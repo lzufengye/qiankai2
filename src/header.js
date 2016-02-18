@@ -1,7 +1,7 @@
 import React from 'react'
-import Menu from './components/menu'
-import MenuItem from './components/menu-item'
-import NavLink from './nav-link'
+import Menu from './header/menu'
+import MenuItem from './header/menu-item'
+import NavLink from './header/nav-link'
 
 var Header = React.createClass({
   render() {
