@@ -25,7 +25,7 @@ var Header = _react2.default.createClass({
     return _react2.default.createElement(
       'div',
       { className: 'header' },
-      _react2.default.createElement('image', { className: 'header-image', src: '' }),
+      _react2.default.createElement('image', { className: 'logo', src: '/study/build/assets/images/logo.png' }),
       _react2.default.createElement(
         _menu2.default,
         null,

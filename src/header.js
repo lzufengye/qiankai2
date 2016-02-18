@@ -6,7 +6,7 @@ var Header = React.createClass({
   render: function() {
     return (
       <div className='header'>
-        <image className='header-image' src=''/>
+        <image className='logo' src='/study/build/assets/images/logo.png' />
         <Menu >
           <a href='www.baidu.com' className='node focus'>菜单一</a>
           <a href='www.baidu.com' className='node'>菜单二</a>

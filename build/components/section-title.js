@@ -18,12 +18,16 @@ var SectionTitle = _react2.default.createClass({
       backgroundImage: 'url(' + this.props.backgroundImage + ')'
     };
 
+    var shadowMarginLeft = {
+      marginLeft: this.props.shadowMarginLeft
+    };
+
     return _react2.default.createElement(
       'div',
       { className: 'section-title', style: style },
       _react2.default.createElement(
         'div',
-        { className: 'section-shadow' },
+        { className: 'section-shadow', style: shadowMarginLeft },
         _react2.default.createElement('image', { src: this.props.sectionIcon }),
         _react2.default.createElement('br', null),
         this.props.sectionTitle
