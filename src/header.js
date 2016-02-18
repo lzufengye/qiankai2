@@ -1,15 +1,17 @@
 import React from 'react'
 import Menu from './components/menu'
-import MenuItem from './components/menu-item.js'
+import MenuItem from './components/menu-item'
+import NavLink from './nav-link'
 
 var Header = React.createClass({
   render: function() {
     return (
       <div className='header'>
-        <image className='logo' src='/study/build/assets/images/logo.png' />
+        <image className='logo' src='' />
         <Menu >
-          <a href='www.baidu.com' className='node focus'>菜单一</a>
-          <a href='www.baidu.com' className='node'>菜单二</a>
+          <NavLink to="/" onlyActiveOnIndex>首页</NavLink>
+          <NavLink to="/page2" onlyActiveOnIndex>首页</NavLink>
+          <NavLink to="/about" onlyActiveOnIndex>首页</NavLink>
         </Menu>
       </div>
     );

@@ -1,19 +1,19 @@
-var app = require('express')();
-var http = require('http').Server(app);
-var bodyParser = require('body-parser');
-var request = require('superagent');
-var listenOnPort = process.env.PORT || 8080;
+var express = require('express')
+var path = require('path')
+var compression = require('compression')
 
-var jsonParser = bodyParser.json();
+var app = express()
 
-app.get('/*', function(req, res) {
-  res.sendFile(__dirname + req.path);
-});
+app.use(compression())
+// serve our static stuff like index.css
+app.use(express.static(path.join(__dirname, 'public')))
 
-app.get('/diagnostic/status/heartbeat', function(req, res) {
-  res.status(200).end();
-});
+// send all requests to index.html so browserHistory in React Router works
+app.get('*', function (req, res) {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'))
+})
 
-http.listen(listenOnPort, function(){
-  console.log('listening on *:' + listenOnPort);
-});
+var PORT = process.env.PORT || 8080
+app.listen(PORT, function() {
+  console.log('Production Express server running at localhost:' + PORT)
+})
