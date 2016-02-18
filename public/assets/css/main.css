@@ -63,6 +63,73 @@ a {
   background-color: #272727;
 }
 
+.search-bar {
+  display: block;
+  float: right;
+  margin-top: 20px;
+  height: 23px;
+  padding: 0 25px 0 12px;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAXCAYAAAA/ZK6/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAfFJREFUOE+Vk8tPE1EUxqc0GAQlsDEmrlixMBGaNoQFGhNZmGjiwo0bIm0NGyNbWEICaNBEdv4RPBRBIsa4ckMCmyq4ITaAtOUxtJV22pnbzud3b1+DoclwJ3fm3jvnd86ZOd/xANDqjc3Hj3oud3Wuddzq0rK+O5q3/YqmScA5I7d7mrfuP+g8nXz5DpE1IPsHKOoQFiBsh3G6P9AowUQ43JdanAcMnVuhps2ZR4F3q+b9yO9rTTwL3SguL/ylW15A3qLLIhdq2LCFqAHxJ4Nt+PyBL9L0VKA1l3yUTGujkr9ne+L1KpJxGAxr2WXPTssyUwG82fgu8zaZgszYkYnDu1xqqYD/+tb0+Pv/zututdOBp5dSK/NTrgEaerD9a/UiQANS+qZrIPZmphFmZsc1sBcMXUXu2K29KpwHvzcuBhx8m/3hligVbmTYD+pEakFKjKqpXwcFAF4R5XfnCVEWJhVXD6lqaX/87Sukk9QSCJQEdx5UbZ740Itm48vH9QJyKNDSlvquUIxqS0Hy4Ey3JZ4PXcPSIs9NpW6lQnaaUnk5XBWIPexuOgjcbDkcDLabK3PfLaEzllDpZRTATrKKZyOUf4CqTWxmsgP7P6PI6gYMhhKMmcmfD5zc8zWle/0NEtwZHbub+/QVJ3tRIJnBP5ORtpZsFLLEAAAAAElFTkSuQmCC) no-repeat left top;
+}
+
+input, textarea, keygen, select, button {
+  margin: 0em;
+  font: 11px BlinkMacSystemFont;
+  text-rendering: auto;
+  color: initial;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+}
+
+input, textarea, keygen, select, button, meter, progress {
+  -webkit-writing-mode: horizontal-tb;
+}
+
+input {
+  -webkit-appearance: textfield;
+  padding: 1px;
+  background-color: white;
+  border: 2px inset;
+  border-image-source: initial;
+  border-image-slice: initial;
+  border-image-width: initial;
+  border-image-outset: initial;
+  border-image-repeat: initial;
+  -webkit-rtl-ordering: logical;
+  -webkit-user-select: text;
+  cursor: auto;
+}
+
+.search-bar input[type="text"] {
+  display: block;
+  float: left;
+  height: 23px;
+  padding: 3px;
+  width: 100px;
+  border: none;
+  outline: none;
+  font-size: 12px;
+  color: #444;
+}
+
+.search-bar input[type="submit"] {
+  display: block;
+  float: left;
+  height: 23px;
+  padding: 0 2px;
+  width: 25px;
+  border: none;
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAXCAYAAAD+4+QTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAABNNJREFUSEuNVVtsVFUUPYOUEJvohz/EhJgYNIoGKa0wYutUKYVq00pK4geZxET9xGg0itGoJQUTMSSYSOKH6A+oxGITraQhMRGNNKDVPqhUsNPOTGnLdN537p25r+XaZ4ZaTWU4cDrn3nPuXnut/TgB+IDyfKVcR6nVtyjX99TKQEApL6CKK5UKOI5apVaoQM0q5SmlfOUqN1dQXtpQtUM/qMjosDKHxjc/2Nd/gdvLD5cgcDkdwOdapqxh6P96Ca98xuWDPDs849jyfgEoxIDhc8jv7/no4rbWe0eaNt/KHbV0KsdK8es83xVRQoFGSiRHCz5/vSL3CCXTy+rpIccTRX3S5wpyVmYhgfSpk5gNh7cKQLaloeY6kIIjvnmaTJEeW1yUxFNhwLVPHLvApwpb2C48o8ANHq6wzpse6IKm7/WdzM7s6lyTqK+7bRHE4mrec5BZKk2BHtJuwXQg+7JHYcihIqcAcsqeltLkJEpJu5YG+r9CvLntHxBxRqSCzc2xQRQ/O4orLz2PoXAnrE8+BH4aoBFKSmslMajjQ2NmRr6CZRJNL8jDc+kIH5JxXH73vdOLTGzRxqbmwz9j8NkuXNh0N7LBdcAj6zBfdw/G2x9H5vNjdNPQihnUSOKRE/dLfEM8icy1Mhk+0wvDgjEzJU86AVReqJRiiD96J2LBDUidO0tQfsmz9sQUpneHkdi6HviltwJCeQmjJaoyxg6+1ZtpqF+j5ulZ+sgBRB/bBAwOME/yxMhXspiWMlHEWpsw9cx2ekkpaB/0TOJUbaS/PtGdaQzVKIshndu9E+NNQbieWOAwJUX1gvIwKV7Ziz9CZJOZ4RmRhDhapCpjYqxfy+WZDNLuZsQ7msTFcsaknDJITmrChtm9DxdDGxnQKUrFbb9SldVA0okRDSK5Hj30OqaeuAv4fQASrgTflcvTgefNYKZjO64+3QmDTEwJhiSKMKo2SvnIeKiVvYqHvcu/Idp2P1J7uuD+eYkpKlFNksk8kof2I9W0BTj9BVlKdUvlJ2HJstowE5hsaa1VlugiGh8/gvEdbRhtaUXsxTAiPS9jcteTGAwGMRqqR+JYD2PCkmQLiNrRm2Ny5by4oRh4DsbQojjJX79HLrwDRvNaLNTdh0LjeuR+PI7EB/sQaXwYqcMfMyDSuWzonldlzJ05MVyOyX+G67oolUowTZPBp5bSvxauYe7Toxje8hAye59jsJJI8DtdKlJ8KUawKCUqWSm9m1pKm35hz4ZlQXz2eodN07ZZMS556gDzT/wS5g6+gfjhd+AmpnWdZGm0aLGjsVlKX5v1CSuN0yTTvyJaKg0iRpcb8p79VteftCbtXYq5tzChOejP2PpFPMlEuZeynAKGdBLxN98/UBVEzrpyZ9CxAglJ7Gz9r6DfF/MEtei5pKd0IeqnLzNJ8u96z08371y9CHKj2BVpWvOs3E3yoxOloqBeSwgq3UZfPn2nEO/quOM6gJbrRiCuLkcOSXO5IDU7Mcq/bOsSF5HSFIZOAqVvvjw7+1T77fMND9Rebd94c0zgF8oFKJrxR7LJkWzK07RDHnJjGgsm4iOTse5X1y71/l9M/i/wmqGdo7eG5JC++1NMBF8yLW0gFYvA+vYMpl97OyQGs8H6FaltdYveLwX5G0td3fEts7waAAAAAElFTkSuQmCC) no-repeat right top;
+  outline: none;
+  cursor: pointer;
+  text-indent: -999em;
+}
+
 /*container*/
 .container {
   width: 1000px;
