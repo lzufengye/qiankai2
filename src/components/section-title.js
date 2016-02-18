@@ -1,7 +1,7 @@
 import React from 'react'
 
 var SectionTitle = React.createClass({
-  render: function () {
+  render () {
     var style = {
       backgroundImage: 'url(' + this.props.backgroundImage + ')',
     };

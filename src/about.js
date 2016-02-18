@@ -5,7 +5,7 @@ import SectionTitle from './components/section-title.js'
 import Block from './components/block.js'
 
 var About = React.createClass({
-  render: function() {
+  render() {
     return (
       <div className='page2'>
         About

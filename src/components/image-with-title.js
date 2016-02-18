@@ -1,7 +1,7 @@
 import React from 'react'
 
 var ImageWithTitle = React.createClass({
-  render: function () {
+  render() {
     return (
       <div className='slick-slide'>
         <image src={this.props.src}/>

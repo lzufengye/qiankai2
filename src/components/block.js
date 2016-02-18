@@ -1,7 +1,7 @@
 import React from 'react'
 
 var Block = React.createClass({
-  render: function () {
+  render() {
     var style = {
       width: this.props.width
     };

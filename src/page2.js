@@ -5,7 +5,7 @@ import SectionTitle from './components/section-title.js'
 import Block from './components/block.js'
 
 var Page2 = React.createClass({
-  render: function() {
+  render() {
     return (
       <div className='page2'>
         page2

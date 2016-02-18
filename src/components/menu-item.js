@@ -1,7 +1,7 @@
 import React from 'react'
 
 var MenuItem = React.createClass({
-  render: function () {
+  render () {
     var items = this.props.subMenu.map(function (item) {
       return (
         <li>{item}</li>

@@ -4,7 +4,7 @@ import MenuItem from './components/menu-item'
 import NavLink from './nav-link'
 
 var Header = React.createClass({
-  render: function() {
+  render() {
     return (
       <div className='header'>
         <image className='logo' src='' />

@@ -5,7 +5,7 @@ import SectionTitle from './components/section-title.js'
 import Block from './components/block.js'
 
 var Home = React.createClass({
-  render: function() {
+  render() {
     return (
       <div className='container'>
         <CustomerSlider>

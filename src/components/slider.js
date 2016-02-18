@@ -2,7 +2,7 @@ var React = require('react');
 var Slider = require('react-slick');
 
 var CustomerSlider = React.createClass({
-  render: function () {
+  render () {
     var settings = {
       //dots: true,
       infinite: true,
