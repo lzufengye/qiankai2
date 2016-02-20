@@ -1,6 +1,7 @@
 import React from 'react'
 import InformationBoard from './components/information-board'
 import NavLink from '../header/nav-link'
+import ServerConfig from '../config/server-config'
 
 var Article = React.createClass({
   getInitialState() {
@@ -25,11 +26,11 @@ var Article = React.createClass({
 
   componentDidMount() {
     var articleId = this.props.params.id == null ? '' : this.props.params.id
-    this.loadArticleFromServer('http://localhost:3000/api/' + this.props.params.title + '/' + articleId);
+    this.loadArticleFromServer(ServerConfig['serverUrl'] + '/api/' + this.props.params.title + '/' + articleId);
   },
 
   componentWillReceiveProps (nextProps) {
-    this.loadArticleFromServer('http://localhost:3000/api/' + this.props.params.title + '/' + articleId);
+    this.loadArticleFromServer(ServerConfig['serverUrl'] + '/api/' + this.props.params.title + '/' + articleId);
   },
 
   render() {

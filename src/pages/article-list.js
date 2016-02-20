@@ -1,6 +1,7 @@
 import React from 'react'
 import InformationBoard from './components/information-board'
 import NavLink from '../header/nav-link'
+import ServerConfig from '../config/server-config'
 
 var ArticleList = React.createClass({
   getInitialState() {
@@ -13,7 +14,7 @@ var ArticleList = React.createClass({
     var searchValue = this.props.params.searchValue;
     if (searchValue != null) {
       $.ajax({
-        url: 'http://localhost:3000/api/search/' + searchValue,
+        url: ServerConfig['serverUrl'] + '/api/search/' + searchValue,
         dataType: 'json',
         cache: false,
         success: function (data) {
@@ -21,19 +22,19 @@ var ArticleList = React.createClass({
           console.log(data);
         }.bind(this),
         error: function (xhr, status, err) {
-          console.error('http://localhost:3000/api/search/' + searchValue, status, err.toString());
+          console.error(ServerConfig['serverUrl'] + '/api/search/' + searchValue, status, err.toString());
         }.bind(this)
       });
     } else {
       $.ajax({
-        url: 'http://localhost:3000/api/' + title,
+        url: ServerConfig['serverUrl'] + '/api/' + title,
         dataType: 'json',
         cache: false,
         success: function (data) {
           this.setState({infoList: data[this.props.params.title]});
         }.bind(this),
         error: function (xhr, status, err) {
-          console.error('localhost:3000/api/' + title, status, err.toString());
+          console.error(ServerConfig['serverUrl'] + '/api/' + title, status, err.toString());
         }.bind(this)
       });
     }

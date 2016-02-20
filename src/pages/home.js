@@ -5,6 +5,7 @@ import SectionTitle from './components/section-title'
 import Block from './components/block'
 import InformationBoard from './components/information-board'
 import NavLink from '../header/nav-link'
+import ServerConfig from '../config/server-config'
 
 var Home = React.createClass({
   getInitialState() {
@@ -19,84 +20,84 @@ var Home = React.createClass({
 
   loadHotProductsFromServer: function () {
     $.ajax({
-      url: 'http://localhost:3000/api/products?hot=true',
+      url: ServerConfig['serverUrl'] + '/api/products?hot=true',
       dataType: 'json',
       cache: false,
       success: function (data) {
         this.setState({products: data['products']});
       }.bind(this),
       error: function (xhr, status, err) {
-        console.error('localhost:3000/api/products', status, err.toString());
+        console.error(ServerConfig['serverUrl'] + '/api/products', status, err.toString());
       }.bind(this)
     });
   },
 
   loadHotNewsesFromServer: function () {
     $.ajax({
-      url: 'http://localhost:3000/api/newses?latest=true',
+      url: ServerConfig['serverUrl'] + '/api/newses?latest=true',
       dataType: 'json',
       cache: false,
       success: function (data) {
         this.setState({newses: data['newses']});
       }.bind(this),
       error: function (xhr, status, err) {
-        console.error('localhost:3000/api/newses', status, err.toString());
+        console.error(ServerConfig['serverUrl'] + '/api/newses', status, err.toString());
       }.bind(this)
     });
   },
 
   loadJobInfosFromServer: function () {
     $.ajax({
-      url: 'http://localhost:3000/api/jobs?latest=true',
+      url: ServerConfig['serverUrl'] + '/api/jobs?latest=true',
       dataType: 'json',
       cache: false,
       success: function (data) {
         this.setState({jobs: data['jobs']});
       }.bind(this),
       error: function (xhr, status, err) {
-        console.error('localhost:3000/api/jobs', status, err.toString());
+        console.error(ServerConfig['serverUrl'] + '/api/jobs', status, err.toString());
       }.bind(this)
     });
   },
 
   loadArticlesFromServer: function () {
     $.ajax({
-      url: 'http://localhost:3000/api/articles?category=learning',
+      url: ServerConfig['serverUrl'] + '/api/articles?category=learning',
       dataType: 'json',
       cache: false,
       success: function (data) {
         this.setState({articles: data['articles']});
       }.bind(this),
       error: function (xhr, status, err) {
-        console.error('localhost:3000/api/articles', status, err.toString());
+        console.error(ServerConfig['serverUrl'] + '/api/articles', status, err.toString());
       }.bind(this)
     });
   },
 
   loadActivitiesFromServer: function () {
     $.ajax({
-      url: 'http://localhost:3000/api/activities',
+      url: ServerConfig['serverUrl'] + '/api/activities',
       dataType: 'json',
       cache: false,
       success: function (data) {
         this.setState({activities: data['activities']});
       }.bind(this),
       error: function (xhr, status, err) {
-        console.error('localhost:3000/api/activities', status, err.toString());
+        console.error(ServerConfig['serverUrl'] + '/api/activities', status, err.toString());
       }.bind(this)
     });
   },
 
   loadAdvertisementFromServer: function () {
     $.ajax({
-      url: 'http://localhost:3000/api/advertisements',
+      url: ServerConfig['serverUrl'] + '/api/advertisements',
       dataType: 'json',
       cache: false,
       success: function (data) {
         this.setState({advertisements: [data['advertisement']]});
       }.bind(this),
       error: function (xhr, status, err) {
-        console.error('localhost:3000/api/advertisements', status, err.toString());
+        console.error(ServerConfig['serverUrl'] + '/api/advertisements', status, err.toString());
       }.bind(this)
     });
   },
@@ -107,6 +108,7 @@ var Home = React.createClass({
     this.loadJobInfosFromServer();
     this.loadArticlesFromServer();
     this.loadActivitiesFromServer();
+    console.log('ENV', process.env.NODE_ENV)
   },
 
   render() {

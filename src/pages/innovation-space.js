@@ -6,6 +6,7 @@ import Block from './components/block.js'
 import InformationBoard from './components/information-board'
 import NavLink from '../header/nav-link'
 import ArticleList from './article-list'
+import ServerConfig from '../config/server-config'
 
 var InnovationSpace = React.createClass({
   getInitialState() {
@@ -17,14 +18,14 @@ var InnovationSpace = React.createClass({
 
   loadJobInfosFromServer: function () {
     $.ajax({
-      url: 'http://localhost:3000/api/jobs?latest=true',
+      url: ServerConfig['serverUrl'] + '/api/jobs?latest=true',
       dataType: 'json',
       cache: false,
       success: function (data) {
         this.setState({jobs: data['jobs']});
       }.bind(this),
       error: function (xhr, status, err) {
-        console.error('localhost:3000/api/jobs', status, err.toString());
+        console.error(ServerConfig['serverUrl'] + '/api/jobs', status, err.toString());
       }.bind(this)
     });
   },
