@@ -61,7 +61,7 @@ var Home = React.createClass({
 
   loadArticlesFromServer: function () {
     $.ajax({
-      url: 'http://localhost:3000/api/articles',
+      url: 'http://localhost:3000/api/articles?category=learning',
       dataType: 'json',
       cache: false,
       success: function (data) {
@@ -199,7 +199,7 @@ var Home = React.createClass({
           {latestNewses}
           </InformationBoard>
           <NavLink to='/convenience-life/newses'>
-            <SectionTitle href='http://www.sxstg.cn/' backgroundImage='/assets/images/kaixian1.jpg'
+            <SectionTitle href='' backgroundImage='/assets/images/kaixian1.jpg'
               sectionIcon='/assets/images/service.png'
               sectionTitle='便民生活'
               shadowMarginLeft='0'
@@ -263,56 +263,64 @@ var Home = React.createClass({
           {latestArticles}
           </InformationBoard>
           <div className='right-part'>
-            <SectionTitle href='http://www.sxstg.cn/' backgroundImage='/assets/images/kaixian2.jpg'
-              sectionIcon='/assets/images/education.png'
-              sectionTitle='教育服务'
-              shadowMarginLeft='50%'
-            />
+            <NavLink to='/education-service/articles/learning'>
+              <SectionTitle href='' backgroundImage='/assets/images/kaixian2.jpg'
+                sectionIcon='/assets/images/education.png'
+                sectionTitle='教育服务'
+                shadowMarginLeft='50%'
+              />
+            </NavLink>
             <Block backgroundColor='#37bd9c' width='200px' blockIcon='/assets/images/school.png'>
               <div className='title-cn'>学校缴费</div>
               <div className='title-cn'>幼儿园缴费</div>
             </Block>
-            <Block backgroundColor='#8dc153' width='200px' blockIcon='/assets/images/online-course.png'>
-              <div className='title-cn'>课程介绍</div>
-              <div className='title-en'>Course Introduction</div>
-            </Block>
-            <Block backgroundColor='#d870ad' width='200px' blockIcon='/assets/images/seo-training.png'>
-              <div className='title-cn'>教育培训</div>
-              <div className='title-en'>Education and Training</div>
-            </Block>
+            <NavLink to='/education-service/articles/course'>
+              <Block backgroundColor='#8dc153' width='200px' blockIcon='/assets/images/online-course.png'>
+                <div className='title-cn'>课程介绍</div>
+                <div className='title-en'>Course Introduction</div>
+              </Block>
+            </NavLink>
+            <NavLink to='/education-service/articles/training'>
+              <Block backgroundColor='#d870ad' width='200px' blockIcon='/assets/images/seo-training.png'>
+                <div className='title-cn'>教育培训</div>
+                <div className='title-en'>Education and Training</div>
+              </Block>
+            </NavLink>
           </div>
         </div>
         <div className='new-section'>
-          <InformationBoard backgroundColor='#967bdc' width='400px' title='主题活动'>
+          <InformationBoard backgroundColor='#967bdc' width='400px' title='主题活动' link='/innovation-space/activities'>
           {latestActivities}
           </InformationBoard>
-          <SectionTitle href='http://www.sxstg.cn/' backgroundImage='/assets/images/innovation.jpg'
-            sectionIcon='/assets/images/innovation.png'
-            sectionTitle='众创空间'
-            shadowMarginLeft='0'
-          />
+          <NavLink to='/innovation-space/activities'>
+            <SectionTitle href='' backgroundImage='/assets/images/innovation.jpg'
+              sectionIcon='/assets/images/innovation.png'
+              sectionTitle='众创空间'
+              shadowMarginLeft='0'
+            />
+          </NavLink>
           <Block backgroundImage='/assets/images/policy.jpg' width='200px'>
           </Block>
           <Block backgroundColor='#0c92d1' width='200px'>
-            <a href='https://ccrprod.alipay.com/credit.htm?_pdType=bbcebbcffijdjheiaigf' target='_blank'>众创空间展示
+            <NavLink to='/innovation-space/articles/innovation_space'>众创空间展示
               <image className='link-image' src='/assets/images/project.png'/>
-            </a>
-            <a href='https://ebppprod.alipay.com/estate.htm?_pdType=accibafdfbdebceidcae' target='_blank'>政策与服务
+            </NavLink>
+            <NavLink to='/innovation-space/articles/service'>政策与服务
               <image className='link-image' src='/assets/images/services.png'/>
-            </a>
+            </NavLink>
           </Block>
-          <a href='http://www.sxstg.cn/index.php?ctl=youhuis' target='_blank'>
+          <NavLink to='/innovation-space/articles/incubation'>
             <Block backgroundColor='#f6bb43' width='300px' blockIcon='/assets/images/incubators.png'>
               <div className='title-cn'>入驻与孵化</div>
               <div className='title-en'>Settle and incubation</div>
             </Block>
-          </a>
-          <a href='http://www.sxstg.cn/index.php?ctl=youhuis' target='_blank'>
+          </NavLink>
+          <NavLink to='/innovation-space/articles/cooperation'>
             <Block backgroundColor='#d870ad' width='300px' blockIcon='/assets/images/support.png'>
               <div className='title-cn'>合作与配套</div>
               <div className='title-en'>Cooperation and support</div>
             </Block>
-          </a>
+          </NavLink>
         </div>
         <div id="weather">
           <iframe width="200" scrolling="no" height="75" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&id=12&icon=1&num=5"></iframe>

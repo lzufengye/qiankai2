@@ -46,7 +46,7 @@ var ArticleList = React.createClass({
       return <NavLink to={link}>{info.title}</NavLink>
     });
     var titleMapping = {newses: '资讯中心', jobs: '就业信息', activities: '主题活动'};
-    var articleMapping = {kaixian: '美丽开县', learning: '学习中心'};
+    var articleMapping = {kaixian: '美丽开县', learning: '学习中心', course: '课程介绍', training: '教育培训', innovation_space: '众创空间展示', service: '政策与服务', incubation: '入驻与孵化', cooperation: '合作与配套'};
     var title = articleMapping[this.props.params.category] || titleMapping[this.props.params.title];
     return (
       <InformationBoard className='article-list' backgroundColor='#f8f8f8' width='630px' color='#888' title={title}>

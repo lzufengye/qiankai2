@@ -13,7 +13,7 @@ var Header = React.createClass({
           <NavLink to="/" onlyActiveOnIndex>首页</NavLink>
           <a href='http://www.sxstg.cn/' target='_blank'>三峡生态购</a>
           <NavLink to="/convenience-life/newses">便民生活</NavLink>
-          <NavLink to="/education-service/articles" >教育服务</NavLink>
+          <NavLink to="/education-service/articles/learning" >教育服务</NavLink>
           <NavLink to="/innovation-space/activities" >众创空间</NavLink>
           <NavLink to="/about" onlyActiveOnIndex>关于我们</NavLink>
           <SearchBar />

@@ -16,13 +16,20 @@ ReactDOM.render(
       <IndexRoute component={Home}/>
       <Route path="/convenience-life" component={ConvenienceLife}>
         <Route path="/convenience-life/:title" component={ArticleList}/>
-        <Route path="/convenience-life/:title/:category" component={ArticleList}/>
+        <Route path="/convenience-life/:title">
+          <Route path="/convenience-life/:title/:category" component={ArticleList}/>
+        </Route>
       </Route>
       <Route path="/education-service" component={EducationService}>
-        <Route path="/education-service/:title/:category" component={ArticleList}/>
+        <Route path="/education-service/:title">
+          <Route path="/education-service/:title/:category" component={ArticleList}/>
+        </Route>
       </Route>
       <Route path="/innovation-space" component={InnovationSpace}>
-        <Route path="/innovation-space/:title" component={ArticleList}/>
+        <Route path="/innovation-space/:title"  component={ArticleList}/>
+        <Route path="/innovation-space/:title">
+          <Route path="/innovation-space/:title/:category" component={ArticleList}/>
+        </Route>
       </Route>
       <Route path="/about" component={About} />
       <Route path="/:title/:id" component={Article}/>
