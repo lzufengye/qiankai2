@@ -1,14 +1,17 @@
 import React from 'react'
-import ImageWithTitle from './components/image-with-title.js'
-import CustomerSlider from './components/slider.js'
-import SectionTitle from './components/section-title.js'
-import Block from './components/block.js'
+import ImageWithTitle from './components/image-with-title'
+import CustomerSlider from './components/slider'
+import SectionTitle from './components/section-title'
+import Block from './components/block'
+import Article from './article'
 
 var About = React.createClass({
   render() {
+    var params = {title: 'about'}
+
     return (
-      <div className='page2'>
-        About
+      <div className='container'>
+        <Article params={params}/>
       </div>
     );
   }
