@@ -428,3 +428,18 @@ iframe {
   line-height: 2em;
   color: #666;
 }
+
+.search-result {
+  width: 1000px;
+  height: 320px;
+  margin-top: 15px;
+  overflow: hidden;
+
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}

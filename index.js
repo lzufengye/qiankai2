@@ -32,6 +32,7 @@ ReactDOM.render(
         </Route>
       </Route>
       <Route path="/about" component={About} />
+      <Route path="/search/:searchValue" component={ArticleList}/>
       <Route path="/:title/:id" component={Article}/>
     </Route>
   </Router>,

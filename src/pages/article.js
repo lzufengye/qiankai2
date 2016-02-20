@@ -15,7 +15,6 @@ var Article = React.createClass({
       dataType: 'json',
       cache: false,
       success: function (data) {
-        console.log('1', data['article']);
         this.setState({article: data['article'] || data['news'] || data['activity'] || data['job']});
       }.bind(this),
       error: function (xhr, status, err) {
@@ -34,7 +33,6 @@ var Article = React.createClass({
   },
 
   render() {
-    console.log('fad', this.state);
     return (
       <div className='wrapper container'>
         <div className='information-board article'>
