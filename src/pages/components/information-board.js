@@ -11,7 +11,7 @@ var InformationBoard = React.createClass({
 
     var boardStyle = {
       backgroundColor: this.props.backgroundColor,
-      height: this.props.title == '学习中心' ? '444px' : '',
+      height: this.props.height == '450px' ? '444px' : '',
       color: this.props.color
     }
 
