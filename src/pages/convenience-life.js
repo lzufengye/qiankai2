@@ -15,33 +15,7 @@ var ConvenienceLife = React.createClass({
     };
   },
 
-  loadJobInfosFromServer: function () {
-    $.ajax({
-      url: 'http://localhost:3000/api/jobs?latest=true',
-      dataType: 'json',
-      cache: false,
-      success: function (data) {
-        this.setState({jobs: data['jobs']});
-      }.bind(this),
-      error: function (xhr, status, err) {
-        console.error('localhost:3000/api/jobs', status, err.toString());
-      }.bind(this)
-    });
-  },
-
-  componentDidMount() {
-    this.loadJobInfosFromServer();
-  },
-
   render() {
-    var latestNewses = this.state.newses.map(function (news) {
-      return <NavLink to="/page2">{news.title}</NavLink>
-    });
-
-    var latestJobs = this.state.jobs.map(function (job) {
-      return <NavLink to="/page2">{job.title}</NavLink>
-    });
-
     return (
       <div className='container'>
         <div className='left-part left-menu'>
@@ -98,12 +72,12 @@ var ConvenienceLife = React.createClass({
               <image className='link-image' src='/assets/images/heart-insurance-symbol.png'/>
             </a>
           </Block>
-          <a href='http://www.sxstg.cn/index.php?ctl=youhuis' target='_blank'>
+          <NavLink to="/convenience-life/articles/kaixian">
             <Block backgroundColor='#169fa5' width='185px' height='112px' blockIcon='/assets/images/beautiful.png'>
               <div className='title-cn'>美丽开县</div>
               <div className='title-en'>Beautiful scenery</div>
             </Block>
-          </a>
+          </NavLink>
         </div>
         {this.props.children}
       </div>

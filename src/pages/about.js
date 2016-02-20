@@ -7,7 +7,7 @@ import Article from './article'
 
 var About = React.createClass({
   render() {
-    var params = {title: 'about'}
+    var params = {title: 'articles', id: 'about'}
 
     return (
       <div className='container'>

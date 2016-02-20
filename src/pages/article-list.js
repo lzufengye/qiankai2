@@ -15,7 +15,7 @@ var ArticleList = React.createClass({
       dataType: 'json',
       cache: false,
       success: function (data) {
-        this.setState({infoList: data[title]});
+        this.setState({infoList: data[this.props.params.title]});
       }.bind(this),
       error: function (xhr, status, err) {
         console.error('localhost:3000/api/' + title, status, err.toString());
@@ -24,23 +24,32 @@ var ArticleList = React.createClass({
   },
 
   componentDidMount() {
-    this.loadListFromServer(this.props.params.title);
+    var path = this.props.params.title;
+    if(this.props.params.category != null) {
+      path += '?category=' + this.props.params.category;
+    }
+    this.loadListFromServer(path);
   },
 
   componentWillReceiveProps: function(nextProps) {
-    this.loadListFromServer(nextProps.params.title);
+    var path = nextProps.params.title;
+    if(nextProps.params.category != null) {
+      path += '?category=' + nextProps.params.category;
+    }
+    this.loadListFromServer(path);
   },
 
   render() {
+    var titleForLink = this.props.params.title
     var infoList = this.state.infoList.map(function (info) {
-      return <NavLink to="/page2">{info.title}</NavLink>
+      var link = '/' + titleForLink + '/' + info.id
+      return <NavLink to={link}>{info.title}</NavLink>
     });
-    console.log(this.state.infoList);
-
-    var titleMapping = {newses: '咨询中心', jobs: '就业信息', articles: '学习中心', activities: '主题活动'}
-
+    var titleMapping = {newses: '资讯中心', jobs: '就业信息', activities: '主题活动'};
+    var articleMapping = {kaixian: '美丽开县', learning: '学习中心'};
+    var title = articleMapping[this.props.params.category] || titleMapping[this.props.params.title];
     return (
-      <InformationBoard className='article-list' backgroundColor='#f8f8f8' width='630px' color='#888' title={titleMapping[this.props.params.title]}>
+      <InformationBoard className='article-list' backgroundColor='#f8f8f8' width='630px' color='#888' title={title}>
           {infoList}
       </InformationBoard>
     );

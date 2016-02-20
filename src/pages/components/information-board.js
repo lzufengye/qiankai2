@@ -1,4 +1,5 @@
 import React from 'react'
+import NavLink from '../../header/nav-link'
 
 var InformationBoard = React.createClass({
   render() {
@@ -22,11 +23,11 @@ var InformationBoard = React.createClass({
     }) : this.props.children;
 
     var className = 'information-board ' + this.props.className;
-
+    var title = this.props.link ? (<NavLink to={this.props.link}>{this.props.title}</NavLink>) : (this.props.title);
     return (
       <div className='wrapper' style={wrapperStyle}>
         <div className={className} style={boardStyle}>
-        <div className='information-title'>{this.props.title}</div>
+        <div className='information-title'>{title}</div>
           <ul>{information}</ul>
         </div>
       </div>

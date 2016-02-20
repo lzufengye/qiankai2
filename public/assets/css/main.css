@@ -306,6 +306,7 @@ input {
   padding: 20px;
   display: inline-block;
   vertical-align: top;
+  background-color: #f8f8f8;
 }
 
 .information-board ul{
@@ -411,4 +412,19 @@ iframe {
 
 .article-list li:first-child {
   border-top: none;
+}
+
+.article .information-title {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 1.375em;
+  line-height: 1.5em;
+  color: #444;
+  border-bottom: 1px solid #eee;
+}
+
+.article span {
+  font-size: .875em;
+  line-height: 2em;
+  color: #666;
 }

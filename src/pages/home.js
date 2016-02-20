@@ -117,19 +117,23 @@ var Home = React.createClass({
     });
 
     var latestNewses = this.state.newses.map(function (news) {
-      return <NavLink to="/page2">{news.title}</NavLink>
+      var link = "/newses/" + news.id
+      return <NavLink to={link}>{news.title}</NavLink>
     });
 
     var latestJobs = this.state.jobs.map(function (job) {
-      return <NavLink to="/page2">{job.title}</NavLink>
+      var link = "/jobs/" + job.id
+      return <NavLink to={link}>{job.title}</NavLink>
     });
 
     var latestArticles = this.state.articles.map(function (article) {
-      return <NavLink to="/page2">{article.title}</NavLink>
+      var link = "/articles/" + article.id
+      return <NavLink to={link}>{article.title}</NavLink>
     });
 
     var latestActivities = this.state.activities.map(function (activity) {
-      return <NavLink to="/page2">{activity.title}</NavLink>
+      var link = "/activities/" + activity.id
+      return <NavLink to={link}>{activity.title}</NavLink>
     });
 
     return (
@@ -191,14 +195,16 @@ var Home = React.createClass({
 
         </div>
         <div className='new-section'>
-          <InformationBoard backgroundColor='#f6bb43' width='400px' title='资讯中心'>
+          <InformationBoard backgroundColor='#f6bb43' width='400px' title='资讯中心' link='/convenience-life/newses'>
           {latestNewses}
           </InformationBoard>
-          <SectionTitle href='http://www.sxstg.cn/' backgroundImage='/assets/images/kaixian1.jpg'
-            sectionIcon='/assets/images/service.png'
-            sectionTitle='便民生活'
-            shadowMarginLeft='0'
-          />
+          <NavLink to='/convenience-life/newses'>
+            <SectionTitle href='http://www.sxstg.cn/' backgroundImage='/assets/images/kaixian1.jpg'
+              sectionIcon='/assets/images/service.png'
+              sectionTitle='便民生活'
+              shadowMarginLeft='0'
+            />
+          </NavLink>
           <div className='left-part'>
             <Block backgroundColor='#ec87c1' width='200px'>
               <a href='http://app.alipay.com/home/appGateway.htm?appId=1000000020' target='_blank'>手机充值
@@ -241,19 +247,19 @@ var Home = React.createClass({
                 <image className='link-image' src='/assets/images/hospital-building.png'/>
               </a>
             </Block>
-            <a href='http://www.sxstg.cn/index.php?ctl=youhuis' target='_blank'>
+            <NavLink to='/convenience-life/articles/kaixian'>
               <Block backgroundColor='#169fa5' width='300px' blockIcon='/assets/images/beautiful.png'>
                 <div className='title-cn'>美丽开县</div>
                 <div className='title-en'>Beautiful scenery</div>
               </Block>
-            </a>
+            </NavLink>
           </div>
-          <InformationBoard className='job-infos' backgroundColor='#f8f8f8' width='300px' color='#888' title='就业信息'>
+          <InformationBoard className='job-infos' backgroundColor='#f8f8f8' width='300px' color='#888' title='就业信息' link='/convenience-life/jobs'>
           {latestJobs}
           </InformationBoard>
         </div>
         <div className='new-section'>
-          <InformationBoard backgroundColor='#0c92d1' width='400px' height='450px' title='学习中心'>
+          <InformationBoard backgroundColor='#0c92d1' width='400px' height='450px' title='学习中心' link='/education-service/articles/learning'>
           {latestArticles}
           </InformationBoard>
           <div className='right-part'>

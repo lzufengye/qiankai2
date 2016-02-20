@@ -15,7 +15,8 @@ var Article = React.createClass({
       dataType: 'json',
       cache: false,
       success: function (data) {
-        this.setState({article: data});
+        console.log('1', data);
+        this.setState({article: data['article'] || data['news'] || data['activity'] || data['job']});
       }.bind(this),
       error: function (xhr, status, err) {
         console.error(url, status, err.toString());
@@ -24,18 +25,22 @@ var Article = React.createClass({
   },
 
   componentDidMount() {
-    this.loadArticleFromServer('http://localhost:3000/api/' + this.props.params.title + this.props.params.id);
+    var articleId = this.props.params.id == null ? '' : this.props.params.id
+    this.loadArticleFromServer('http://localhost:3000/api/' + this.props.params.title + '/' + articleId);
   },
 
-  componentWillReceiveProps: function(nextProps) {
-    this.loadArticleFromServer('http://localhost:3000/api/' + nextProps.params.title + nextProps.params.id);
+  componentWillReceiveProps (nextProps) {
+    this.loadArticleFromServer('http://localhost:3000/api/' + this.props.params.title + '/' + articleId);
   },
 
   render() {
     return (
-      <InformationBoard className='article-list' backgroundColor='#f8f8f8' width='1000px' color='#888' title={article.title}>
-          {article}
-      </InformationBoard>
+      <div className='wrapper container'>
+        <div className='information-board article'>
+          <div className='information-title'>{this.state.article.title}</div>
+          <span dangerouslySetInnerHTML={{__html: this.state.article.text}} />
+        </div>
+      </div>
     );
   }
 });
