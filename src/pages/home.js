@@ -119,22 +119,22 @@ var Home = React.createClass({
     });
 
     var latestNewses = this.state.newses.map(function (news) {
-      var link = "/newses/" + news.id
+      var link = "/article/newses/" + news.id
       return <NavLink to={link}>{news.title}</NavLink>
     });
 
     var latestJobs = this.state.jobs.map(function (job) {
-      var link = "/jobs/" + job.id
+      var link = "/article/jobs/" + job.id
       return <NavLink to={link}>{job.title}</NavLink>
     });
 
     var latestArticles = this.state.articles.map(function (article) {
-      var link = "/articles/" + article.id
+      var link = "/article/articles/" + article.id
       return <NavLink to={link}>{article.title}</NavLink>
     });
 
     var latestActivities = this.state.activities.map(function (activity) {
-      var link = "/activities/" + activity.id
+      var link = "/article/activities/" + activity.id
       return <NavLink to={link}>{activity.title}</NavLink>
     });
 

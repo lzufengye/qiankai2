@@ -5,6 +5,7 @@ var CustomerSlider = React.createClass({
   render () {
     var settings = {
       //dots: true,
+      arrows: false,
       infinite: true,
       speed: 500,
       slidesToShow: 1,

@@ -16,6 +16,7 @@ var Header = React.createClass({
           <NavLink to="/education-service/articles/learning" >教育服务</NavLink>
           <NavLink to="/innovation-space/activities" >众创空间</NavLink>
           <NavLink to="/about" onlyActiveOnIndex>关于我们</NavLink>
+          <NavLink to="/products/food" onlyActiveOnIndex>商城</NavLink>
           <SearchBar />
         </Menu>
       </div>

@@ -1,0 +1,154 @@
+.products-container {
+  width: 100%;
+  color: rgb(72, 82, 85);
+  box-sizing: border-box;
+}
+
+.products-container .slick-slider {
+  margin-bottom: 0;
+  height: 450px;
+}
+
+.clear {
+  clear: both;
+}
+
+.top-nav {
+  padding: 0 100px;
+  background-color: rgb(241, 242, 244);
+  font-size: 14px;
+}
+
+.top-nav span{
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 10px;
+}
+
+.top-nav .back-home {
+  border-right: solid 1px #425255;
+  padding-right: 50px;
+}
+
+.top-nav ul {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.top-nav ul li {
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 30px;
+}
+
+.top-nav .right {
+  float: right;
+}
+
+.shopping-number {
+  width: 15px;
+  height: 15px;
+  background-color: rgb(250, 155, 10);
+  margin-left: 10px;
+  border-radius: 7px;
+  font-size: 12px;
+  color: white;
+}
+
+.middle-nav {
+  padding: 10px;
+  background-color: white;
+}
+
+.middle-nav .logo-image {
+  width: 80px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10%;
+  margin-right: 3%;
+}
+
+.middle-nav .logo-title {
+  width: 500px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.bottom-nav {
+  background-color: white;
+  color: rgb(72, 82, 85);
+  padding: 20px 100px 5px;
+}
+
+.bottom-nav a {
+  color: rgb(72, 82, 85);
+  display: inline-block;
+  width: 8%;
+  vertical-align: top;
+}
+
+.product-category {
+  display: inline-block;
+  width: 180px;
+  padding: 0 20px;
+}
+
+.product-category a {
+  width: 90%;
+  padding: 3px 10px;
+}
+
+.highlighted {
+  background-color: rgb(25, 26, 26);
+  color: rgb(242, 255, 255) !important;
+}
+
+.categories {
+  color: white;
+  background-color: rgb(211, 33, 31);
+  position: absolute;
+  width: 182px;
+  z-index: 1000;
+}
+
+.category-item {
+  border-bottom: solid 1px rgb(197, 19, 22);
+  font-size: 14px;
+  padding: 10px;
+}
+
+.category-item ul {
+  list-style-type: none;
+  font-size: .875em;
+  line-height: 2em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 0;
+  margin: 0;
+}
+
+.category-item li {
+  padding: 0 10px;
+  float: left;
+}
+
+.right-arrow {
+  width: 12px;
+  float: right;
+  margin-top: 5px;
+}
+
+.page {
+  min-height: 450px;
+  border-bottom: 1px solid #CCC;
+  padding: 10px 20px;
+  box-shadow: 2px 2px 5px #DDD;
+}
+.page--food {
+  background-color: #F1F1F1;
+  color: #333;
+}
+.page--fashion {
+  background-color: #DDD;
+}

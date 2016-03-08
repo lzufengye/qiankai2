@@ -8,6 +8,8 @@ import ArticleList from './src/pages/article-list'
 import Article from './src/pages/article'
 import EducationService from './src/pages/education-service'
 import InnovationSpace from './src/pages/innovation-space'
+import Products from './src/pages/products/products'
+import Product from './src/pages/products/components/products/product'
 import { Router, Route, browserHistory, IndexRoute } from 'react-router'
 
 ReactDOM.render(
@@ -33,7 +35,10 @@ ReactDOM.render(
       </Route>
       <Route path="/about" component={About} />
       <Route path="/search/:searchValue" component={ArticleList}/>
-      <Route path="/:title/:id" component={Article}/>
+      <Route path="/article/:title/:id" component={Article}/>
+    </Route>
+    <Route path="/products/:category" component={Products} >
+      <Route path="/products/product/:id" component={Product} />
     </Route>
   </Router>,
   document.getElementById('content')

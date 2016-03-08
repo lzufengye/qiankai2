@@ -35,14 +35,6 @@ var InnovationSpace = React.createClass({
   },
 
   render() {
-    var latestNewses = this.state.newses.map(function (news) {
-      return <NavLink to="/page2">{news.title}</NavLink>
-    });
-
-    var latestJobs = this.state.jobs.map(function (job) {
-      return <NavLink to="/page2">{job.title}</NavLink>
-    });
-
     return (
       <div className='container'>
         <div className='left-part left-menu'>

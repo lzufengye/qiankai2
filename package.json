@@ -16,7 +16,8 @@
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
     "react-router": "^2.0.0",
-    "react-slick": "^0.10.0"
+    "react-slick": "^0.10.0",
+    "reflux": "^0.2.12"
   },
   "devDependencies": {
     "babel-core": "^6.5.1",
@@ -25,6 +26,8 @@
     "babel-preset-react": "^6.5.0",
     "http-server": "^0.8.5",
     "webpack": "^1.12.13",
-    "webpack-dev-server": "^1.14.1"
+    "webpack-dev-server": "^1.14.1",
+    "lodash": "^3.5.0",
+    "superagent": "^1.1.0"
   }
 }

@@ -63,7 +63,7 @@ var ArticleList = React.createClass({
 
       if(category == 'news') category = 'newses';
 
-      var link = '/' + category  + '/' + info.id;
+      var link = '/article/' + category  + '/' + info.id;
       return <NavLink to={link}>{info.title}</NavLink>
     });
     var titleMapping = {newses: '资讯中心', jobs: '就业信息', activities: '主题活动'};
