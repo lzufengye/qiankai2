@@ -1,12 +1,19 @@
+ul, ol, li {
+  list-style-type: none;
+}
+
 .products-container {
   width: 100%;
   color: rgb(72, 82, 85);
   box-sizing: border-box;
+  background-color: #ffffff;
 }
 
 .products-container .slick-slider {
   margin-bottom: 0;
   height: 450px;
+  width: 1190px;
+  margin: 0 auto;
 }
 
 .clear {
@@ -19,7 +26,7 @@
   font-size: 14px;
 }
 
-.top-nav span{
+.top-nav span {
   display: inline-block;
   vertical-align: middle;
   padding-left: 10px;
@@ -145,10 +152,130 @@
   padding: 10px 20px;
   box-shadow: 2px 2px 5px #DDD;
 }
+
 .page--food {
   background-color: #F1F1F1;
   color: #333;
 }
+
 .page--fashion {
   background-color: #DDD;
 }
+
+.product-section {
+  width: 1190px;
+  height: 420px;
+  margin: 10px auto;
+  overflow: hidden;
+  border-top: 2px solid #df3627;
+}
+
+.product-section-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  box-sizing: border-box;
+  padding-top: 70px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.appItems {
+  overflow: hidden;
+  text-align: center;
+  display: inline-block;
+  width: 1000px;
+  margin: 0;
+  padding: 0;
+}
+
+.appItems li {
+  width: 200px;
+  height: 210px;
+  display: inline-block;
+}
+
+.appItem {
+  height: 100%;
+  width: 100%;
+  border-right: 1px solid #eee;
+  overflow: hidden;
+  padding-top: 25px;
+}
+
+.appItem img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+}
+
+.appItem--is-inBasket {
+  border: 3px solid #FB4065;
+}
+
+.goods-name {
+  width: 154px;
+  height: 24px;
+  margin: 0 auto;
+  font-family: 'Microsoft YaHei';
+  color: #333;
+  line-height: 24px;
+  overflow: hidden;
+  font: 12px/1.5 arial,tahoma,\5b8b\4f53;
+}
+
+.appItem-qty {
+  display: none;
+  padding: 5px 10px;
+  background-color: #FB4065;
+  color: #FFF;
+  margin-left: 10px;
+}
+
+.appItem--is-inBasket .appItem-qty {
+  display: inline-block;
+}
+
+.appItem-title {
+  width: 100%;
+  text-transform: uppercase;
+  color: #FFF;
+  background-color: #333;
+  background-color: rgba(33, 33, 33, 0.2);
+  letter-spacing: 1px;
+  font-family: 'Futura', monospace;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+}
+
+.appItem-price {
+  background-color: #FFF;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.addBasket {
+  margin-right: 10px;
+}
+
+.itemTransition-enter {
+  opacity: 0.01;
+  transition: opacity .5s ease-out;
+}
+
+.itemTransition-enter.itemTransition-enter-active {
+  opacity: 1;
+}
+
+.itemTransition-leave {
+  opacity: 0.02;
+  transition: opacity 0s 0s;
+}
+
+.itemTransition-leave.itemTransition-leave-active {
+  opacity: 0.01;
+  transition: opacity 0s 0s;
+}
+

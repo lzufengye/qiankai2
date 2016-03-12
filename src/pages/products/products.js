@@ -6,7 +6,7 @@ import Header from './components/header/header'
 import CustomerSlider from '../components/slider'
 import advertisementStore from './stores/advertisement-store'
 import actions from './actions/app-actions'
-import ImageWithTitle from '../components/image-with-title'
+import ProductSection from './components/products/products-section'
 import { Link } from 'react-router'
 
 // page data
@@ -31,10 +31,8 @@ var Products = React.createClass({
   render: function () {
     let pageName = 'food';
 
-    console.log('d', this.state.advertisements);
-
-    var advertisements = this.state.advertisements.map(function (advertisement) {
-      return <a href={advertisement.link} target='_blank'>
+    var advertisements = this.state.advertisements.map(function (advertisement, index) {
+      return <a href={advertisement.link} target='_blank' key={index}>
         <image src={advertisement.imageUrl}/>
       </a>
     });
@@ -46,10 +44,8 @@ var Products = React.createClass({
         <CustomerSlider>
           {advertisements}
         </CustomerSlider>
-        <div className={pages['page' + pageName].pageClasses}>
-          <h1>{pages['page' + pageName].heading}</h1>
-          <Items type={pageName} />
-        </div>
+        <ProductSection backgroundImage='http://7xjdwj.com1.z0.glb.clouddn.com/section-title.jpg' width='190px' height='420px' title='开县自营' link='#' type='food'/>
+        <ProductSection backgroundImage='http://7xjdwj.com1.z0.glb.clouddn.com/section-title.jpg' width='190px' height='420px' title='开县自营' link='#' type='fashion'/>
       </div>
     );
   }
