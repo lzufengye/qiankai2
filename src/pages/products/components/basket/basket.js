@@ -45,7 +45,7 @@ var Basket = React.createClass({
         </li>);
     });
     var emptyBasket = this.state.qty === 0 ? '您的购物车是空的' : ''
-    var checkOut = this.state.qty === 0 ? '' : <button>去结算</button>
+    var checkOut = this.state.qty === 0 ? '' : <a href='/shopping-cart'>去结算</a>
     return (
       <div className={"appBasket pure-u-3-5 pure-u-md-3-5 pure-u-lg-2-5 " + statusClassName}>
         <div className="pure-g">

@@ -3,10 +3,11 @@ import Reflux from 'reflux'
 import CartActions from '../actions/cart'
 import _ from 'lodash'
 import Qing from '../../../utils/qing'
+import request from 'superagent'
 import layer from '../../../utils/layer'
 import MemberActions from '../actions/member'
 
-var CardStore = Reflux.createStore({
+var CartStore = Reflux.createStore({
   listenables: [CartActions],
   shipFee: 0,
   selectedAddressId: '',
@@ -69,20 +70,17 @@ var CardStore = Reflux.createStore({
   //加载购物车项目
   onLoadItems: function () {
     var $this = this;
-    Qing.apiPost('cart.items', {}, function (resp) {
-      if (resp.error) {
-        $this.list = [];
-      } else {
-        $this.list = resp.data;
-      }
-      //所有项增加selected=false的属性
-      _.map($this.list, function (item) {
-        item['selected'] = false
+
+    $this.list = [];
+    request.get('/data/cart.json')
+      .end((err, res) => {
+        $this.list = JSON.parse(res.text).data;
+        _.map($this.list, function (item) {
+          item['selected'] = false
+        });
+        $this.loaded = true;
+        $this.trigger({'list': $this.list, 'loaded': $this.loaded});
       });
-      $this.loaded = true;
-      //console.log($this.list);
-      $this.trigger({'list': $this.list, 'loaded': $this.loaded});
-    });
   },
   onToggleSelectAll: function (selected) {
     this.list = _.map(this.list, function (item) {
@@ -168,4 +166,4 @@ var CardStore = Reflux.createStore({
   }
 });
 
-export default CardStore
+export default CartStore

@@ -35,9 +35,9 @@ var CartTableHead = React.createClass({
 		CartActions.toggleSelectAll(evt.target.checked);
 	},
 	render: function () {
-		$this = this;
+		var that = this;
 		var h = this.props.data.map(function (item, i) {
-			if (item['forEdit'] && !$this.props.editable) {
+			if (item['forEdit'] && !that.props.editable) {
 				return '';
 			}
 			var t;
@@ -45,7 +45,7 @@ var CartTableHead = React.createClass({
 				t = item['label']
 			} else if (item['type'] == 'checkbox') {
 				t = (<label className="qing-checkbox" htmlFor={"col-index-" + i}>
-					<input type="checkbox" onChange={$this.toggleAll} className={item['className']} id={'col-index-' + i}/>
+					<input type="checkbox" onChange={that.toggleAll} className={item['className']} id={'col-index-' + i}/>
 					<i></i>
 				</label>);
 			}
@@ -252,7 +252,7 @@ var CartApp = React.createClass({
 	},
 	render: function () {
 		return (
-			<ReactRouter.RouteHandler list={this.state.list} loaded={this.state.loaded} />
+			<CartTable list={this.state.list} loaded={this.state.loaded} />
 		)
 	}
 });
@@ -518,4 +518,13 @@ var CartInvoice = React.createClass({
 	}
 });
 
-export default CartTableHead;
+var CartPage = React.createClass({
+	render() {
+		return (
+			<CartApp>
+				</CartApp>
+		);
+	}
+});
+
+export default CartPage

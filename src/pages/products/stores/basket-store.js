@@ -29,9 +29,6 @@ var BasketStore = Reflux.createStore({
       let itemToRemove = _.find(this.data.basketItems, { 'id': item.id });
       let itemIndex = this.data.basketItems.indexOf(itemToRemove);
 
-      console.log('isIn', this.isInBasket(item));
-      console.log('qty', this.data.basketItems[itemIndex]);
-
       if(this.isInBasket(item) && this.data.basketItems[itemIndex].qty>1) {
         this.data.basketItems[itemIndex].qty--;
       } else {
