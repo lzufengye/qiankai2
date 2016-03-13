@@ -2,6 +2,7 @@ import React from 'react'
 import Reflux from 'reflux'
 
 import Header from './components/header/header'
+import Footer from '../../footer'
 import AddToBasket from './components/basket/add-to-basket'
 import RemoveFromBasket from './components/basket/remove-from-basket'
 import Basket from './components/basket/basket'
@@ -51,8 +52,6 @@ var Product = React.createClass({
         <image src={image} data-src={image}/>
       </li>
     });
-
-    console.log(this.state.product);
 
     return (
       <div className='products-container'>
@@ -144,6 +143,7 @@ var Product = React.createClass({
             <ProductMoreInfo />
           </div>
         </div>
+        <Footer />
       </div>
     );
   }

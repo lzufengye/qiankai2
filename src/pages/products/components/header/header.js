@@ -36,13 +36,14 @@ var Header =
                 </ul>
               </div>
               <div className="middle-nav">
-                <image className='logo-image' src='/assets/images/products/logo3.png' />
+                <image className='logo-image' src='/assets/images/products/logo.jpg' />
                 <image className='logo-title' src='/assets/images/products/logo-title.png' />
               </div>
               <div className="bottom-nav">
                 <ProductCategory />
-                <NavLink to="/" onlyActiveOnIndex>首页</NavLink>
-                <a href='#'>智慧旅游</a>
+                <NavLink to="/products/hot" onlyActiveOnIndex>首页</NavLink>
+                <a href="/products/all">商城</a>
+                <a href='/travel.html'>智慧旅游</a>
                 <NavLink to="/convenience-life/newses">便民服务</NavLink>
                 <NavLink to="/" onlyActiveOnIndex>热点资讯</NavLink>
                 <NavLink to="/innovation-space/activities" >众创空间</NavLink>

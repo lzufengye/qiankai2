@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>开街网</title>
+    <link href="/assets/travel/css/navbar.css" rel="stylesheet" type="text/css"/>
+    <link href="/assets/travel/css/commom.css" rel="stylesheet" type="text/css"/>
+    <script src="/assets/travel/lib/jquery-1.7.2.min.js"></script>
+    <script src="/assets/travel/lib/jquery.hiSlider.js"></script>
+    <script src="/assets/travel/jQuery/navLeft.js"></script>
+    <script src="/assets/travel/jQuery/navRight.js"></script>
+    <script src="/assets/travel/jQuery/bar.js"></script>
+</head>
+<body>
+<header>
+    <div class="tool-bar">
+        <!--顶部工具栏-->
+        <div class="bar">
+            <!--左工具栏（登陆注册）-->
+            <div class="barLeft">
+                <ul>
+                    <li><a href="">请登录</a><span></span></li>
+                    <li><a href="">免费注册</a><span></span></li>
+                </ul>
+            </div>
+            <!--右工具栏-->
+            <div class="barRight">
+                <ul class="bar-right">
+                    <li id="br-1"><a href="">购物车</a><span></span></li>
+                    <li id="br-2"><a href="">我的开街</a><span></span></li>
+                    <li id="br-3"><a href="">我的订单</a><span></span></li>
+                </ul>
+                <!--隐藏盒子-->
+                <div id="bar-1" class="hidden-barBox hidden-bar-index">
+                    <ul>
+                        <li>。。。。</li>
+                        <li>。。。。</li>
+                        <li>。。。。</li>
+                        <li>。。。。</li>
+                    </ul>
+                </div>
+                <div id="bar-2" class="hidden-barBox hidden-bar-us">
+                    <ul>
+                        <li>加入步骤</li>
+                        <li>申请要求</li>
+                    </ul>
+                </div>
+                <div id="bar-3" class="hidden-barBox hidden-bar-info">
+                    <ul>
+                        <li>订单管理</li>
+                        <li>物流跟踪</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Logo和搜索栏-->
+    <div class="logo">
+        <img src="/assets/travel/img/logo.png">
+        <div class="search-wrap">
+            <input class="search-text"/>
+            <a class="search-btn">搜索</a>
+        </div>
+    </div>
+</header>
+
+<!--导航栏框架-->
+<nav id="navOut">
+    <!--导航栏样式-->
+    <div class="nav">
+        <!--商品分类栏（左导航栏）-->
+        <div class="navLeft">
+            <a href="index.html"><p>全部商品分类</p></a>
+        </div>
+        <!--右导航栏-->
+        <div class="navRight">
+            <ul class="nav-right">
+                <li id="li-1"><a href="">开街商城</a><span></span></li>
+                <li id="li-2"><a href="">智慧旅游</a><span></span></li>
+                <li id="li-3"><a href="">便民服务</a><span></span></li>
+                <li id="li-4"><a href="">金融服务</a><span></span></li>
+                <li id="li-5"><a href="">众创空间</a><span></span></li>
+                <li id="li-6"><a href="">企业服务</a><span></span></li>
+            </ul>
+            <!--隐藏盒子-->
+            <div id="list-1" class="hidden-box hidden-loc-box01">
+                <ul>
+                    <li>开县自营</li>
+                    <li>名特产品</li>
+                    <li>乡村土货</li>
+                    <li>工艺产品</li>
+                    <li>县外产品</li>
+                    <li>进口产品</li>
+                </ul>
+            </div>
+            <div id="list-2" class="hidden-box hidden-loc-box02">
+                <ul>
+                    <li><a href="#hotview">热门景点</a></li>
+                    <li><a href="#village">乡村旅游</a></li>
+                    <li><a href="http://bbs.cqkx.com/forum-142-1.html"> 自驾旅游</a></li>
+                    <li><a href="#orderhotel">酒店预订</a></li>
+                    <li><a href="#virtual">虚拟旅游</a></li>
+                    <li><a href="http://bbs.cqkx.com/forum-273-1.html">驴友之家</a></li>
+                </ul>
+            </div>
+            <div id="list-3" class="hidden-box hidden-loc-box03">
+                <ul>
+                    <li>购票缴费</li>
+                    <li>健康服务</li>
+                    <li>就业服务</li>
+                    <li>餐饮娱乐</li>
+                    <li>房屋中介</li>
+                    <li>家政服务</li>
+                </ul>
+            </div>
+            <div id="list-4" class="hidden-box hidden-loc-box04">
+                <ul>
+                    <li>投资理财</li>
+                    <li>融资担保</li>
+                    <li>小额贷款</li>
+                    <li>银行服务</li>
+                    <li>保险服务</li>
+                    <li>证券资讯</li>
+                </ul>
+            </div>
+            <div id="list-5" class="hidden-box hidden-loc-box05">
+                <ul>
+                    <li>商家展示</li>
+                    <li>孵化体验</li>
+                    <li>合作配套</li>
+                    <li>活动发布</li>
+                    <li>教育培训</li>
+                    <li>创客之家</li>
+                </ul>
+            </div>
+            <div id="list-6" class="hidden-box hidden-loc-box06">
+                <ul>
+                    <li>企业入驻</li>
+                    <li>政策咨询</li>
+                    <li>专家把脉</li>
+                    <li>商务运作</li>
+                    <li>法务服务</li>
+                    <li>协会服务</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!--滚动栏-->
+<div id="banner">
+    <ul class="hiSlider hiSlider1">
+        <li data-title="11111" class="hiSlider-item"><a href=""><img class="img-item" src="/assets/travel/img/travel/travel-index01.jpg" alt="11111"></a></li>
+        <li data-title="11111" class="hiSlider-item"><a href=""><img class="img-item" src="/assets/travel/img/travel/travel-index02.jpg" alt="11111"></a></li>
+        <li data-title="11111" class="hiSlider-item"><a href=""><img class="img-item" src="/assets/travel/img/travel/travel-index03.jpg" alt="11111"></a></li>
+        <li data-title="11111" class="hiSlider-item"><a href=""><img class="img-item" src="/assets/travel/img/travel/travel-index04.jpg" alt="11111"></a></li>
+    </ul>
+</div>
+
+<!--旅游景点展示-->
+    <div id="content">
+        <div class="part-wrap">
+            <span id="hotview" name="hotview"></span>
+            <lable class="title">热门景点</lable>
+            <label style="float: right;font-size: large"><a href="viewList.html">更多</a></label>
+            <div id="part1" class="item-wrap">
+                <div class="travel-show">
+                    <a href=""><img src="/assets/travel/img/travel/hotView/longzuishan.jpg"></a>
+                    <div class="introduce">龙头嘴森林公园</div>
+                </div>
+                <div class="travel-show">
+                    <a href=""><img src="/assets/travel/img/travel/hotView/hanfenghu.jpg"></a>
+                    <div class="introduce">汉丰湖</div>
+                </div>
+                <div class="travel-show">
+                    <a href=""><img src="/assets/travel/img/travel/hotView/shilizhuxi.jpg"></a>
+                    <div class="introduce">十里竹溪</div>
+                </div>
+            </div>
+
+        </div>
+        <br/>
+        <br/>
+
+        <div class="part-wrap">
+            <span id="village" name="village"></span>
+            <lable class="title">乡村旅游</lable>
+            <label style="float: right;font-size: large"><a href="viewList.html">更多</a></label>
+            <div id="part2" class="item-wrap">
+                <div class="travel-show">
+                    <img src="/assets/travel/img/travel/village/manyue.jpg">
+                    <div class="introduce">满月乡村风光</div>
+                </div>
+                <div class="travel-show">
+                    <img src="/assets/travel/img/travel/village/tianyuandade.jpg">
+                    <div class="introduce">田园大德</div>
+                </div>
+                <div class="travel-show">
+                    <img src="/assets/travel/img/travel/village/shuiyunhouba.JPG">
+                    <div class="introduce">水韵厚坝</div>
+                </div>
+            </div>
+
+        </div>
+        <br/>
+        <br/>
+        <!--
+        <div class="part-wrap">
+            <span id="byself" name="byself"></span>
+            <lable class="title">自驾旅游</lable>
+            <ul class="nav-travel">
+                <li>开县特产</li>
+                <li id="kaixiangouwu">开县购物</li>
+                <li style="background-color:#CC3333 ">开县美食</li>
+            </ul>
+            <div id="part3" class="item-wrap">
+                <div class="travel-show">
+                    <img src="src/img/travel/byself/food01.jpg">
+                    <div class="introduce">牛肉包面</div>
+                </div>
+                <div class="travel-show">
+                    <img src="src/img/travel/byself/food02.jpg">
+                    <div class="introduce">开州大笼蒸</div>
+                </div>
+                <div class="travel-show">
+                    <img src="src/img/travel/byself/food03.jpg">
+                    <div class="introduce">十大碗</div>
+                </div>
+            </div>
+        </div>
+        <br/>
+        <br/>
+        <!-->
+        <div class="part-wrap">
+            <span id="orderhotel" name="orderhotel"></span>
+            <lable class="title">酒店预订</lable>
+            <label style="float: right;font-size: large"><a href="">更多</a></label>
+            <div id="part4" class="item-wrap">
+                <div class="hotel-show">
+                    <img src="/assets/travel/img/travel/hotel/jinke.jpg">
+                    <ul class="price">
+                        <li>金科大酒店</li>
+                        <li style="color: red">¥ 398.00</li>
+                    </ul>
+                </div>
+                <div class="hotel-show">
+                    <img src="/assets/travel/img/travel/hotel/huangguan.jpg">
+                    <ul class="price">
+                        <li>皇冠大酒店</li>
+                        <li style="color: red">¥ 298.00</li>
+                    </ul>
+                </div>
+                <div class="hotel-show">
+                    <img src="/assets/travel/img/travel/hotel/kaiyue.JPG">
+                    <ul class="price">
+                        <li>凯悦酒店</li>
+                        <li style="color: red">¥ 228.00</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <br/>
+        <br/>
+
+        <div class="part-wrap">
+            <span id="virtual" name="virtual"></span>
+            <lable class="title">虚拟旅游</lable>
+            <div id="part5" class="item-wrap">
+                <div class="travel-show"></div>
+                <div class="travel-show"></div>
+                <div class="travel-show"></div>
+            </div>
+        </div>
+        <br/>
+        <br/>
+    </div>
+
+<footer>
+    <div style="text-align: center;margin-top: 40px">
+    <img src="/assets/travel/img/footer/footer.png">
+    </div>
+</footer>
+
+<script>
+    $('.hiSlider1').hiSlider({
+        isShowTitle: false,
+        affectTime:1000,
+        intervalTime:3000
+
+    });
+
+    $('.nav-travel li').click(function(){
+        $(this).css('background-color','#CC3333');
+        $(this).siblings().css('background-color','#2292DD')
+    })
+
+</script>
+</body>
+</html>

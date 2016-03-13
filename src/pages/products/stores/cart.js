@@ -58,13 +58,16 @@ var CartStore = Reflux.createStore({
   },
   //建订单
   onCreateOrder: function (data, callback) {
-    layer.msg('提交订单中...');
-    Qing.apiPost('order.create', data, function (resp) {
-      layer.msg(resp.msg);
-      if (!resp.error && 'function' == typeof callback) {
-        callback(resp);
-      }
-    });
+    layer.msg('模拟支付，提交订单中...');
+
+    request.get('/data/order.create.json')
+      .end((err, resp) => {
+        layer.msg('模拟支付，提交订单中...');
+        if (!resp.error && 'function' == typeof callback) {
+          callback(resp);
+        }
+        layer.msg(JSON.parse(resp.text).msg);
+      });
   },
   //加载购物车项目
   onLoadItems: function () {

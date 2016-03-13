@@ -9,8 +9,10 @@ import CartAction from '../actions/cart'
 import MyAddressList from './cart/myaddresslist'
 import CartTableHead from './cart/cart-table-header'
 import CartTableBody from './cart/cart-table-body'
+import CartActions from '../actions/cart'
 import InvoiceEditor from './invoice-editor'
 import Header from './header/header'
+import Footer from '../../../footer'
 
 //待付商品列表
 var WaitingForPayCartItemList = React.createClass({
@@ -165,6 +167,12 @@ var CartToOrder = React.createClass({
     CartStore.initProductTotalFee(ptf);
     this.setState({'productTotalFee': ptf});
   },
+
+  componentDidMount() {
+    var selectedList = cookie.load('selectedList');
+    this.setState({'selectedList': selectedList});
+  },
+
   submitOrder: function () {
     //CartActions.createOrder(this.state);
     var ids = [];
@@ -198,21 +206,12 @@ var CartToOrder = React.createClass({
           </div>
           <WaitingForPayCartItemList list={this.state.selectedList}/>
           <div className="row">
-            <div className="col-md-6">
-              <div className="cart-mod">
-                <h2 className="cart-mod-title">
-                  <i className="icon iconfont">&#xe625;</i> {'我要留言'}</h2>
-                <textarea className="form-control" rows="3" valueLink={this.linkState('orderMemo')}></textarea>
-              </div>
-            </div>
-            <div className="col-md-6">
-              <CartInvoice/>
-            </div>
             <div className="col-xs-12">
               <CartSummaryForPay submitOrder={this.submitOrder} list={this.state.selectedList} shipFee={this.state.shipFee}/>
             </div>
           </div>
         </div>
+        <Footer />
       </div>
     )
   }

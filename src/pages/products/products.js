@@ -1,10 +1,12 @@
 import React from 'react'
 import Reflux from 'reflux'
 import Header from './components/header/header'
+import Footer from '../../footer'
 import CustomerSlider from '../components/slider'
 import advertisementStore from './stores/advertisement-store'
 import actions from './actions/product-actions'
 import ProductSection from './components/products/products-section'
+import ServiceBar from './components/service-bar'
 import { Link } from 'react-router'
 
 // page data
@@ -39,11 +41,31 @@ var Products = React.createClass({
       <div className='products-container'>
         <Header>
         </Header>
-        <CustomerSlider>
+        <div className='slider-server-container'>
+          <ServiceBar />
+          <CustomerSlider>
           {advertisements}
-        </CustomerSlider>
-        <ProductSection backgroundImage='http://7xjdwj.com1.z0.glb.clouddn.com/section-title.jpg' width='190px' height='420px' title='开县自营' link='#' type='food'/>
-        <ProductSection backgroundImage='http://7xjdwj.com1.z0.glb.clouddn.com/section-title.jpg' width='190px' height='420px' title='开县自营' link='#' type='food'/>
+          </CustomerSlider>
+        </div>
+        <ProductSection backgroundImage='http://7xjdwj.com1.z0.glb.clouddn.com/section-title.jpg' width='190px' height='500px' title='开县自营' link='#' type='food'>
+          <ul className='section-menu'>
+            <li>开县县馆</li>
+            <li>满月镇</li>
+            <li>紫水镇</li>
+            <li>大德镇</li>
+            <li>麻柳镇</li>
+            <li>五通镇</li>
+            <li>南雅镇</li>
+          </ul>
+        </ProductSection>
+        <ProductSection backgroundImage='/assets/images/products/ziying.png' width='190px' height='210px' title='开县特产' link='#' type='food'/>
+        <ProductSection backgroundImage='/assets/images/products/imported.png' width='190px' height='420px' title='进口商品' link='#' type='food'/>
+        <ProductSection backgroundImage='/assets/images/products/riyong.png' width='190px' height='210px' title='生活日用' link='#' type='food'/>
+        <ProductSection backgroundImage='/assets/images/products/jiushui.png' width='190px' height='210px' title='食品酒水' link='#' type='food'/>
+        <ProductSection backgroundImage='/assets/images/products/hufu.png' width='190px' height='210px' title='美妆护肤' link='#' type='food'/>
+        <ProductSection backgroundImage='/assets/images/products/xiangji.png' width='190px' height='210px' title='数码相机' link='#' type='food'/>
+        <ProductSection backgroundImage='/assets/images/products/jiadian.png' width='190px' height='420px' title='家用电器' link='#' type='food'/>
+        <Footer />
       </div>
     );
   }

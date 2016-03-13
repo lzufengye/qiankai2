@@ -348,14 +348,14 @@ input {
   height: 75px;
   padding: 20px 0;
   line-height: 2.0834em;
-  background-color: #E54137;
+  background-color: #33302b;
   text-align: center;
-  color: #FCCCC9;
+  color: #eee;
   font-size: 0.75em;
 }
 
 .footer a {
-  color: #FCCCC9;
+  color: #eee;
   padding: 0 5px;
 }
 

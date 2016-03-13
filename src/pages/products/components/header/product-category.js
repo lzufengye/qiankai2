@@ -23,11 +23,8 @@ var ProductCategory = React.createClass({
     };
 
     var hideSubMenu = () => {
-      console.log('hide');
       actions.hideCategory();
     }
-
-    console.log(this.state.display);
 
     var style = {
       display: this.state.display

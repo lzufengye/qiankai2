@@ -20,8 +20,12 @@ var ProductSection = React.createClass({
       item.type = this.state.productType;
       return <Item key={item.id} item={item} index={i} />;
     });
+
+    var style = {height: this.props.height};
+
     return (
-      <div className='product-section'>
+      <div className='product-section' style={style}>
+        {this.props.children}
         <ProductSectionTitle backgroundImage={this.props.backgroundImage} width={this.props.width} height={this.props.height} title={this.props.title} link={this.props.link}/>
         <ReactCSSTransitionGroup component="ul" className="pure-g appItems list-reset" id="item-group"  transitionName="itemTransition" transitionLeave={false}>
           {items}

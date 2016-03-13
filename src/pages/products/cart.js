@@ -2,6 +2,7 @@ import React from 'react'
 
 import CartPage from './components/carttable'
 import Header from './components/header/header'
+import Footer from '../../footer'
 
 var Cart = React.createClass({
   render() {
@@ -9,6 +10,7 @@ var Cart = React.createClass({
       <div className='products-container'>
         <Header />
         <CartPage />
+        <Footer />
       </div>
     );
   }

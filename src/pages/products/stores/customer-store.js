@@ -33,7 +33,7 @@ var CustomerStore = Reflux.createStore({
   },
 
   hideCategory() {
-    this.data.display = 'none';
+    //this.data.display = 'none';
     this.trigger(this.data);
   },
 

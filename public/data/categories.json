@@ -2,7 +2,7 @@
   "categories": [
     {
       "id": 1,
-      "display": "开县自营",
+      "display": "乡镇",
       "subCategories": [
         {
           "id": 1,
@@ -24,7 +24,7 @@
     },
     {
       "id": 2,
-      "display": "名特产品",
+      "display": "粮油调味",
       "subCategories": [
         {
           "id": 5,
@@ -46,85 +46,99 @@
     },
     {
       "id": 3,
-      "display": "乡村土货",
+      "display": "休闲零食",
       "subCategories": [
         {
           "id": 9,
-          "display": "满月"
+          "display": "蜜饯"
         },
         {
           "id": 10,
-          "display": "紫水"
+          "display": "炒货"
         },
         {
           "id": 11,
-          "display": "竹溪"
+          "display": "海味"
         }
       ]
     },
     {
       "id": 4,
-      "display": "工艺产品",
+      "display": "茗茶冲饮",
       "subCategories": [
         {
           "id": 12,
-          "display": "满月"
+          "display": "红茶"
         },
         {
           "id": 13,
-          "display": "紫水"
+          "display": "绿茶"
         },
         {
           "id": 14,
-          "display": "竹溪"
+          "display": "花草茶"
         },
         {
           "id": 15,
-          "display": "大德"
+          "display": "冲饮"
         }
       ]
     },
     {
       "id": 5,
-      "display": "县外产品",
+      "display": "滋补养生",
       "subCategories": [
         {
           "id": 16,
-          "display": "满月"
+          "display": "蜂蜜"
         },
         {
           "id": 17,
-          "display": "紫水"
+          "display": "枸杞"
         },
         {
           "id": 18,
-          "display": "竹溪"
-        },
-        {
-          "id": 19,
-          "display": "大德"
+          "display": "石斛"
         }
       ]
     },
     {
       "id": 6,
-      "display": "进口商品",
+      "display": "美酒佳酿",
       "subCategories": [
         {
           "id": 20,
-          "display": "满月"
+          "display": "葡萄酒"
         },
         {
           "id": 21,
-          "display": "紫水"
+          "display": "白酒"
         },
         {
           "id": 22,
-          "display": "竹溪"
+          "display": "松子酒"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "display": "时令生鲜",
+      "subCategories": [
+        {
+          "id": 20,
+          "display": "蜜柚"
+        },
+        {
+          "id": 21,
+          "display": "脐橙"
+        },
+        {
+          "id": 22,
+          "display": "腊肉"
         },
         {
           "id": 23,
-          "display": "大德"
+          "display": "水产"
         }
       ]
     }
