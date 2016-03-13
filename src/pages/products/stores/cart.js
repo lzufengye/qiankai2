@@ -20,13 +20,13 @@ var CartStore = Reflux.createStore({
   },
   initProductTotalFee: function (fee) {
     this.productTotalFee = fee;
-
   },
   //选中项以下单
   onSelectItemToOrder: function (selectedList) {
     this.selectedList = selectedList;
-    //console.log('Trigger selectedList');
-    //console.log(this.selectedList);
+  },
+
+  loadSelectedItems: function () {
     this.trigger({'selectedList': this.selectedList});
   },
   //保存发票信息
@@ -55,10 +55,6 @@ var CartStore = Reflux.createStore({
   },
   //建订单
   onCreateOrder: function (data, callback) {
-    //console.log(data.addressId);
-    //console.log(data.invoiceTitle);
-    //console.log(data.memo);
-    //console.log(data.ids);
     layer.msg('提交订单中...');
     Qing.apiPost('order.create', data, function (resp) {
       layer.msg(resp.msg);
@@ -130,28 +126,28 @@ var CartStore = Reflux.createStore({
     reload = typeof reload == 'undefined' ? true : false;
     var $this = this;
     if (foundItem) {
-      Qing.apiPost('cart.updateQty', {'id': foundItem.id, 'qty': qty}, function (resp) {
-        if (resp.error) {
-          layer.msg(resp.msg);
-          if (resp.code == 80000) {
-            //foundItem.qty = qty;
-            //$this.trigger($this.list);
-            if (reload) CartActions.loadItems();
-          }
-        } else {
-          if (qty > 0) {
-            foundItem.qty = qty;
+      request.get('/data/cart.updateQty.json')
+        .end((err, resp) => {
+          if (resp.error) {
+            layer.msg(resp.msg);
+            if (resp.code == 80000) {
+              //foundItem.qty = qty;
+              //$this.trigger($this.list);
+              if (reload) CartActions.loadItems();
+            }
           } else {
-            //删除项目
-            _.remove($this.list, function (item) {
-              return item['id'] == foundItem['id'];
-            });
-            //console.log($this.list);
+            if (qty > 0) {
+              foundItem.qty = qty;
+            } else {
+              //删除项目
+              _.remove($this.list, function (item) {
+                return item['id'] == foundItem['id'];
+              });
+              //console.log($this.list);
+            }
+            $this.updateList($this.list);
           }
-          $this.updateList($this.list);
-        }
-
-      });
+        });
     }
   },
   getItemBySn: function (sn) {
@@ -164,6 +160,7 @@ var CartStore = Reflux.createStore({
       return item.id === id;
     });
   }
+
 });
 
 export default CartStore

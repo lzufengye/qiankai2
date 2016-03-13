@@ -11,6 +11,7 @@ import InnovationSpace from './src/pages/innovation-space'
 import Products from './src/pages/products/products'
 import Product from './src/pages/products/product'
 import Cart from './src/pages/products/cart'
+import CartToOrder from './src/pages/products/components/cart-to-order'
 import { Router, Route, browserHistory, IndexRoute } from 'react-router'
 
 ReactDOM.render(
@@ -42,6 +43,7 @@ ReactDOM.render(
     </Route>
     <Route path="/product/:id" component={Product} />
     <Route path="/shopping-cart" component={Cart} />
+    <Route path="/shopping-cart-to-order" component={CartToOrder} />
   </Router>,
   document.getElementById('content')
 );
