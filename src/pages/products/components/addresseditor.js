@@ -130,7 +130,7 @@ var AddressEditor = React.createClass({
   render: function () {
     var defaultAddress = this.radioGroup("isDefault");
     return (
-      <div className="row">
+      <div className="row address-editor">
         <form method="post" className="qing-pad-tb-10 col-md-12 form-horizontal" id="addressEditForm">
           <div className="form-group">
             <label className="col-md-3 align-right control-label">{'收货人姓名'}</label>

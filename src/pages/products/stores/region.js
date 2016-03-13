@@ -2,6 +2,7 @@ import Reflux from 'reflux'
 
 import RegionActions from '../actions/region'
 import Qing from '../../../utils/qing'
+import request from 'superagent'
 
 var initRegionData = {
   provinceList: [],
@@ -21,10 +22,11 @@ var Region = Reflux.createStore({
   //载入省份
   onLoadRegionProvince: function () {
     var $this = this;
-    Qing.apiPost('region.provinceList', {}, function (resp) {
-      $this.regionData.provinceList = resp.data.list;
-      $this.trigger($this.regionData);
-    });
+    request.get('/data/region.provinceList.json')
+      .end((err, resp) => {
+        $this.regionData.provinceList = JSON.parse(resp.text).data.list;
+        $this.trigger($this.regionData);
+      });
   },
   //根据省份载入城市
   onSelectProvince: function (province, callback) {
@@ -33,14 +35,15 @@ var Region = Reflux.createStore({
     this.regionData.selectedProvinceId = province['id'];
     this.regionData.selectedCityId = '';
 
-    Qing.apiPost('region.cityList', {'provinceId': province['id']}, function (resp) {
-      $this.regionData.cityList = resp.data.list;
-      $this.regionData.selectedProvince = province;
-      $this.regionData.selectedRegion = province['name'];
-      $this.trigger($this.regionData);
-      if (typeof callback == 'function')
-        callback.call();
-    });
+    request.get('/data/region.cityList.json')
+      .end((err, resp) => {
+        $this.regionData.cityList = JSON.parse(resp.text).data.list;
+        $this.regionData.selectedProvince = province;
+        $this.regionData.selectedRegion = province['name'];
+        $this.trigger($this.regionData);
+        if (typeof callback == 'function')
+          callback.call();
+      });
   },
   //选中城市
   onSelectCity: function (city) {

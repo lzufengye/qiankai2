@@ -415,7 +415,7 @@ h2.cart-mod-title:before {
 }
 .cart-region-item.active,
 .cart-region-item:focus {
-  background: #2cd5b6;
+  background: rgb(250, 155, 10);
   color: #fff;
 }
 .cart-region-item:hover {
@@ -433,7 +433,6 @@ h2.cart-mod-title:before {
   padding: 5px;
   display: inline-block;
   position: relative;
-  margin: 5px 0px;
   vertical-align: top;
   width: 98%;
   clear: both;
@@ -441,7 +440,7 @@ h2.cart-mod-title:before {
 }
 .cart-addr-item:hover,
 .cart-addr-item.cart-addr-active {
-  border-color: #2cd5b6;
+  border-color: rgb(250, 155, 10);
 }
 .cart-addr-item .cart-addr-title {
   border-bottom: 1px solid #dedede;
@@ -479,6 +478,7 @@ h2.cart-mod-title:before {
 .cart-addr-more {
   margin-left: 10px;
   cursor: pointer;
+  color: rgb(250, 155, 10);
 }
 .cart-beforepay-summary {
   padding: 10px 0px;
@@ -576,3 +576,40 @@ h2.cart-mod-title:before {
 .qing-no-padding {
   padding: 0px;
 }
+
+.cart-to-order-container {
+  width: 1190px;
+  margin: 0 auto;
+  padding-top: 15px;
+}
+
+.col-md-3 {
+  width: 260px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  display: inline-block;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.layui-layer-page {
+  margin: 0 auto;
+}
+
+.address-editor .col-md-3 {
+  width: 20%;
+  display: inline-block;
+  box-sizing: border-box;
+  margin-right: 10px;
+}
+
+.address-editor .col-md-9 {
+  width: 70%;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+.hide {
+  display: none;
+}
+

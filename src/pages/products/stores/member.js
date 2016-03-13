@@ -6,6 +6,7 @@ import RegionActions from '../actions/region'
 import RegionStore from '../stores/region'
 import _ from 'lodash'
 import Qing from '../../../utils/qing'
+import request from 'superagent'
 
 var Member = Reflux.createStore({
   listenables: [MemberActions],
@@ -55,15 +56,16 @@ var Member = Reflux.createStore({
     this.trigger({'selectedAddressId': this.selectedAddressId, 'list': this.list});
   },
   onSaveAddress: function (data, callback) {
-    Qing.apiPost('member.saveAddress', data, function (resp) {
-      if ('function' == typeof callback) {
-        callback(resp);
-      }
-      if (!resp.error) {
-        //更新list
-        this.onLoadAddressList();
-      }
-    }.bind(this));
+    request.get('/data/member.saveAddress.json')
+      .end((err, resp) => {
+        if ('function' == typeof callback) {
+          callback(resp);
+        }
+        if (!resp.error) {
+          //更新list
+          this.onLoadAddressList();
+        }
+      }).bind(this);
   },
   onNewAddress: function () {
     var data = this.getInitAddressObject(true);
@@ -106,19 +108,21 @@ var Member = Reflux.createStore({
   },
   onLoadAddressList: function () {
     var $this = this;
-    Qing.apiPost('member.addressList', {}, function (resp) {
-      $this.list = resp.data['list'];
-      $this.trigger({'list': resp.data['list']});
-      //选中默认
-      if (!this.selectedAddressId && _.isArray($this.list) && $this.list.length > 0) {
-        var defaultAddr = _.find($this.list, function (item) {
-          return item['isDefault'] == 1;
-        });
-        //console.log('set default');
-        //console.log(defaultAddr);
-        MemberActions.selectAddress(defaultAddr);
-      }
-    });
+
+    request.get('/data/member.addressList.json')
+      .end((err, resp) => {
+        $this.list = JSON.parse(resp.text).data['list'];
+        $this.trigger({'list': JSON.parse(resp.text).data['list']});
+        //选中默认
+        if (!this.selectedAddressId && _.isArray($this.list) && $this.list.length > 0) {
+          var defaultAddr = _.find($this.list, function (item) {
+            return item['isDefault'] == 1;
+          });
+          //console.log('set default');
+          //console.log(defaultAddr);
+          MemberActions.selectAddress(defaultAddr);
+        }
+      });
   }
 });
 

@@ -4,6 +4,7 @@ import Reflux from 'reflux'
 import MemberActions from '../../actions/member'
 import MemberStore from '../../stores/member'
 import AddressEditor from '../addresseditor'
+import layer from '../../../../utils/layer'
 //地址项
 var MyAddressItem = React.createClass({
   editAddrItem: function (e) {
@@ -123,7 +124,7 @@ var AddressList = React.createClass({
         </div>
         <div className="col-md-12">
           <button className="btn" onClick={this.newAddress} type="button">
-            <i className="icon iconfont">&#xe62d;</i>{'新增收货地址'}</button>
+            {'新增收货地址'}</button>
 						{moreAddrs}
         </div>
 

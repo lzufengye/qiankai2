@@ -10,6 +10,7 @@ import MyAddressList from './cart/myaddresslist'
 import CartTableHead from './cart/cart-table-header'
 import CartTableBody from './cart/cart-table-body'
 import InvoiceEditor from './invoice-editor'
+import Header from './header/header'
 
 //待付商品列表
 var WaitingForPayCartItemList = React.createClass({
@@ -189,24 +190,27 @@ var CartToOrder = React.createClass({
   render: function () {
 
     return (
-      <div classRow="row">
-        <div className="col-md-12">
-          <MyAddressList />
-        </div>
-        <WaitingForPayCartItemList list={this.state.selectedList}/>
-        <div className="row">
-          <div className="col-md-6">
-            <div className="cart-mod">
-              <h2 className="cart-mod-title">
-                <i className="icon iconfont">&#xe625;</i> {'我要留言'}</h2>
-              <textarea className="form-control" rows="3" valueLink={this.linkState('orderMemo')}></textarea>
+      <div className="products-container">
+        <Header />
+        <div className="cart-to-order-container">
+          <div className="col-md-12">
+            <MyAddressList />
+          </div>
+          <WaitingForPayCartItemList list={this.state.selectedList}/>
+          <div className="row">
+            <div className="col-md-6">
+              <div className="cart-mod">
+                <h2 className="cart-mod-title">
+                  <i className="icon iconfont">&#xe625;</i> {'我要留言'}</h2>
+                <textarea className="form-control" rows="3" valueLink={this.linkState('orderMemo')}></textarea>
+              </div>
             </div>
-          </div>
-          <div className="col-md-6">
-            <CartInvoice/>
-          </div>
-          <div className="col-xs-12">
-            <CartSummaryForPay submitOrder={this.submitOrder} list={this.state.selectedList} shipFee={this.state.shipFee}/>
+            <div className="col-md-6">
+              <CartInvoice/>
+            </div>
+            <div className="col-xs-12">
+              <CartSummaryForPay submitOrder={this.submitOrder} list={this.state.selectedList} shipFee={this.state.shipFee}/>
+            </div>
           </div>
         </div>
       </div>
