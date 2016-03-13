@@ -1,46 +1,41 @@
 import Reflux from 'reflux'
 import request from 'superagent'
-import actions from '../actions/app-actions'
 import productActions from '../actions/product-actions'
 
 var ProductStore = Reflux.createStore({
 
   init() {
     this.data = {
-      products: {food: [], fashion: []}
+      product: {id: '', images: [], comments: [], customer: {}},
+      displayImage: ''
     };
 
     this.listenTo(productActions.loadProduct, this.loadProduct);
+    this.listenTo(productActions.changeDisplayImage, this.changeDisplayImage);
   },
 
-  loadProduct(productType) {
-    console.log('type', productType);
-    if(this.data.products[productType].length === 0) {
-      request.get('/data/' + productType +'.json')
+  loadProduct(id) {
+    if(this.data.product.id == '') {
+      request.get('/data/product-' + id + '.json')
         .end((err, res) => {
-          this.data.products[productType] = JSON.parse(res.text)[0].products;
+          this.data.product = JSON.parse(res.text).product;
+          if(this.data.product.images.length > 0) {
+            this.data.displayImage = this.data.product.images[0];
+          }
           this.trigger(this.data);
         });
     } else {
       this.trigger(this.data);
     }
+    $('.image-zoom-main').zoom();
   },
 
-  loadPage(productType,cached) {
-    console.log('product-store-load-page');
-    if(cached !== true || this.data.products[productType].length === 0) {
-      request.get('/data/' + productType +'.json')
-        .end((err, res) => {
-          this.data.products[productType] = JSON.parse(res.text)[0].products;
-          this.trigger(this.data);
-        });
-    } else {
-      this.trigger(this.data);
-    }
+  changeDisplayImage(index) {
+    this.data.displayImage = this.data.product.images[index];
+    this.trigger(this.data);
   },
 
   getInitialState() {
-    console.log('product-store');
     return this.data;
   }
 });

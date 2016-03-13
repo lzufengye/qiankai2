@@ -2,7 +2,7 @@ import React from 'react'
 import Reflux from 'reflux'
 
 import basketStore from '../../stores/basket-store'
-import actions from '../../actions/app-actions'
+import actions from '../../actions/product-actions'
 
 var RemoveFromBasket = React.createClass({
   mixins: [Reflux.connect(basketStore), Reflux.ListenerMixin],

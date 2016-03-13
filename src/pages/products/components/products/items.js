@@ -3,7 +3,7 @@ import Reflux from 'reflux'
 import ReactCSSTransitionGroup from 'react/lib/ReactCSSTransitionGroup'
 
 import store from '../../stores/product-store'
-import actions from '../../actions/app-actions'
+import actions from '../../actions/product-actions'
 
 import Item from './item.js'
 

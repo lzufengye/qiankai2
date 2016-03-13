@@ -8,7 +8,17 @@
   background-color: #FFF;
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 0 0 5px 5px;
+  visibility: hidden;
+  cursor: pointer;
 }
+
+.basket-container {
+  position: absolute;
+  top: 0px;
+  right: 45px;
+  padding-top: 45px;
+}
+
 .appBasket--is-empty .appBasket-nrItems, .appBasket--is-empty .appBasket-total {
   opacity: 0;
   height: 0;
@@ -25,12 +35,11 @@
 }
 .appBasket-nrItems {
   padding: 3px 7px;
-  color: #FFF;
-  background-color: #FB4065;
+  color: rgb(250, 155, 10);
 }
 .appBasket-qty {
   display: inline-block;
-  color: #FB4065;
+  color: rgb(250, 155, 10);
   margin: 0 10px;
   letter-spacing: 1px;
 }
@@ -40,7 +49,7 @@
 }
 .appBasket-total {
   padding: 3px 7px;
-  background-color: #2CBB9C;
+  background-color: rgb(250, 155, 10);
   color: #FFF;
 }
 .appBasket--is-empty .basketList {
@@ -62,4 +71,20 @@
 }
 .appBasket-controls button {
   box-shadow: 0 0 3px #666;
+}
+
+.appBasket .bottom-part {
+  margin: 16px 0;
+  text-align: center;
+}
+
+.appBasket .bottom-part button {
+  background-color: rgb(255, 166, 0);
+  border: none;
+  color: #f5f5f5;
+  width: 135px;
+  height: 40px;
+  text-align: center;
+  font-size: 20px;
+  cursor: pointer;
 }

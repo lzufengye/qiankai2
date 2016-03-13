@@ -5,14 +5,14 @@ import ReactCSSTransitionGroup from 'react/lib/ReactCSSTransitionGroup'
 import ProductSectionTitle from './product-section-title'
 import Item from './item'
 
-import store from '../../stores/product-store'
+import store from '../../stores/products-store'
 import actions from '../../actions/product-actions'
 
 var ProductSection = React.createClass({
   mixins: [Reflux.connect(store), Reflux.ListenerMixin],
 
   componentDidMount () {
-    actions.loadProduct(this.props.type);
+    actions.loadProducts(this.props.type);
   },
 
   render() {

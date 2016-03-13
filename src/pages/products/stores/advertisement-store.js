@@ -1,6 +1,6 @@
 import Reflux from 'reflux'
 import request from 'superagent'
-import actions from '../actions/app-actions'
+import actions from '../actions/product-actions'
 
 var AdvertisementStore = Reflux.createStore({
 

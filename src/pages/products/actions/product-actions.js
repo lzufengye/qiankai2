@@ -6,7 +6,14 @@ var ProductActions = Reflux.createActions(
     'loadCategory',
     'displayCategory',
     'hideCategory',
-    'loadProduct'
+    'loadProducts',
+    'loadProduct',
+    'changeDisplayImage',
+    'loadPage',
+    'addItem',
+    'removeItem',
+    'pageChange',
+    'loadAdvertisement'
   ]
 );
 

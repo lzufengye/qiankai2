@@ -2,7 +2,7 @@ import React from 'react'
 import Reflux from 'reflux'
 
 import basketStore from '../../stores/basket-store'
-import actions from '../../actions/app-actions'
+import actions from '../../actions/product-actions'
 
 var ShoppingCart = React.createClass({
 
@@ -27,6 +27,7 @@ var ShoppingCart = React.createClass({
   },
 
   render() {
+
     return (
       <li>
         <span><image src='/assets/images/products/shopping-cart.png'/></span>

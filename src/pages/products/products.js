@@ -1,11 +1,9 @@
 import React from 'react'
 import Reflux from 'reflux'
-import Items from './components/products/items'
-import Basket from './components/basket/basket'
 import Header from './components/header/header'
 import CustomerSlider from '../components/slider'
 import advertisementStore from './stores/advertisement-store'
-import actions from './actions/app-actions'
+import actions from './actions/product-actions'
 import ProductSection from './components/products/products-section'
 import { Link } from 'react-router'
 
@@ -45,7 +43,7 @@ var Products = React.createClass({
           {advertisements}
         </CustomerSlider>
         <ProductSection backgroundImage='http://7xjdwj.com1.z0.glb.clouddn.com/section-title.jpg' width='190px' height='420px' title='开县自营' link='#' type='food'/>
-        <ProductSection backgroundImage='http://7xjdwj.com1.z0.glb.clouddn.com/section-title.jpg' width='190px' height='420px' title='开县自营' link='#' type='fashion'/>
+        <ProductSection backgroundImage='http://7xjdwj.com1.z0.glb.clouddn.com/section-title.jpg' width='190px' height='420px' title='开县自营' link='#' type='food'/>
       </div>
     );
   }

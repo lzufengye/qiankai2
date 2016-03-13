@@ -1,0 +1,24 @@
+{
+  "product": {
+    "id": 1,
+    "colorId": 2,
+    "name": "Food item #1",
+    "images": [
+      "https://img.alicdn.com/imgextra/i3/191550135801272865/TB2bJXygVXXXXa4XXXXXXXXXXXX_!!29679155-0-saturn_solar.jpg_250x250.jpg",
+      "http://image4.suning.cn/b2c/catentries/000000000139489828_1_400x400.jpg",
+      "http://image4.suning.cn/b2c/catentries/000000000139489828_1_400x400.jpg"
+    ],
+    "description": "numquam ex voluptas quo\nnatus voluptatibus repudiandae dolorem harum quasi temporibus\nharum sit minima placeat ad rerum molestiae quam nihil",
+    "price": 21,
+    "soldAmount": 101,
+    "comments": ["好产品", "经久耐用"],
+    "service": "由\"生态农业食品专营店\"直接销售和发货，并提供售后服务",
+    "score": 4.74,
+    "attitude": 4.78,
+    "logistics": 4.75,
+    "customer": {
+      "name": "重庆生态农业有限公司",
+      "telephone": "023-12343223"
+    }
+  }
+}

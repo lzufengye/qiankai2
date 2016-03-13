@@ -16,6 +16,50 @@ ul, ol, li {
   margin: 0 auto;
 }
 
+.product-detail {
+  width: 1190px;
+  margin: 40px auto 0;
+  border: solid 1px #EEE;
+}
+
+.image-zoom {
+  width: 400px;
+  height: 482px;
+  border-right: solid 1px #EEE;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.image-zoom-main-container {
+  width: 360px;
+  height: 360px;
+  padding: 20px;
+}
+
+.imgzoom-thumb-main ul {
+  margin: 0;
+}
+
+.image-zoom-main img {
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+
+.imgzoom-thumb {
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  border: solid 1px #EEE;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.imgzoom-thumb img {
+  width: 100%;
+  height: 100%;
+}
+
 .clear {
   clear: both;
 }
@@ -189,6 +233,11 @@ ul, ol, li {
   padding: 0;
 }
 
+.appItems a {
+  display: block;
+  color: #333;
+}
+
 .appItems li {
   width: 200px;
   height: 210px;
@@ -256,8 +305,11 @@ ul, ol, li {
   font-weight: bold;
 }
 
-.addBasket {
-  margin-right: 10px;
+.addBasket, .removeBasket {
+  width: 22px;
+  height: 30px;
+  vertical-align: middle;
+  cursor: pointer;
 }
 
 .itemTransition-enter {
@@ -279,3 +331,296 @@ ul, ol, li {
   transition: opacity 0s 0s;
 }
 
+.appHeader {
+  border-bottom: 2px solid #333;
+}
+
+.zoomImg {
+  width: 600px !important;
+  height: 600px !important;
+}
+
+.product-info {
+  display: inline-block;
+  width: 785px;
+  height: 482px;
+  vertical-align: middle;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.product-info h1 {
+  font: 700 16px/1.5 \5FAE\8F6F\96C5\9ED1;
+  color: #666;
+  word-break: break-all;
+}
+
+.product-info h2 {
+  font: 400 14px/1.5 \5FAE\8F6F\96C5\9ED1;
+  color: #F60;
+  word-break: break-all;
+}
+
+.exist-price {
+  position: relative;
+  margin-right: -1px;
+  padding: 15px 0 10px;
+  background: url('/assets/images/products/product-name-bg.png') repeat-x 0 0;
+  color: #FFF;
+  z-index: 5;
+  padding: 30px 60px;
+  height: 125px;
+  box-sizing: border-box;
+}
+
+.exist-price .mainprice {
+  font: 700 30px/25px Tahoma;
+  text-shadow: 0 1px 0 #F50;
+}
+
+.exist-price .star {
+  width: 78px;
+  height: 14px;
+  background: url('/assets/images/products/icons.png') no-repeat -50px -15px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 15px;
+}
+
+.exist-price .star em {
+  width: 0;
+  float: left;
+  height: 14px;
+  background: url('/assets/images/products/icons.png') no-repeat -50px 0;
+  -moz-transition: width .5s ease;
+  -webkit-transition: width .5s ease;
+  -o-transition: width .5s ease;
+  transition: width .5s ease;
+}
+
+.score {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 12px;
+  margin-top: 15px;
+  margin-left: 15px;
+}
+
+.proinfo-promo {
+  padding: 10px 60px;
+  background: #f5f5f5;
+  font: 400 12px/1.5 Arial,\5b8b\4f53;
+  color: #999;
+}
+
+.proinfo-promo .value {
+  color: #F90;
+}
+
+.proinfo-promo .blank {
+  margin-left: 39px;
+}
+
+.buy-count {
+  text-align: center;
+  margin-top: 14px;
+  clear: both;
+  height: 30px;
+}
+
+.buy-count .change-quantity {
+  width: 100px;
+  display: inline-block;
+  float: left;
+}
+
+.buy-count .action {
+  display: inline-block;
+  color: #333;
+  width: 26px;
+  height: 30px;
+  line-height: 26px;
+  padding: 0;
+  vertical-align: top;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.buy-count .minus {
+  border-right: 1px solid #ccc;
+}
+
+.buy-count .plus {
+  border-left: 1px solid #ccc;
+}
+
+.buy-count .quantity {
+  display: inline-block;
+  font-size: 14px;
+  width: 20px;
+  height: 18px;
+  padding: 5px;
+  border: solid 1px #DDD;
+  margin: 0 5px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.buy-service {
+  clear: both;
+  text-align: center;
+  margin-top: 20px;
+  height: 24px;
+}
+
+.buy-service-content {
+  font: 400 12px/1.5 Arial,\5b8b\4f53;
+  color: #333;
+  text-align: left;
+  float: left;
+  margin: 5px 0 0 5px;
+}
+
+.small-lable {
+  float: left;
+  width: 70px;
+  padding-left: 50px;
+  color: #999;
+  overflow: hidden;
+  font: 400 12px/1.5 Arial,\5b8b\4f53;
+  line-height: 30px;
+}
+
+.lable-spaces {
+  display: inline-block;
+  width: 24px;
+}
+
+.proinfo-line {
+  height: 2px;
+  background: #e9e9e9;
+  margin: 10px 20px 10px;
+  overflow: hidden;
+}
+
+.shop-actions, .proinfo-line {
+  clear: both;
+}
+
+.shop-actions {
+  height: 40px;
+  padding-bottom: 10px;
+  padding-top: 20px;
+  padding-left: 128px;
+}
+
+.buy-action {
+  position: relative;
+  float: left;
+  margin-right: 10px;
+  background-image: url('/assets/images/products/btns-2.png');
+  color: #999;
+  text-align: center;
+  cursor: pointer;
+}
+
+.buy-now {
+  width: 115px;
+  height: 40px;
+  background-position: -94px 0;
+}
+
+.shop-actions button {
+  background-image: url('/assets/images/products/btns-2.png');
+  background-position: -219px -45px;
+  width: 135px;
+  height: 40px;
+  border: none;
+}
+
+.add-to-cart {
+  background-position: -219px -45px;
+  width: 135px;
+  height: 40px;
+}
+
+.more-info {
+  width: 1190px;
+  margin: 15px auto 0;
+}
+
+.left-column {
+  width: 190px;
+  height: 280px;
+  border: solid 1px #EEE;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.right-column {
+  display: inline-block;
+  vertical-align: top;
+  width: 980px;
+  margin-left: 15px;
+  border: solid 1px #EEE;
+  box-sizing: border-box;
+}
+
+.left-column .title {
+  height: 35px;
+  border-bottom: solid 1px #EEE;
+  font: 400 14px/34px \5FAE\8F6F\96C5\9ED1;
+  color: #333;
+  text-align: center;
+}
+
+.left-column .satisfactions {
+  font: 400 12px/1.5 Arial,\5b8b\4f53;
+  color: #999;
+  padding: 15px;
+}
+
+.left-column .satisfactions .value {
+  color: #F90;
+}
+
+.left-column .customer-info {
+  background: #f5f5f5;
+  padding: 15px;
+}
+
+.left-column .customer-info table{
+  font: 400 12px/1.5 Arial,\5b8b\4f53;
+  color: #333;
+}
+
+.left-column .bottom-part{
+  padding: 15px;
+}
+
+.left-column button {
+  background-color: rgb(255, 166, 0);
+  border: none;
+  color: #f5f5f5;
+}
+
+.right-column .titles {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.right-column .titles li {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 20%;
+  font: 400 14px/34px \5FAE\8F6F\96C5\9ED1;
+  color: #666;
+  border-right: solid 1px #EEE;
+  text-align: center;
+  cursor: pointer;
+}
+
+.right-column .titles li:last-child {
+  border-right: none;
+}

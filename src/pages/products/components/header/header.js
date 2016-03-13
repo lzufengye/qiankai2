@@ -6,7 +6,17 @@ import ProductCategory from './product-category'
 
 var Header =
   React.createClass({
+    displayBasket() {
+      $('.appBasket').css({visibility: 'visible'});
+    },
+
+    hideBasket() {
+      $('.appBasket').css({visibility: 'hidden'});
+    },
+
     render() {
+      var that = this;
+
       return (
           <div className="pure-g">
             <header className="appHeader pure-u-1">
@@ -39,6 +49,9 @@ var Header =
               </div>
               { this.props.children }
             </header>
+            <div className='basket-container' onMouseOver={that.displayBasket} onMouseOut={that.hideBasket}>
+              <Basket />
+            </div>
           </div>
       );
     }
