@@ -1,6 +1,6 @@
 import Reflux from 'reflux'
 
-RegionActions = Reflux.createActions([
+var RegionActions = Reflux.createActions([
   'loadRegionProvince',
   'selectProvince',
   'selectCity'

@@ -1,6 +1,6 @@
 import Reflux from 'reflux'
 
-CartActions = Reflux.createActions([
+var CartActions = Reflux.createActions([
   'toggleSelectAll',
   'loadItems',
   'toggleSelectItem',

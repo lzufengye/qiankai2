@@ -1,6 +1,10 @@
-import RegionActions from 'app/action/region'
-import MemberStore from 'app/store/member'
-import LinkedStateRadioGroupMixin from 'app/utils/linkedStateRadioGroupMixin'
+import React from 'react'
+import Reflux from 'reflux'
+import LinkedStateMixin from 'react/lib/LinkedStateMixin'
+
+import RegionActions from '../actions/region'
+import MemberStore from '../stores/member'
+import LinkedStateRadioGroupMixin from '../../../utils/linkedStateRadioGroupMixin'
 
 //省份
 var ProvinceItem = React.createClass({
@@ -49,7 +53,7 @@ var CityItem = React.createClass({
   }
 });
 //新增或修改地址
-AddressEditor = React.createClass({
+var AddressEditor = React.createClass({
   showRegionSelector: function (ev) {
     $(ev.target).next('.cart-region-list').removeClass('hide');
     $(document).on('mousedown touchstart', function (e) {
@@ -110,7 +114,6 @@ AddressEditor = React.createClass({
       contentContainer.children('#' + htmlFor).addClass('active');
     });
     //ready validate
-    require('validator');
     $('#addressEditForm').validate({
       ignore: "",
       messages: {
@@ -122,7 +125,7 @@ AddressEditor = React.createClass({
       }
     });
   },
-  mixins: [Reflux.connect(MemberStore), React.addons.LinkedStateMixin, LinkedStateRadioGroupMixin],
+  mixins: [Reflux.connect(MemberStore), LinkedStateMixin, LinkedStateRadioGroupMixin],
 
   render: function () {
     var defaultAddress = this.radioGroup("isDefault");

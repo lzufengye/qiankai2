@@ -1,9 +1,11 @@
-import MemberActions from 'app/action/member'
-import layer from 'layer'
-import RegionActions from 'app/action/region'
-import RegionStore from 'app/store/region'
+import Reflux from 'reflux'
+
+import MemberActions from '../actions/member'
+import layer from '../../../utils/layer'
+import RegionActions from '../actions/region'
+import RegionStore from '../stores/region'
 import _ from 'lodash'
-import Qing from 'app/utils/qing'
+import Qing from '../../../utils/qing'
 
 var Member = Reflux.createStore({
   listenables: [MemberActions],

@@ -1,5 +1,8 @@
-import RegionActions from 'app/action/region'
-import Qing from 'app/utils/qing'
+import Reflux from 'reflux'
+
+import RegionActions from '../actions/region'
+import Qing from '../../../utils/qing'
+
 var initRegionData = {
   provinceList: [],
   cityList: [],

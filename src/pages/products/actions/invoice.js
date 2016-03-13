@@ -1,7 +1,7 @@
 import Reflux from 'reflux'
 
-InvoiceActions = Reflux.createActions([
+var InvoiceActions = Reflux.createActions([
   'newInvoice'
-])
+]);
 
 export default InvoiceActions

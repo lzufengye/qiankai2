@@ -1,6 +1,10 @@
 import React from 'react'
+import Reflux from 'reflux'
+import LinkedStateMixin from 'react/lib/LinkedStateMixin'
+import InvoiceStore from '../stores/invoice'
+import LinkedStateRadioGroupMixin from '../../../utils/linkedStateRadioGroupMixin'
 
-ImvoiceEditor = React.createClass({
+var InvoiceEditor = React.createClass({
   getInitialState: function () {
     return {
       'invoiceCompany': '',
@@ -17,7 +21,7 @@ ImvoiceEditor = React.createClass({
   unSave: function () {
     this.props.unsave()
   },
-  mixins: [Reflux.connect(InvoiceStore), React.addons.LinkedStateMixin, LinkedStateRadioGroupMixin],
+  mixins: [Reflux.connect(InvoiceStore), LinkedStateMixin, LinkedStateRadioGroupMixin],
   render: function () {
     var isEnabled = this.radioGroup("enabled");
     return (
@@ -56,4 +60,4 @@ ImvoiceEditor = React.createClass({
 
 });
 
-export default ImvoiceEditor
+export default InvoiceEditor

@@ -1,6 +1,6 @@
 import Reflux from 'reflux'
 
-MemberActions = Reflux.createActions([
+var MemberActions = Reflux.createActions([
   'saveAddress',
   'loadAddressList',
   'loadAddress',

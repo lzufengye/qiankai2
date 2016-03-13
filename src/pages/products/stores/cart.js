@@ -1,8 +1,10 @@
-import CartActions from 'app/action/cart'
+import Reflux from 'reflux'
+
+import CartActions from '../actions/cart'
 import _ from 'lodash'
-import Qing from 'app/utils/qing'
-import layer from 'layer'
-import MemberActions from 'app/action/member'
+import Qing from '../../../utils/qing'
+import layer from '../../../utils/layer'
+import MemberActions from '../actions/member'
 
 var CardStore = Reflux.createStore({
   listenables: [CartActions],

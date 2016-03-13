@@ -1,8 +1,10 @@
-import MemberStore from 'app/store/member'
-import MemberActions from 'app/action/member'
+import Reflux from 'reflux'
+
+import MemberStore from './member'
+import MemberActions from '../actions/member'
 import _ from 'lodash'
-import Qing from 'app/utils/qing'
-import layer from 'layer'
+import Qing from '../../../utils/qing'
+import layer from '../../../utils/layer'
 
 var CartToOrder = Reflux.createStore({
   shipFee: 0,

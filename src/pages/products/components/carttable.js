@@ -1,18 +1,22 @@
-import CartActions from 'app/action/cart'
-import RegionActions from 'app/action/region'
-import MemberActions from 'app/action/member'
-import InvoiceActions from 'app/action/invoice'
-import CartStore from 'app/store/cart'
-import RegionStore from 'app/store/region'
-import MemberStore from 'app/store/member'
-import InvoiceStore from 'app/store/invoice'
+import CartActions from '../actions/cart'
+import RegionActions from '../actions/region'
+import MemberActions from '../actions/member'
+import InvoiceActions from '../actions/invoice'
+import CartStore from '../stores/cart'
+import RegionStore from '../stores/region'
+import MemberStore from '../stores/member'
+import InvoiceStore from '../stores/invoice'
+
 import Reflux from 'reflux'
-import ReactRouter from 'react-router'
-import MyAddressList from 'app/component/cart/myaddresslist'
-import layer from 'layer'
-import LinkedStateRadioGroupMixin from 'app/utils/linkedStateRadioGroupMixin'
-import InvoiceEditor from 'app/component/invoice-editor'
-import CartToOrderStore from 'app/store/cart-to-order'
+import React from 'react'
+import LinkedStateMixin from 'react/lib/LinkedStateMixin'
+
+import { ReactRouter } from 'react-router'
+import MyAddressList from './cart/myaddresslist'
+import layer from '../../../utils/layer'
+import LinkedStateRadioGroupMixin from '../../../utils/linkedStateRadioGroupMixin'
+import InvoiceEditor from './invoice-editor'
+import CartToOrderStore from '../stores/cart-to-order'
 
 var CartTableHead = React.createClass({
 	getDefaultProps: function () {
@@ -74,7 +78,7 @@ var CartItem = React.createClass({
 		CartActions.deleteItem(this.props.item['id']);
 		e.preventDefault();
 	},
-	mixins: [React.addons.LinkedStateMixin],
+	mixins: [LinkedStateMixin],
 	render: function () {
 		var item = this.props.item;
 		var cbxHtml = '', delHtml = '', qtyHtml;
@@ -193,7 +197,6 @@ var CartSummary = React.createClass({
 		});
 		flowCartSummary();
 	},
-	mixins: [ReactRouter.Navigation],
 	readyCreateOrder: function () {
 		var selectedList = _.filter(this.props.data, function (item) {
 			return item['selected'] == true;
@@ -301,7 +304,7 @@ var CartToOrder = React.createClass({
 			invoiceTitle: ''
 		}
 	},
-	mixins: [Reflux.connect(CartStore), ReactRouter.State, ReactRouter.Navigation, React.addons.LinkedStateMixin],
+	mixins: [Reflux.connect(CartStore), LinkedStateMixin],
 	componentWillMount: function () {
 		//TODO:如何改用Store的数据源
 		var selectedList = _.filter(this.props.list, function (item) {

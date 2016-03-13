@@ -1,7 +1,9 @@
-import InvoiceActions from 'app/action/invoice'
-import Qing from 'app/utils/qing'
+import Reflux from 'reflux'
 
-Invoice = Reflux.createStore({
+import InvoiceActions from '../actions/invoice'
+import Qing from '../../../utils/qing'
+
+var Invoice = Reflux.createStore({
   listenables: [InvoiceActions],
   getInitData: function () {
 

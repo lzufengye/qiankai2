@@ -10,6 +10,7 @@ import EducationService from './src/pages/education-service'
 import InnovationSpace from './src/pages/innovation-space'
 import Products from './src/pages/products/products'
 import Product from './src/pages/products/product'
+import Cart from './src/pages/products/cart'
 import { Router, Route, browserHistory, IndexRoute } from 'react-router'
 
 ReactDOM.render(
@@ -40,6 +41,7 @@ ReactDOM.render(
     <Route path="/products/:category" component={Products} >
     </Route>
     <Route path="/product/:id" component={Product} />
+    <Route path="/shopping-cart" component={Cart} />
   </Router>,
   document.getElementById('content')
 );

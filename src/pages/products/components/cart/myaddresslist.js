@@ -1,6 +1,9 @@
-import MemberActions from 'app/action/member'
-import MemberStore from 'app/store/member'
-import AddressEditor from 'app/component/addresseditor'
+import React from 'react'
+import Reflux from 'reflux'
+
+import MemberActions from '../../actions/member'
+import MemberStore from '../../stores/member'
+import AddressEditor from '../addresseditor'
 //地址项
 var MyAddressItem = React.createClass({
   editAddrItem: function (e) {
@@ -132,4 +135,4 @@ var AddressList = React.createClass({
   }
 });
 
-export default MyAddressItem
+export default AddressList
