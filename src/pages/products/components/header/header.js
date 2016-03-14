@@ -21,12 +21,6 @@ var Header =
           <div className="pure-g">
             <header className="appHeader pure-u-1">
               <div className="top-nav">
-                <span><image src='/assets/images/products/home-button.png'/></span>
-                <span className="back-home">返回首页</span>
-                <ul>
-                  <li>网站导航</li>
-                  <li>消息</li>
-                </ul>
                 <ul className="right clear">
                   <li>登录</li>
                   <li>注册</li>

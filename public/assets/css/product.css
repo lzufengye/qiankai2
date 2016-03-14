@@ -67,6 +67,7 @@ ul, ol, li {
   padding: 0 100px;
   background-color: rgb(241, 242, 244);
   font-size: 14px;
+  height: 45px;
 }
 
 .top-nav span {
@@ -167,6 +168,14 @@ ul, ol, li {
   border-bottom: solid 1px rgb(197, 19, 22);
   font-size: 14px;
   padding: 10px;
+}
+
+.category-item a {
+  color: white;
+  width: auto;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
 }
 
 .category-item ul {

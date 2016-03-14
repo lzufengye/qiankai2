@@ -5,12 +5,12 @@ import ReactCSSTransitionGroup from 'react/lib/ReactCSSTransitionGroup'
 var CategoryItem = React.createClass({
   render() {
     var subCategories = this.props.category.subCategories.map(function (subCategory) {
-      return <li>{subCategory.display}</li>
+      return <a href={'/products-by-category/'+subCategory.name}><li>{subCategory.display}</li></a>
     });
 
     return (
       <div className='category-item'>
-        {this.props.category.display}
+        <a href={'/products-by-category/'+this.props.category.name}>{this.props.category.display}</a>
         <ul>
         {subCategories}
         </ul>

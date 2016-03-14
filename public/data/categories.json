@@ -3,142 +3,174 @@
     {
       "id": 1,
       "display": "乡镇",
+      "name": "vilage",
       "subCategories": [
         {
           "id": 1,
-          "display": "满月"
+          "display": "满月",
+          "name": "manyue"
         },
         {
           "id": 2,
-          "display": "紫水"
+          "display": "紫水",
+          "name": "zishui"
         },
         {
           "id": 3,
-          "display": "竹溪"
+          "display": "竹溪",
+          "name": "zhuxi"
         },
         {
           "id": 4,
-          "display": "大德"
+          "display": "大德",
+          "name": "dade"
         }
       ]
     },
     {
       "id": 2,
       "display": "粮油调味",
+      "name": "grain_oil",
       "subCategories": [
         {
           "id": 5,
-          "display": "米"
+          "display": "米",
+          "name": "rice"
         },
         {
           "id": 6,
-          "display": "油"
+          "display": "油",
+          "name": "oil"
         },
         {
           "id": 7,
-          "display": "干货"
+          "display": "干货",
+          "name": "dry_goods"
         },
         {
           "id": 8,
-          "display": "调味"
+          "display": "调味",
+          "name": "flavor"
         }
       ]
     },
     {
       "id": 3,
       "display": "休闲零食",
+      "name": "snacks",
       "subCategories": [
         {
           "id": 9,
-          "display": "蜜饯"
+          "display": "蜜饯",
+          "name": "candied_fruit"
         },
         {
           "id": 10,
-          "display": "炒货"
+          "display": "炒货",
+          "name": "fried"
         },
         {
           "id": 11,
-          "display": "海味"
+          "display": "海味",
+          "name": "seafood"
         }
       ]
     },
     {
       "id": 4,
       "display": "茗茶冲饮",
+      "name": "drink_tea",
       "subCategories": [
         {
           "id": 12,
-          "display": "红茶"
+          "display": "红茶",
+          "name": "red_tea"
         },
         {
           "id": 13,
-          "display": "绿茶"
+          "display": "绿茶",
+          "name": "green_tea"
         },
         {
           "id": 14,
-          "display": "花草茶"
+          "display": "花草茶",
+          "name": "herbal_tea"
         },
         {
           "id": 15,
-          "display": "冲饮"
+          "display": "冲饮",
+          "name": "drink"
         }
       ]
     },
     {
       "id": 5,
       "display": "滋补养生",
+      "name": "nourishing_health",
       "subCategories": [
         {
           "id": 16,
-          "display": "蜂蜜"
+          "display": "蜂蜜",
+          "name": "honey"
         },
         {
           "id": 17,
-          "display": "枸杞"
+          "display": "枸杞",
+          "name": "wolfberry"
         },
         {
           "id": 18,
-          "display": "石斛"
+          "display": "石斛",
+          "name": "dendrobii"
         }
       ]
     },
     {
       "id": 6,
       "display": "美酒佳酿",
+      "name": "wine_drink",
       "subCategories": [
         {
           "id": 20,
-          "display": "葡萄酒"
+          "display": "葡萄酒",
+          "name": "grape_wine"
         },
         {
           "id": 21,
-          "display": "白酒"
+          "display": "白酒",
+          "name": "wine"
         },
         {
           "id": 22,
-          "display": "松子酒"
+          "display": "松子酒",
+          "name": "gin"
         }
       ]
     },
     {
       "id": 7,
       "display": "时令生鲜",
+      "name": "seasonal_fresh",
       "subCategories": [
         {
           "id": 20,
-          "display": "蜜柚"
+          "display": "蜜柚",
+          "name": "pomelo"
         },
         {
           "id": 21,
-          "display": "脐橙"
+          "display": "脐橙",
+          "name": "navel_orange"
         },
         {
           "id": 22,
-          "display": "腊肉"
+          "display": "腊肉",
+          "name": "bacon"
         },
         {
           "id": 23,
-          "display": "水产"
+          "display": "水产",
+          "name": "sea_food"
         }
       ]
     }
