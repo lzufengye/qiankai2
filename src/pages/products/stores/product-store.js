@@ -1,6 +1,7 @@
 import Reflux from 'reflux'
 import request from 'superagent'
 import productActions from '../actions/product-actions'
+import ServerConfig from '../../../config/server-config'
 
 var ProductStore = Reflux.createStore({
 
@@ -16,7 +17,7 @@ var ProductStore = Reflux.createStore({
 
   loadProduct(id) {
     if(this.data.product.id == '') {
-      request.get('/data/product-' + id + '.json')
+      request.get(ServerConfig['serverUrl'] + '/api/products/' + id)
         .end((err, res) => {
           this.data.product = JSON.parse(res.text).product;
           if(this.data.product.images.length > 0) {

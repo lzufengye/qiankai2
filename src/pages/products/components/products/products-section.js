@@ -18,7 +18,7 @@ var ProductSection = React.createClass({
   render() {
     var items = this.state.products[this.props.type].map((item,i) => {
       item.type = this.state.productType;
-      return <Item key={item.id} item={item} index={i} />;
+      return <Item key={item.id} item={item} id={item.id} index={i} />;
     });
 
     var style = {height: this.props.height};
