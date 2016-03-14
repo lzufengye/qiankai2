@@ -1,6 +1,7 @@
 import Reflux from 'reflux'
 import request from 'superagent'
 import actions from '../actions/product-actions'
+import ServerConfig from '../../../config/server-config'
 
 var AdvertisementStore = Reflux.createStore({
 
@@ -14,7 +15,7 @@ var AdvertisementStore = Reflux.createStore({
 
   loadAdvertisement(cached) {
     if(cached !== true) {
-      request.get('/data/hot-products.json')
+      request.get(ServerConfig['serverUrl'] + '/api/advertisements')
         .end((err, res) => {
           this.data.advertisements = JSON.parse(res.text).advertisements;
           this.trigger(this.data);
