@@ -4,7 +4,12 @@ var Service = React.createClass({
   render() {
     return (
       <div className='right-bar'>
-        <image src='/assets/images/products/good-stuff.png' />
+        <div className='good-stuff'>
+          <a href='/products-by-category/organic' className='good-stuff-section'><img src='/assets/images/youji.png'/></a>
+          <a href='/products-by-category/green' className='good-stuff-section'><img src='/assets/images/lvse.png'/></a>
+          <a href='/products-by-category/foundation' className='good-stuff-section'><img src='/assets/images/jidi.png'/></a>
+          <a href='/products-by-category/heritage' className='good-stuff-section'><img src='/assets/images/yichan.png'/></a>
+        </div>
         <div id='facilitate-service'>
           <ul>
             <li>

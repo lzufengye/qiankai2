@@ -12,8 +12,7 @@ ul, ol, li {
 .products-container .slick-slider {
   margin-bottom: 0;
   height: 450px;
-  width: 1190px;
-  margin: 0 auto;
+  width: 990px;
 }
 
 .product-detail {
@@ -683,4 +682,29 @@ ul, ol, li {
   display: inline-block;
   text-align: center;
   background: url('/assets/images/products/feature.png') no-repeat -165px 0;
+}
+
+.product-sub-page {
+  width: 1190px;
+  margin: 0 auto;
+  min-height: 400px;
+}
+
+.good-stuff {
+  width: 200px;
+  height: 260px;
+}
+
+.good-stuff a {
+  display: inline-block;
+}
+
+.good-stuff-section {
+  width: 100px;
+  height: 130px;
+}
+
+.good-stuff-section img {
+  width: 80%;
+  height: 80%;
 }

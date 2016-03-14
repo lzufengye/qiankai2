@@ -47,7 +47,7 @@ var Products = React.createClass({
           {advertisements}
           </CustomerSlider>
         </div>
-        <ProductSection backgroundImage='http://7xjdwj.com1.z0.glb.clouddn.com/section-title.jpg' width='190px' height='500px' title='开县自营' link='#' type='self_sale'>
+        <ProductSection backgroundImage='http://7xjdwj.com1.z0.glb.clouddn.com/section-title.jpg' width='190px' height='500px' title='开县自营' link='/products-by-category/self_sale' type='self_sale'>
           <ul className='section-menu'>
             <li>开县县馆</li>
             <li>满月镇</li>
@@ -58,13 +58,13 @@ var Products = React.createClass({
             <li>南雅镇</li>
           </ul>
         </ProductSection>
-        <ProductSection backgroundImage='/assets/images/products/ziying.png' width='190px' height='210px' title='开县特产' link='#' type='kaixian_special'/>
-        <ProductSection backgroundImage='/assets/images/products/imported.png' width='190px' height='420px' title='进口商品' link='#' type='imported'/>
-        <ProductSection backgroundImage='/assets/images/products/riyong.png' width='190px' height='210px' title='生活日用' link='#' type='daily_usage'/>
-        <ProductSection backgroundImage='/assets/images/products/jiushui.png' width='190px' height='210px' title='食品酒水' link='#' type='wine_drink'/>
-        <ProductSection backgroundImage='/assets/images/products/hufu.png' width='190px' height='210px' title='美妆护肤' link='#' type='beautify'/>
-        <ProductSection backgroundImage='/assets/images/products/xiangji.png' width='190px' height='210px' title='数码相机' link='#' type='camera'/>
-        <ProductSection backgroundImage='/assets/images/products/jiadian.png' width='190px' height='420px' title='家用电器' link='#' type='home_machine'/>
+        <ProductSection backgroundImage='/assets/images/products/ziying.png' width='190px' height='210px' title='开县特产' link='/products-by-category/kaixian_special' type='kaixian_special'/>
+        <ProductSection backgroundImage='/assets/images/products/imported.png' width='190px' height='420px' title='进口商品' link='/products-by-category/imported' type='imported'/>
+        <ProductSection backgroundImage='/assets/images/products/riyong.png' width='190px' height='210px' title='生活日用' link='/products-by-category/daily_usage' type='daily_usage'/>
+        <ProductSection backgroundImage='/assets/images/products/jiushui.png' width='190px' height='210px' title='食品酒水' link='/products-by-category/wine_drink' type='wine_drink'/>
+        <ProductSection backgroundImage='/assets/images/products/hufu.png' width='190px' height='210px' title='美妆护肤' link='/products-by-category/beautify' type='beautify'/>
+        <ProductSection backgroundImage='/assets/images/products/xiangji.png' width='190px' height='210px' title='数码相机' link='/products-by-category/camera' type='camera'/>
+        <ProductSection backgroundImage='/assets/images/products/jiadian.png' width='190px' height='420px' title='家用电器' link='/products-by-category/home_machine' type='home_machine'/>
         <Footer />
       </div>
     );

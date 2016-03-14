@@ -8,6 +8,7 @@ var ProductActions = Reflux.createActions(
     'hideCategory',
     'loadProducts',
     'loadProduct',
+    'loadProductsByCategory',
     'changeDisplayImage',
     'loadPage',
     'addItem',

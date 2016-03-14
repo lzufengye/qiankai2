@@ -10,6 +10,7 @@ import EducationService from './src/pages/education-service'
 import InnovationSpace from './src/pages/innovation-space'
 import Products from './src/pages/products/products'
 import Product from './src/pages/products/product'
+import CategoryProduct from './src/pages/products/category-product'
 import Cart from './src/pages/products/cart'
 import CartToOrder from './src/pages/products/components/cart-to-order'
 import OrderPay from './src/pages/products/order-pay'
@@ -41,6 +42,8 @@ ReactDOM.render(
       <Route path="/article/:title/:id" component={Article}/>
     </Route>
     <Route path="/products/:category" component={Products} >
+    </Route>
+    <Route path="/products-by-category/:category" component={CategoryProduct} >
     </Route>
     <Route path="/product/:id" component={Product} />
     <Route path="/shopping-cart" component={Cart} />
