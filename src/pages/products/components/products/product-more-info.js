@@ -2,6 +2,8 @@ import React from 'react'
 
 var ProductMoreInfo = React.createClass({
   render() {
+    console.log(this.props);
+
     return (
       <div >
         <ul className='titles'>
@@ -12,13 +14,10 @@ var ProductMoreInfo = React.createClass({
           <li>售后保障</li>
         </ul>
         <div>
-          <image src='/assets/images/products/product-detail.png'/>
+          <image src={this.props.product_detail}/>
         </div>
         <div>
-          <image src='/assets/images/products/service.png'/>
-        </div>
-        <div>
-          <image src='/assets/images/products/comments.png'/>
+          <image src={this.props.service}/>
         </div>
       </div>
     );

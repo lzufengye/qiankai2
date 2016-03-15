@@ -98,7 +98,7 @@ var Product = React.createClass({
             <div className='buy-service'>
               <span className='small-lable'>{'服'}<div className='lable-spaces'> </div>{'务'}</span>
               <div className='buy-service-content'>
-                {this.state.product.service}
+                {this.state.product.service_description}
               </div>
             </div>
             <div className='buy-count'>
@@ -140,7 +140,7 @@ var Product = React.createClass({
             </div>
           </div>
           <div className='right-column'>
-            <ProductMoreInfo />
+            <ProductMoreInfo product_detail={this.state.product.product_detail} service={this.state.product.service}/>
           </div>
         </div>
         <Footer />

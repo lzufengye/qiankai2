@@ -175,7 +175,7 @@ ul, ol, li {
   width: auto;
   display: inline-block;
   margin: 0;
-  padding: 0;
+  padding: 0`;
 }
 
 .category-item ul {
@@ -236,7 +236,7 @@ ul, ol, li {
 
 .appItems {
   overflow: hidden;
-  text-align: center;
+  text-align: left;
   display: inline-block;
   width: 1000px;
   margin: 0;
@@ -252,6 +252,7 @@ ul, ol, li {
   width: 200px;
   height: 210px;
   display: inline-block;
+  text-align: center;
 }
 
 .appItem {
