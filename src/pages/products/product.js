@@ -79,7 +79,7 @@ var Product = React.createClass({
             </h2>
             <div className='exist-price'>
               开街特价
-              <span className='mainprice'>¥ {this.state.product.price}.00</span>
+              <span className='mainprice'>¥ {this.state.product.price}</span>
               <br/>
               <div className='star'>
                 <em style={{width: '92%'}}></em>
