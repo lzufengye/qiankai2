@@ -8,7 +8,7 @@ var Cart = React.createClass({
   render() {
     return (
       <div className='products-container'>
-        <Header />
+        <Header display='none'/>
         <CartPage />
         <Footer />
       </div>
