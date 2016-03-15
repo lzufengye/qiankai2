@@ -32,7 +32,7 @@ var ProductCategory = React.createClass({
 
     return (
       <div className='product-category'>
-        <a href='#' className='highlighted'>
+        <a href='#' className='highlighted' style={style}>
           全部商品分类
           <span><image className='right-arrow' src='/assets/images/products/right-arrow.png'/></span>
         </a>
