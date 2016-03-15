@@ -12,7 +12,8 @@ ul, ol, li {
 .products-container .slick-slider {
   margin-bottom: 0;
   height: 450px;
-  width: 990px;
+  width: 790px;
+  margin-left: 195px;
 }
 
 .product-detail {
@@ -112,7 +113,7 @@ ul, ol, li {
 }
 
 .middle-nav .logo-image {
-  width: 80px;
+  width: 100px;
   display: inline-block;
   vertical-align: middle;
   margin-left: 10%;
@@ -120,7 +121,7 @@ ul, ol, li {
 }
 
 .middle-nav .logo-title {
-  width: 500px;
+  width: 380px;
   display: inline-block;
   vertical-align: middle;
 }
@@ -131,11 +132,42 @@ ul, ol, li {
   padding: 20px 100px 5px;
 }
 
+.menus {
+  display: inline-block;
+  text-align: center;
+  width: 10%;
+}
+
+.menus .menu-item {
+  position: absolute;
+  z-index: 1000;
+  padding: 0;
+  margin: 0;
+  background-color: rgb(211, 33, 31);
+  width: 124px;
+  display: none;
+}
+
+.menus .menu-item li {
+  border-bottom: solid 1px rgb(197, 19, 22);
+}
+
+.menus .menu-item li a {
+  color: white;
+  font-size: 14px;
+  display: block;
+  padding: 5px 0;
+}
+
+.menus .menu-item li a:hover {
+  background-color: rgb(197, 19, 22);
+}
+
 .bottom-nav a {
   color: rgb(72, 82, 85);
   display: inline-block;
-  width: 8%;
   vertical-align: top;
+  text-align: center;
 }
 
 .product-category {
@@ -168,14 +200,21 @@ ul, ol, li {
   border-bottom: solid 1px rgb(197, 19, 22);
   font-size: 14px;
   padding: 10px;
+  height: 14px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.category-item:hover {
+  height: 260px;
 }
 
 .category-item a {
   color: white;
   width: auto;
-  display: inline-block;
+  display: block;
   margin: 0;
-  padding: 0`;
+  padding: 0;
 }
 
 .category-item ul {
@@ -187,11 +226,37 @@ ul, ol, li {
   text-overflow: ellipsis;
   padding-left: 0;
   margin: 0;
+  margin-top: 40px;
 }
 
 .category-item li {
   padding: 0 10px;
   float: left;
+}
+
+.sub-sub-category {
+  position: absolute;
+  background-color: rgba(0,0,0,0.5);
+  top: -33px;
+  left: 200px;
+  width: 200px;
+  height: 450px;
+  display: block;
+  z-index: 2001;
+  display: none;
+}
+
+.sub-sub-category a {
+  display: block;
+  text-align: left;
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
+.sub-sub-category-title {
+  display: block;
+  font-size: 14px;
+  margin-top: 30px;
 }
 
 .right-arrow {

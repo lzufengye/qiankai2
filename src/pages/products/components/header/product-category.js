@@ -32,11 +32,11 @@ var ProductCategory = React.createClass({
 
     return (
       <div className='product-category'>
-        <a href='#' className='highlighted' onMouseOver={displaySubMenu} onMouseOut={hideSubMenu}>
+        <a href='#' className='highlighted'>
           全部商品分类
           <span><image className='right-arrow' src='/assets/images/products/right-arrow.png'/></span>
         </a>
-        <div className='categories' style={style} onMouseOver={displaySubMenu} onMouseOut={hideSubMenu}>
+        <div className='categories' style={style}>
           {categories}
         </div>
       </div>

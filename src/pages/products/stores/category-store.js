@@ -7,7 +7,7 @@ var CategoryStore = Reflux.createStore({
   init() {
     this.data = {
       categories: [],
-      display: 'none'
+      display: 'block'
     };
 
     this.listenTo(actions.loadCategory, this.loadCategory);
