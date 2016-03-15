@@ -58,13 +58,13 @@ var Products = React.createClass({
             <li>南雅镇</li>
           </ul>
         </ProductSection>
-        <ProductSection backgroundImage='/assets/images/products/ziying.png' width='190px' height='210px' title='开县特产' link='/products-by-category/kaixian_special' type='kaixian_special'/>
-        <ProductSection backgroundImage='/assets/images/products/imported.png' width='190px' height='420px' title='进口商品' link='/products-by-category/imported' type='imported'/>
-        <ProductSection backgroundImage='/assets/images/products/riyong.png' width='190px' height='210px' title='生活日用' link='/products-by-category/daily_usage' type='daily_usage'/>
-        <ProductSection backgroundImage='/assets/images/products/jiushui.png' width='190px' height='210px' title='食品酒水' link='/products-by-category/wine_drink' type='wine_drink'/>
-        <ProductSection backgroundImage='/assets/images/products/hufu.png' width='190px' height='210px' title='美妆护肤' link='/products-by-category/beautify' type='beautify'/>
-        <ProductSection backgroundImage='/assets/images/products/xiangji.png' width='190px' height='210px' title='数码相机' link='/products-by-category/camera' type='camera'/>
-        <ProductSection backgroundImage='/assets/images/products/jiadian.png' width='190px' height='420px' title='家用电器' link='/products-by-category/home_machine' type='home_machine'/>
+        <ProductSection backgroundImage='/assets/images/products/ziying.png' width='190px' height='420px' title='名特产品' link='/products-by-category/kaixian_special' type='kaixian_special'/>
+        <ProductSection backgroundImage='/assets/images/products/riyong.png' width='190px' height='420px' title='乡村土货' link='/products-by-category/xiangcuntuhuo' type='xiangcuntuhuo'/>
+        <ProductSection backgroundImage='/assets/images/products/jiushui.png' width='190px' height='420px' title='工艺产品' link='/products-by-category/gongyichanping' type='gongyichanping'/>
+        <ProductSection backgroundImage='/assets/images/products/hufu.png' width='190px' height='420px' title='县外产品' link='/products-by-category/xianwaichanping' type='xianwaichanping'/>
+        <ProductSection backgroundImage='/assets/images/products/xiangji.png' width='190px' height='420px' title='进口产品' link='/products-by-category/imported' type='imported'/>
+        <ProductSection backgroundImage='/assets/images/products/jiadian.png' width='190px' height='420px' title='智慧旅游' link='/products-by-category/zhihuilvyou' type='zhihuilvyou'/>
+
         <Footer />
       </div>
     );

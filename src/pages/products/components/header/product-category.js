@@ -27,7 +27,7 @@ var ProductCategory = React.createClass({
     }
 
     var style = {
-      display: this.state.display
+      display: this.props.display
     };
 
     return (

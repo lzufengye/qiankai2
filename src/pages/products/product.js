@@ -55,7 +55,7 @@ var Product = React.createClass({
 
     return (
       <div className='products-container'>
-        <Header>
+        <Header display='none'>
         </Header>
         <div className='product-detail'>
           <div className='image-zoom'>

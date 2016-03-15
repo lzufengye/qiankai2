@@ -8,7 +8,7 @@ var ProductsStore = Reflux.createStore({
 
   init() {
     this.data = {
-      products: {self_sale: [], kaixian_special: [], imported: [], daily_usage: [], wine_drink: [], beautify: [], camera: [], home_machine: []}
+      products: {self_sale: [], kaixian_special: [], imported: [], daily_usage: [], wine_drink: [], beautify: [], camera: [], home_machine: [], xiangcuntuhuo: [], gongyichanping: [], xianwaichanping: [], zhihuilvyou: []}
     };
 
     this.listenTo(productActions.loadProducts, this.loadProducts);

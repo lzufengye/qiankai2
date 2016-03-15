@@ -77,7 +77,7 @@ var Header =
                 <image className='logo-title' src='/assets/images/products/logo-title.png' />
               </div>
               <div className="bottom-nav">
-                <ProductCategory />
+                <ProductCategory display={this.props.display}/>
                 <MenuItem menuIndex={1} subMenu={shoppingMallItems} name='开街商城' link='/products/all' />
                 <MenuItem menuIndex={2} subMenu={travelItems} name='智慧旅游' link='/travel.html' />
                 <MenuItem menuIndex={3} subMenu={convenienceLifeItems} name='便民服务' link='/convenience-life/newses' />
