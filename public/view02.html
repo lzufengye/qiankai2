@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>开街网</title>
+    <link href="/assets/travel/css/navbar.css" rel="stylesheet" type="text/css"/>
+    <link href="/assets/travel/css/commom.css" rel="stylesheet" type="text/css"/>
+    <script src="/assets/travel/lib/jquery-1.7.2.min.js"></script>
+    <script src="/assets/travel/lib/jquery.hiSlider.js"></script>
+    <script src="/assets/travel/jQuery/navLeft.js"></script>
+    <script src="/assets/travel/jQuery/navRight.js"></script>
+    <script src="/assets/travel/jQuery/bar.js"></script>
+</head>
+<body>
+<header>
+    <div class="tool-bar">
+        <!--顶部工具栏-->
+        <div class="bar">
+            <!--左工具栏（登陆注册）-->
+            <div class="barLeft">
+                <ul>
+                    <li><a href="">请登录</a><span></span></li>
+                    <li><a href="">免费注册</a><span></span></li>
+                </ul>
+            </div>
+            <!--右工具栏-->
+            <div class="barRight">
+                <ul class="bar-right">
+                    <li id="br-1"><a href="">购物车</a><span></span></li>
+                    <li id="br-2"><a href="">我的开街</a><span></span></li>
+                    <li id="br-3"><a href="">我的订单</a><span></span></li>
+                </ul>
+                <!--隐藏盒子-->
+                <div id="bar-1" class="hidden-barBox hidden-bar-index">
+                    <ul>
+                        <li>。。。。</li>
+                        <li>。。。。</li>
+                        <li>。。。。</li>
+                        <li>。。。。</li>
+                    </ul>
+                </div>
+                <div id="bar-2" class="hidden-barBox hidden-bar-us">
+                    <ul>
+                        <li>加入步骤</li>
+                        <li>申请要求</li>
+                    </ul>
+                </div>
+                <div id="bar-3" class="hidden-barBox hidden-bar-info">
+                    <ul>
+                        <li>订单管理</li>
+                        <li>物流跟踪</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Logo和搜索栏-->
+    <div class="logo">
+        <img src="/assets/travel/img/logo.png">
+        <div class="search-wrap">
+            <input class="search-text"/>
+            <a class="search-btn">搜索</a>
+        </div>
+    </div>
+</header>
+
+<!--导航栏框架-->
+<nav id="navOut">
+    <!--导航栏样式-->
+    <div class="nav">
+        <!--商品分类栏（左导航栏）-->
+        <div class="navLeft">
+            <a href="index.html"><p>全部商品分类</p></a>
+        </div>
+        <!--右导航栏-->
+        <div class="navRight">
+            <ul class="nav-right">
+                <li id="li-1"><a href="http://qiankai.daoapp.io/products/all">开街商城</a><span></span></li>
+                <li id="li-2"><a href="http://qiankai.daoapp.io/travel.html">智慧旅游</a><span></span></li>
+                <li id="li-3"><a href="http://qiankai.daoapp.io/convenience-life/newses">便民服务</a><span></span></li>
+                <li id="li-4"><a href="http://qiankai.daoapp.io/convenience-life/newses">金融服务</a><span></span></li>
+                <li id="li-5"><a href="http://qiankai.daoapp.io/innovation-space/activities">众创空间</a><span></span></li>
+                <li id="li-6"><a href="http://qiankai.daoapp.io/innovation-space/activities">企业服务</a><span></span></li>
+            </ul>
+            <!--隐藏盒子-->
+            <div id="list-1" class="hidden-box hidden-loc-box01">
+                <ul>
+                    <li>开县自营</li>
+                    <li>名特产品</li>
+                    <li>乡村土货</li>
+                    <li>工艺产品</li>
+                    <li>县外产品</li>
+                    <li>进口产品</li>
+                </ul>
+            </div>
+            <div id="list-2" class="hidden-box hidden-loc-box02">
+                <ul>
+                    <li><a href="#hotview">热门景点</a></li>
+                    <li><a href="#village">乡村旅游</a></li>
+                    <li><a href="http://bbs.cqkx.com/forum-142-1.html"> 自驾旅游</a></li>
+                    <li><a href="#orderhotel">酒店预订</a></li>
+                    <li><a href="#virtual">虚拟旅游</a></li>
+                    <li><a href="http://bbs.cqkx.com/forum-273-1.html">驴友之家</a></li>
+                </ul>
+            </div>
+            <div id="list-3" class="hidden-box hidden-loc-box03">
+                <ul>
+                    <li>购票缴费</li>
+                    <li>健康服务</li>
+                    <li>就业服务</li>
+                    <li>餐饮娱乐</li>
+                    <li>房屋中介</li>
+                    <li>家政服务</li>
+                </ul>
+            </div>
+            <div id="list-4" class="hidden-box hidden-loc-box04">
+                <ul>
+                    <li>投资理财</li>
+                    <li>融资担保</li>
+                    <li>小额贷款</li>
+                    <li>银行服务</li>
+                    <li>保险服务</li>
+                    <li>证券资讯</li>
+                </ul>
+            </div>
+            <div id="list-5" class="hidden-box hidden-loc-box05">
+                <ul>
+                    <li>商家展示</li>
+                    <li>孵化体验</li>
+                    <li>合作配套</li>
+                    <li>活动发布</li>
+                    <li>教育培训</li>
+                    <li>创客之家</li>
+                </ul>
+            </div>
+            <div id="list-6" class="hidden-box hidden-loc-box06">
+                <ul>
+                    <li>企业入驻</li>
+                    <li>政策咨询</li>
+                    <li>专家把脉</li>
+                    <li>商务运作</li>
+                    <li>法务服务</li>
+                    <li>协会服务</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!--滚动栏-->
+<div id="banner">
+    <ul class="hiSlider hiSlider1">
+        <li data-title="11111" class="hiSlider-item"><a href=""><img class="img-item" src="http://7xryaq.com1.z0.glb.clouddn.com/travel-index01.jpg" alt="11111"></a></li>
+        <li data-title="11111" class="hiSlider-item"><a href=""><img class="img-item" src="http://7xryaq.com1.z0.glb.clouddn.com/travel-index02.jpg" alt="11111"></a></li>
+        <li data-title="11111" class="hiSlider-item"><a href=""><img class="img-item" src="http://7xryaq.com1.z0.glb.clouddn.com/travel-index03.jpg" alt="11111"></a></li>
+    </ul>
+</div>
+
+<!--旅游景点展示-->
+    <div id="main-text">
+        <label>汉丰湖</label>
+        <img class="viewImg" src="http://7xryaq.com1.z0.glb.clouddn.com/hanfenghu2.jpg">
+        <p>汉丰湖因三峡工程而生，由境内两江汇成，常年蓄水170.28米以上, 水域面积15平方公里。秦巴古道上的无人区——雪宝山，
+            系汉丰湖的重要水源地。汉丰湖四山环抱、与城市和谐共生，拥有独特的滨湖湿地、风雨廊桥、举子公园、刘伯承同志纪念
+            馆（故居）等自然与人文景观。湿地观鸟、赏荷野钓、画舫游湖、水上婚庆、运动休闲等旅游产品深受游客青睐，2013年开
+            县跻身“中国十大休闲小城”，2014年汉丰湖评为“国家级湿地公园”、国家AAAA级旅游景区。
+            “汉丰”——汉土丰盛。这座既古老又年轻的湖泊，已经成为三峡深度体验的旅游休闲胜地。
+        </p>
+        <img class="viewImg" src="http://7xryaq.com1.z0.glb.clouddn.com/hanfenghu3.jpg">
+
+        <h2>一、风雨廊桥</h2>
+        <p>汉丰湖水位调节坝，是三峡大坝中的坝中坝，也称为“三峡小坝”。风雨廊桥系汉丰湖的标志性景观，与三峡小坝融为
+                一体，调节水位，传承文化，既是汉丰湖的保护神，更是一件廊桥艺术的珍品。风雨廊桥总长507米，精雕细刻的照壁、
+                牌楼、石坊、圆亭、廊桥、斗拱，处处洋溢着明清建筑的风韵。“记忆开州”主题系列浮雕，展示了这方地域古老的风
+                物、风情、风景。牌坊上“汉丰湖”三字，系书法泰斗沈鹏亲笔题写，同时汇聚了中国当代众多的艺术家及民间艺人，
+                共同打造出了这座既具功能性又有观赏性的记忆之廊、艺术之桥。
+        </p>
+        <h2>二、城南故津</h2>
+        <p>
+            津者，渡口也。此地是开州故城之南的一个著名古渡口，当年，开州故城两江环峙，无桥可通，这个渡口就成了古城通向外
+            部世界的一个重要通道。开县地处秦巴枢衢，南北文化的交融，使得许多开县人从中国大三峡腹地，翻越巴山秦岭，走向中
+            原地区。在历史上，走出了两江总督李宗羲、一代军神刘伯承、抗日英雄王润波等众多仁人志士。改革开放时期，更走出了
+            50万敢闯敢干的务工创业者。
+            而今，城南故津已成为 “三峡最美滨湖城市”的最佳观景点之一。
+        </p>
+        <h2>三、文峰塔</h2>
+        <p>
+            文峰塔位于汉丰湖的文峰岛，清嘉庆九年建。其塔高约10丈，建筑雄伟，结构别致，雕刻精细。塔分9层，从下往上有石阶
+            螺旋上升，内空宽敞。1967年时被拆毁，尽管文峰塔的原貌已经无处可寻，但遗址古木参天，塔原址前方5米处，有三块大
+            石碑依旧完好存在，三块碑并肩而立，中间的石碑上有"文峰塔" 三个遒劲的大字，两侧的碑上则分别是文峰塔碑的碑文和
+            碑序。碑文碑序上的字清晰可见，上面所署日期均为“大清嘉庆十年”，且通过碑文可看出当年修建文峰塔如碑文中所言
+            “科名代出”的历史意义，为开县日后的文风蔚然和举子之乡奠定了坚实基础。
+        </p>
+        <h2>四、军神广场</h2>
+        <p>
+            刘伯承，中华人民共和国元帅，1892年12月4日诞生在重庆市开县，革命一生，为中国人民的解放事业立下了不朽的功勋。
+            他幼读兵书，在辛亥革命以及抗日战争、中国革命战争史上屡建功勋，被誉为当代中国“军神”。2012年12月，为了纪念
+            刘帅诞辰120周年，刘帅子女、社会各届以及开县人民筑铜像于广场中心，名军神广场。铜像高7.2米，总高12.4米，取其
+            刘帅的生日12月4日之意。
+        </p>
+        <h2>五、风荷鹭影</h2>
+        <p>
+            在汉丰湖的滨湖地带挖塘堆基，种植荷花，逶迤十里。每当夏季来临，碧叶连天，莲花盛放，清风弄荷，万般旖旎。翩飞的
+            水鸟与盛开的荷花，不仅给游客凭添了一道诗情画意的风景，也对汉丰湖淡水环境、消落带湿地生态系统及多样性物种进行
+            了有效保护。
+            风荷鹭影美如画，残荷秋雁亦入诗。6-9月：最佳观赏期。
+        </p>
+        <h2>六、鱼道</h2>
+        <p>
+            鱼道是名副其实的“生命通道”。汉丰湖位于长江支流澎溪河中上游，有胭脂鱼、岩原鲤、白甲鱼等众多珍稀水生物。它们
+            大多有在洄游季节有溯流而上繁殖、索饵和越冬等习性。错落有致的鱼道，迂回在风雨廊桥北端，无论潮起潮落，雨打风吹，
+            它一如既往地守护着这“生命的出口”，维护河流生态系统的完整性和生物多样性。
+            鱼道全长642米，设有透明的水下观察室。春季是鱼的洄游季节，在这里，你可以清晰的近距离观看一场场“生命之舞”。
+        </p>
+        <h2>七、龙王庙</h2>
+        <p>
+            开州历史上，在澎溪河与清江河畔，人们常建龙王庙祭祀，祈福风调雨顺，五谷丰登。在文革破“四旧”的风暴中，这些庙
+            宇被大量拆毁，少者幸存，当年在这个遗址上，毁而残存的“龙王庙”香火延绵，望水而立。而今，两江碧水一夜成湖，龙
+            王庙得以在汉丰湖畔重建，民众信众祈愿：浪静风平，家园永宁。
+        </p>
+        <h2>八、滨湖浴场</h2>
+        <p>
+            开县滨湖浴场由天然游泳场、恒温游泳馆以及人工沙滩等项目组成，总占地近3万平方米，是环湖运动休闲的主要去处。天
+            然游泳场水域面积约1.2万平方米，总长217米，宽25米，可容纳2000人湖中畅游；恒温游泳馆是开县第一座标准化的游泳
+            馆，馆内游泳池可容纳420人，看台可容纳观众500人；人造沙滩约2500平方米，可供沙滩运动与休闲，颇具海岸风情。
+        </p>
+        <h2>九、开心之州游乐场</h2>
+        <p>
+            “开心之洲游乐城”将炫丽、动感、时尚的游乐设施与美丽的汉丰湖湖畔风光融为一体，丰富了市民的娱乐生活，美化了城
+            市环境，成为滨湖公园内的新亮点。
+        </p>
+        <h2>十、月潭公园</h2>
+        <p>
+            月潭公园与南岭公园、举子广场紧密相连，因公园地形呈一个月牙形，故名“月潭”。月潭公园总面积达14公顷，其中水面
+            4公顷，陆地10公顷，能同时容纳数千人游玩、观光。公园内碧波荡漾、绿树成荫、百鸟争鸣，游人怡然自得，人文、自然
+            融为一体。
+            景点地址：重庆市开县南山东路
+        </p>
+
+        <h3>小贴士：</h3>
+        <ul>
+            <li>门票：免费</li>
+            <li>开放时间：全天</li>
+            <li>景区地址：重庆市开县县城内</li>
+            <li>景区电话：咨询电话：023-52793888</li>
+            <li>官网：http://hanfenghu.cn/、www.cqkxly.gov.cn</li>
+            <li>官微：@开县旅游官方微博（新浪）</li>
+            <li>微信二维码</li>
+        </ul>
+        <img class="viewImg" src="http://7xryaq.com1.z0.glb.clouddn.com/longzuishanerwei.jpg">
+
+        <h3>交通:</h3>
+        <ul>
+            <li>汽车：重庆主城区龙头寺长途汽车站有至开县的汽车，车程约4小时；票价130元/人</li>
+            <li>自驾：重庆主城经渝万高速至万开高速（四川、陕西等周边区县经开达高速）—重庆市开县出口下道</li>
+        </ul>
+    </div>
+
+<footer>
+    <div style="text-align: center;margin-top: 40px">
+    <img src="src/img/footer/footer.png">
+    </div>
+</footer>
+
+<script>
+    $('.hiSlider1').hiSlider({
+        isShowTitle: false,
+        affectTime:1000,
+        intervalTime:3000
+
+    });
+
+    var oBox=document.getElementById('demo');
+    var demoHtml = oBox.innerHTML.substring(0,250)+'...';
+    // 填充至指定位置
+    oBox.innerHTML = demoHtml;
+
+</script>
+</body>
+</html>
