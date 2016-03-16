@@ -9,6 +9,7 @@ import Article from './src/pages/article'
 import EducationService from './src/pages/education-service'
 import InnovationSpace from './src/pages/innovation-space'
 import FinanceService from './src/pages/finance-service'
+import CompanyService from './src/pages/company-service'
 import Products from './src/pages/products/products'
 import Product from './src/pages/products/product'
 import CategoryProduct from './src/pages/products/category-product'
@@ -42,6 +43,12 @@ ReactDOM.render(
         <Route path="/finance-service/:title"  component={ArticleList}/>
         <Route path="/finance-service/:title">
           <Route path="/finance-service/:title/:category" component={ArticleList}/>
+        </Route>
+      </Route>
+      <Route path="/company-service" component={CompanyService}>
+        <Route path="/company-service/:title"  component={ArticleList}/>
+        <Route path="/company-service/:title">
+          <Route path="/company-service/:title/:category" component={ArticleList}/>
         </Route>
       </Route>
       <Route path="/about" component={About} />
