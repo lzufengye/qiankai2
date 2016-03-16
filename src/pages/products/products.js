@@ -47,7 +47,7 @@ var Products = React.createClass({
           {advertisements}
           </CustomerSlider>
         </div>
-        <ProductSection backgroundImage='http://7xjdwj.com1.z0.glb.clouddn.com/section-title.jpg' width='190px' height='500px' title='开县自营' link='/products-by-category/self_sale' type='self_sale'>
+        <ProductSection backgroundImage='http://7xjdwj.com1.z0.glb.clouddn.com/section-title.jpg' width='190px' height='500px' title='开街县货' link='/products-by-category/self_sale' type='self_sale'>
           <ul className='section-menu'>
             <li>开县县馆</li>
             <li>满月镇</li>
