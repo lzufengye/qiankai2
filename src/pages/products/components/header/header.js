@@ -38,12 +38,12 @@ var Header =
         {name: '房屋中介', link: '#'},
         {name: '家政服务', link: '#'}
       ];
-      var financeServiceItems = [{name: '投资理财', link: '#'},
-        {name: '融资担保', link: '#'},
-        {name: '小额贷款', link: '/convenience-life/jobs'},
-        {name: '银行服务', link: '#'},
-        {name: '保险服务', link: '#'},
-        {name: '证券资讯', link: '#'}
+      var financeServiceItems = [{name: '投资理财', link: '/finance-service/articles/investment'},
+        {name: '融资担保', link: '/finance-service/articles/financing_guarantee'},
+        {name: '小额贷款', link: '/finance-service/articles/microfinance'},
+        {name: '银行服务', link: '/finance-service/articles/bank_services'},
+        {name: '保险服务', link: '/finance-service/articles/insurance_services'},
+        {name: '证券资讯', link: '/finance-service/articles/securities_information'}
       ];
       var innovationSpaceItems = [{name: '商家展示', link: '#'},
         {name: '孵化体验', link: '#'},
@@ -81,7 +81,7 @@ var Header =
                 <MenuItem menuIndex={1} subMenu={shoppingMallItems} name='开街商城' link='/products/all' />
                 <MenuItem menuIndex={2} subMenu={travelItems} name='智慧旅游' link='/travel.html' />
                 <MenuItem menuIndex={3} subMenu={convenienceLifeItems} name='便民服务' link='/convenience-life/newses' />
-                <MenuItem menuIndex={4} subMenu={financeServiceItems} name='金融服务' link='/convenience-life/newses' />
+                <MenuItem menuIndex={4} subMenu={financeServiceItems} name='金融服务' link='/finance-service/articles/investment' />
                 <MenuItem menuIndex={5} subMenu={innovationSpaceItems} name='众创空间' link='/innovation-space/activities' />
                 <MenuItem menuIndex={6} subMenu={companyItems} name='企业服务' link='/innovation-space/activities' />
               </div>

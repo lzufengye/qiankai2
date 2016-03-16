@@ -9,30 +9,6 @@ import ArticleList from './article-list'
 import ServerConfig from '../config/server-config'
 
 var InnovationSpace = React.createClass({
-  getInitialState() {
-    return {
-      newses: [],
-      jobs: []
-    };
-  },
-
-  loadJobInfosFromServer: function () {
-    $.ajax({
-      url: ServerConfig['serverUrl'] + '/api/jobs?latest=true',
-      dataType: 'json',
-      cache: false,
-      success: function (data) {
-        this.setState({jobs: data['jobs']});
-      }.bind(this),
-      error: function (xhr, status, err) {
-        console.error(ServerConfig['serverUrl'] + '/api/jobs', status, err.toString());
-      }.bind(this)
-    });
-  },
-
-  componentDidMount() {
-    this.loadJobInfosFromServer();
-  },
 
   render() {
     return (
