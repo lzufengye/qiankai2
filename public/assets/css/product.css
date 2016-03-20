@@ -69,6 +69,7 @@ ul, ol, li {
   background-color: rgb(241, 242, 244);
   font-size: 14px;
   height: 45px;
+  color: #000000;
 }
 
 .top-nav span {
@@ -95,6 +96,10 @@ ul, ol, li {
 
 .top-nav .right {
   float: right;
+}
+
+.top-nav a {
+  color: #000000;
 }
 
 .shopping-number {

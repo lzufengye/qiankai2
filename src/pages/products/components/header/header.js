@@ -98,7 +98,6 @@ var Header =
                   <a href="/login">注册</a>
                 </li>)}
                 <li>我的订单</li>
-                <li>我的开街</li>
                 <ShoppingCart />
               </ul>
             </div>
