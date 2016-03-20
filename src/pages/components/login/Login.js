@@ -39,14 +39,29 @@ const Login = React.createClass({
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label><input ref="email" placeholder="email" defaultValue="joe@example.com" /></label>
-        <label><input ref="pass" placeholder="password" /></label> (hint: password1)<br />
-        <button type="submit">login</button>
+      <div className='container'>
+        <div className='login'>
+          <form onSubmit={this.handleSubmit}>
+            <table>
+              <tr>
+                <td>用户名: </td>
+                <td><input ref="email" placeholder="email" defaultValue="joe@example.com" /></td>
+              </tr>
+              <tr>
+                <td>密 码: </td>
+                <td><input ref="pass" placeholder="password" /></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td><button type="submit">登录</button></td>
+              </tr>
+            </table>
         {this.state.error && (
-          <p>Bad login information</p>
+          <p>请输入正确的用户名或密码</p>
         )}
-      </form>
+          </form>
+        </div>
+      </div>
     )
   }
 

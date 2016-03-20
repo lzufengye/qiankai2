@@ -448,3 +448,38 @@ iframe {
 .article-content img{
   width: 100%;
 }
+
+.login {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.login table {
+  text-align: center;
+  color: rgb(72, 82, 85);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  -moz-transform: translateY(-50%) translateX(-50%);
+  -ms-transform: translateY(-50%) translateX(-50%);
+  -o-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+}
+
+.login input {
+  width: 160px;
+  height: 30px;
+}
+
+.login button {
+  background-color: rgb(250, 155, 10);
+  width: 135px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  font-size: 16px;
+  color: #f5f5f5;
+}

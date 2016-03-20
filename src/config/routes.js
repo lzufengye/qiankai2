@@ -2,11 +2,6 @@ import auth from '../utils/auth.js'
 import App from '../app'
 import Logout from '../pages/components/login/Logout'
 import Login from '../pages/components/login/Login'
-import User from '../pages/components/login/User'
-import Dashboard from '../pages/components/login/Dashboard'
-import Landing from '../pages/components/login/Landing'
-import PageOne from '../pages/components/login/PageOne'
-import PageTwo from '../pages/components/login/PageTwo'
 import Products from '../pages/products/products'
 import Product from '../pages/products/product'
 import CategoryProduct from '../pages/products/category-product'
@@ -274,7 +269,7 @@ export default {
         // Dynamically load the correct component
         if (auth.loggedIn()) {
           return require.ensure([], (require) => {
-            cb(null, Dashboard)
+            cb(null, Products)
           })
         }
         return require.ensure([], (require) => {
@@ -296,14 +291,8 @@ export default {
         {
           onEnter: redirectToLogin,
           childRoutes: [
-            // Protected nested routes for the dashboard
             {
-              path: '/page2',
-              getComponent: (location, cb) => {
-                require.ensure([], (require) => {
-                  cb(null, PageTwo)
-                })
-              }
+
             }
 
           ]
