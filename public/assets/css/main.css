@@ -134,6 +134,7 @@ input {
 /*container*/
 .container {
   width: 1000px;
+  min-height: 415px;
   margin: 0px auto;
   margin-top: 15px;
 }
