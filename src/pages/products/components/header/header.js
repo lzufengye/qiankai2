@@ -4,6 +4,7 @@ import ShoppingCart from '../basket/shopping-cart'
 import NavLink from '../../../../header/nav-link'
 import ProductCategory from './product-category'
 import MenuItem from './menu-item'
+import auth from '../../../../utils/auth'
 
 var Header =
   React.createClass({
@@ -13,6 +14,23 @@ var Header =
 
     hideBasket() {
       $('.appBasket').css({visibility: 'hidden'});
+    },
+
+    getInitialState() {
+      return {
+        loggedIn: auth.loggedIn()
+      }
+    },
+
+    updateAuth(loggedIn) {
+      this.setState({
+        loggedIn: !!loggedIn
+      })
+    },
+
+    componentWillMount() {
+      auth.onChange = this.updateAuth
+      auth.login()
     },
 
     render() {
@@ -60,37 +78,49 @@ var Header =
         {name: '协会服务', link: '/company-service/articles/association_service'}
       ];
 
+      console.log(this.state.loggedIn);
+
       return (
-          <div className="pure-g">
-            <header className="appHeader pure-u-1">
-              <div className="top-nav">
-                <ul className="right clear">
-                  <li>登录</li>
-                  <li>注册</li>
-                  <li>我的订单</li>
-                  <li>我的开街</li>
-                  <ShoppingCart />
-                </ul>
-              </div>
-              <div className="middle-nav">
-                <image className='logo-image' src='/assets/images/products/logo.jpg' />
-                <image className='logo-title' src='/assets/images/products/logo-title.png' />
-              </div>
-              <div className="bottom-nav">
-                <ProductCategory display={this.props.display}/>
-                <MenuItem menuIndex={1} subMenu={shoppingMallItems} name='开街商城' link='/products/all' />
-                <MenuItem menuIndex={2} subMenu={travelItems} name='智慧旅游' link='/travel.html' />
-                <MenuItem menuIndex={3} subMenu={convenienceLifeItems} name='便民服务' link='/convenience-life/newses' />
-                <MenuItem menuIndex={4} subMenu={financeServiceItems} name='金融服务' link='/finance-service/articles/investment' />
-                <MenuItem menuIndex={5} subMenu={innovationSpaceItems} name='众创空间' link='/innovation-space/activities' />
-                <MenuItem menuIndex={6} subMenu={companyItems} name='企业服务' link='/company-service/articles/company_settlement' />
-              </div>
-              { this.props.children }
-            </header>
-            <div className='basket-container' onMouseOver={that.displayBasket} onMouseOut={that.hideBasket}>
-              <Basket />
+        <div className="pure-g">
+          <header className="appHeader pure-u-1">
+            <div className="top-nav">
+              <ul className="right clear">
+                  {this.state.loggedIn ? (
+                    <li>
+                      <a href="/logout">退出</a>
+                    </li>
+                  ) : (
+                    <li>
+                      <a href="/login">登录</a>
+                    </li>
+                  )}
+                {this.state.loggedIn ? ('') : (<li>
+                  <a href="/login">注册</a>
+                </li>)}
+                <li>我的订单</li>
+                <li>我的开街</li>
+                <ShoppingCart />
+              </ul>
             </div>
+            <div className="middle-nav">
+              <image className='logo-image' src='/assets/images/products/logo.jpg' />
+              <image className='logo-title' src='/assets/images/products/logo-title.png' />
+            </div>
+            <div className="bottom-nav">
+              <ProductCategory display={this.props.display}/>
+              <MenuItem menuIndex={1} subMenu={shoppingMallItems} name='开街商城' link='/products/all' />
+              <MenuItem menuIndex={2} subMenu={travelItems} name='智慧旅游' link='/travel.html' />
+              <MenuItem menuIndex={3} subMenu={convenienceLifeItems} name='便民服务' link='/convenience-life/newses' />
+              <MenuItem menuIndex={4} subMenu={financeServiceItems} name='金融服务' link='/finance-service/articles/investment' />
+              <MenuItem menuIndex={5} subMenu={innovationSpaceItems} name='众创空间' link='/innovation-space/activities' />
+              <MenuItem menuIndex={6} subMenu={companyItems} name='企业服务' link='/company-service/articles/company_settlement' />
+            </div>
+              { this.props.children }
+          </header>
+          <div className='basket-container' onMouseOver={that.displayBasket} onMouseOut={that.hideBasket}>
+            <Basket />
           </div>
+        </div>
       );
     }
   });

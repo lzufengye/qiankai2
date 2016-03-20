@@ -39,8 +39,6 @@ var Products = React.createClass({
 
     return (
       <div className='products-container'>
-        <Header>
-        </Header>
         <div className='slider-server-container'>
           <ServiceBar />
           <CustomerSlider>
@@ -64,8 +62,6 @@ var Products = React.createClass({
         <ProductSection backgroundImage='/assets/images/products/hufu.png' width='190px' height='420px' title='县外产品' link='/products-by-category/xianwaichanping' type='xianwaichanping'/>
         <ProductSection backgroundImage='/assets/images/products/xiangji.png' width='190px' height='420px' title='进口产品' link='/products-by-category/imported' type='imported'/>
         <ProductSection backgroundImage='/assets/images/products/jiadian.png' width='190px' height='420px' title='智慧旅游' link='/products-by-category/zhihuilvyou' type='zhihuilvyou'/>
-
-        <Footer />
       </div>
     );
   }
