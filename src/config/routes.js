@@ -1,13 +1,17 @@
 import auth from '../utils/auth.js'
 import App from '../app'
 import Logout from '../pages/components/login/Logout'
-import About from '../pages/components/login/About'
 import Login from '../pages/components/login/Login'
 import User from '../pages/components/login/User'
 import Dashboard from '../pages/components/login/Dashboard'
 import Landing from '../pages/components/login/Landing'
 import PageOne from '../pages/components/login/PageOne'
 import PageTwo from '../pages/components/login/PageTwo'
+import Products from '../pages/products/products'
+import Product from '../pages/products/product'
+import CategoryProduct from '../pages/products/category-product'
+import Cart from '../pages/products/cart'
+import CartToOrder from '../pages/products/components/cart-to-order'
 
 function redirectToLogin(nextState, replace) {
   if (!auth.loggedIn()) {
@@ -31,13 +35,6 @@ export default {
       getComponent: (location, cb) => {
         require.ensure([], (require) => {
           cb(null, Logout)
-        })
-      }
-    },
-    { path: '/about',
-      getComponent: (location, cb) => {
-        require.ensure([], (require) => {
-          cb(null, About)
         })
       }
     },
@@ -70,6 +67,38 @@ export default {
         // ...
       ]
     },
+    {
+      path: '/products-by-category/:category',
+      getComponent: (location, cb) => {
+        require.ensure([], (require) => {
+          cb(null, CategoryProduct)
+        })
+      }
+    },
+    {
+      path: '/product/:id',
+      getComponent: (location, cb) => {
+        require.ensure([], (require) => {
+          cb(null, Product)
+        })
+      }
+    },
+    {
+      path: '/shopping-cart',
+      getComponent: (location, cb) => {
+        require.ensure([], (require) => {
+          cb(null, Cart)
+        })
+      }
+    },
+    {
+      path: '/shopping-cart-to-order',
+      getComponent: (location, cb) => {
+        require.ensure([], (require) => {
+          cb(null, CartToOrder)
+        })
+      }
+    },
 
     { path: '/',
       getComponent: (location, cb) => {
@@ -81,7 +110,7 @@ export default {
           })
         }
         return require.ensure([], (require) => {
-          cb(null, Landing)
+          cb(null, Products)
         })
       },
       indexRoute: {
@@ -89,7 +118,7 @@ export default {
           // Only load if we're logged in
           if (auth.loggedIn()) {
             return require.ensure([], (require) => {
-              cb(null, PageOne)
+              cb(null, Products)
             })
           }
           return cb()
@@ -106,7 +135,7 @@ export default {
                 })
               }
             }
-            // ...
+
           ]
         }
       ]

@@ -5,12 +5,14 @@ import Header from './components/header/header'
 import Footer from '../../footer'
 
 var Cart = React.createClass({
+  componentDidMount() {
+    $('.product-category').css('visibility', 'hidden')
+  },
+
   render() {
     return (
       <div className='products-container'>
-        <Header display='none'/>
         <CartPage />
-        <Footer />
       </div>
     );
   }

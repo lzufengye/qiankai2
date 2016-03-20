@@ -171,6 +171,7 @@ var CartToOrder = React.createClass({
   componentDidMount() {
     var selectedList = cookie.load('selectedList');
     this.setState({'selectedList': selectedList});
+    $('.product-category').css('visibility', 'hidden');
   },
 
   submitOrder: function () {
@@ -199,7 +200,6 @@ var CartToOrder = React.createClass({
 
     return (
       <div className="products-container">
-        <Header />
         <div className="cart-to-order-container">
           <div className="col-md-12">
             <MyAddressList />
@@ -211,7 +211,6 @@ var CartToOrder = React.createClass({
             </div>
           </div>
         </div>
-        <Footer />
       </div>
     )
   }

@@ -22,6 +22,7 @@ var Product = React.createClass({
     this.setState({inBasketQty: this.getBasketQty()});
     this.listenTo(actions.addItem, this.onStatusChange);
     this.listenTo(actions.removeItem, this.onStatusChange);
+    $('.product-category').css('visibility', 'hidden');
   },
 
   onStatusChange() {
@@ -55,8 +56,6 @@ var Product = React.createClass({
 
     return (
       <div className='products-container'>
-        <Header display='none'>
-        </Header>
         <div className='product-detail'>
           <div className='image-zoom'>
             <div className='image-zoom-main-container' onMouseEnter={that.startZoom}>
@@ -143,7 +142,6 @@ var Product = React.createClass({
             <ProductMoreInfo product_detail={this.state.product.product_detail} service={this.state.product.service}/>
           </div>
         </div>
-        <Footer />
       </div>
     );
   }

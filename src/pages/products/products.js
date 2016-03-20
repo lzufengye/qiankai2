@@ -26,6 +26,7 @@ var Products = React.createClass({
 
   componentDidMount () {
     actions.loadAdvertisement(false);
+    $('.product-category').css('visibility', 'visible');
   },
 
   render: function () {

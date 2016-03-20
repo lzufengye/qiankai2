@@ -72,8 +72,6 @@ var CategoryProduct = React.createClass({
 
     return (
       <div className='products-container' style={style}>
-        <Header>
-        </Header>
         <div className='product-sub-page'>
           <div className='product-list-container'>
             <h1>{titleMapping[this.props.params.category]}</h1>
@@ -83,7 +81,6 @@ var CategoryProduct = React.createClass({
             </ReactCSSTransitionGroup>
           </div>
         </div>
-        <Footer />
       </div>
     );
   }
