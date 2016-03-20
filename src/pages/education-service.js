@@ -9,6 +9,10 @@ import ArticleList from './article-list'
 
 var EducationService = React.createClass({
 
+  componentDidMount() {
+    $('.product-category').css('visibility', 'hidden');
+  },
+
   render() {
     return (
       <div className='container'>

@@ -8,6 +8,11 @@ import NavLink from '../header/nav-link'
 import ServerConfig from '../config/server-config'
 
 var CompanyService = React.createClass({
+
+  componentDidMount() {
+    $('.product-category').css('visibility', 'hidden');
+  },
+
   render() {
     return (
       <div className='container'>

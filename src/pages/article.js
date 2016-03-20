@@ -27,6 +27,7 @@ var Article = React.createClass({
   componentDidMount() {
     var articleId = this.props.params.id == null ? '' : this.props.params.id
     this.loadArticleFromServer(ServerConfig['serverUrl'] + '/api/' + this.props.params.title + '/' + articleId);
+    $('.product-category').css('visibility', 'hidden');
   },
 
   componentWillReceiveProps (nextProps) {
@@ -38,7 +39,7 @@ var Article = React.createClass({
       <div className='wrapper container'>
         <div className='information-board article'>
           <div className='information-title'>{this.state.article.title}</div>
-          <span dangerouslySetInnerHTML={{__html: this.state.article.text}} />
+          <span className='article-content' dangerouslySetInnerHTML={{__html: this.state.article.text}} />
         </div>
       </div>
     );

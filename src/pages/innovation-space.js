@@ -10,6 +10,10 @@ import ServerConfig from '../config/server-config'
 
 var InnovationSpace = React.createClass({
 
+  componentDidMount() {
+    $('.product-category').css('visibility', 'hidden');
+  },
+
   render() {
     return (
       <div className='container'>
@@ -44,7 +48,7 @@ var InnovationSpace = React.createClass({
               <div className='title-en'>/innovation-space/articles/education</div>
             </Block>
           </NavLink>
-          <NavLink to="/finance-service/articles/guest_house">
+          <NavLink to="/innovation-space/articles/guest_house">
             <Block backgroundColor='#f6bb43' width='185px' height='112px' blockIcon='/assets/images/incubators.png'>
               <div className='title-cn'>创客之家</div>
               <div className='title-en'>Guest House</div>

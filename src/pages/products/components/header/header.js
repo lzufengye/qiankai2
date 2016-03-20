@@ -68,7 +68,7 @@ var Header =
         {name: '合作配套', link: '/innovation-space/articles/cooperation'},
         {name: '活动发布', link: '/innovation-space/activities'},
         {name: '教育培训', link: '/innovation-space/articles/education'},
-        {name: '创客之家', link: '/finance-service/articles/guest_house'}
+        {name: '创客之家', link: '/innovation-space/articles/guest_house'}
       ];
       var companyItems = [{name: '企业入驻', link: '/company-service/articles/company_settlement'},
         {name: '政策咨询', link: '/company-service/articles/company_policies'},
@@ -108,7 +108,7 @@ var Header =
             </div>
             <div className="bottom-nav">
               <ProductCategory display={this.props.display}/>
-              <MenuItem menuIndex={1} subMenu={shoppingMallItems} name='开街商城' link='/products/all' />
+              <MenuItem menuIndex={1} subMenu={shoppingMallItems} name='开街商城' link='/' />
               <MenuItem menuIndex={2} subMenu={travelItems} name='智慧旅游' link='/travel.html' />
               <MenuItem menuIndex={3} subMenu={convenienceLifeItems} name='便民服务' link='/convenience-life/newses' />
               <MenuItem menuIndex={4} subMenu={financeServiceItems} name='金融服务' link='/finance-service/articles/investment' />

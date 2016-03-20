@@ -15,6 +15,10 @@ var ConvenienceLife = React.createClass({
     };
   },
 
+  componentDidMount() {
+    $('.product-category').css('visibility', 'hidden');
+  },
+
   render() {
     return (
       <div className='container'>

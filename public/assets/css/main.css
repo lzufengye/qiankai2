@@ -443,3 +443,7 @@ iframe {
   -o-transform: translateX(-50%);
   transform: translateX(-50%);
 }
+
+.article-content img{
+  width: 100%;
+}
