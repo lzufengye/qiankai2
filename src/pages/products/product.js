@@ -11,6 +11,7 @@ import ProductMoreInfo from './components/products/product-more-info'
 import actions from './actions/product-actions'
 import store from './stores/product-store'
 import basketStore from './stores/basket-store'
+import { browserHistory } from 'react-router'
 
 import { Link } from 'react-router'
 
@@ -32,6 +33,11 @@ var Product = React.createClass({
   clickHandler(index) {
     $('.image-zoom-main').trigger('zoom.destroy');
     actions.changeDisplayImage(index);
+  },
+
+  clickShopNow () {
+    actions.addItem(this.state.product);
+    browserHistory.push('/shopping-cart');
   },
 
   startZoom() {
@@ -110,7 +116,7 @@ var Product = React.createClass({
             </div>
             <div className='proinfo-line'></div>
             <div className='shop-actions'>
-              <div className='buy-action buy-now'></div>
+              <div className='buy-action buy-now' onClick={that.clickShopNow}></div>
               <AddToBasket className='buy-action add-to-cart' item={this.state.product}/>
             </div>
           </div>
