@@ -95,7 +95,7 @@ var Header =
                     </li>
                   )}
                 {this.state.loggedIn ? ('') : (<li>
-                  <a href="/login">注册</a>
+                  <a href="/register">注册</a>
                 </li>)}
                 <li>我的订单</li>
                 <ShoppingCart />

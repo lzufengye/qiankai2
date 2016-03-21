@@ -453,6 +453,7 @@ iframe {
   width: 80%;
   margin: 0 auto;
   text-align: center;
+  color: rgb(72, 82, 85);
 }
 
 .login table {

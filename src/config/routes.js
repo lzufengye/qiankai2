@@ -2,6 +2,7 @@ import auth from '../utils/auth.js'
 import App from '../app'
 import Logout from '../pages/components/login/Logout'
 import Login from '../pages/components/login/Login'
+import Register from '../pages/components/login/Register'
 import Products from '../pages/products/products'
 import Product from '../pages/products/product'
 import CategoryProduct from '../pages/products/category-product'
@@ -55,8 +56,15 @@ export default {
               cb(null, Login)
             })
           }
+        },
+        {
+          path: '/register',
+          getComponent: (location, cb) => {
+            require.ensure([], (require) => {
+              cb(null, Register)
+            })
+          }
         }
-        // ...
       ]
     },
 

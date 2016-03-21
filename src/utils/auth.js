@@ -1,3 +1,6 @@
+import request from 'superagent'
+import ServerConfig from '../config/server-config'
+
 module.exports = {
   login(email, pass, cb) {
     cb = arguments[arguments.length - 1]
@@ -6,16 +9,51 @@ module.exports = {
       this.onChange(true)
       return
     }
-    pretendRequest(email, pass, (res) => {
-      if (res.authenticated) {
-        localStorage.token = res.token
-        if (cb) cb(true)
-        this.onChange(true)
-      } else {
-        if (cb) cb(false)
-        this.onChange(false)
-      }
-    })
+    request.post(ServerConfig['serverUrl'] + '/consumers/sign_in')
+      .send({ "consumer": {
+        "email": email,
+        "password": pass
+      } })
+      .end((err, res) => {
+        if(JSON.parse(res.text).consumer.authentication_token != undefined) {
+          localStorage.token = JSON.parse(res.text).consumer.authentication_toke
+          cb({
+            authenticated: true
+          })
+          this.onChange(true)
+        } else {
+          cb({ authenticated: false })
+        }
+      });
+  },
+
+  register(email, password, password_confirmation, cb) {
+    cb = arguments[arguments.length - 1]
+    if (localStorage.token) {
+      if (cb) cb(true)
+      this.onChange(true)
+      return
+    }
+    if (password != password_confirmation) {
+      return
+    }
+    request.post(ServerConfig['serverUrl'] + '/consumers')
+      .send({ "consumer": {
+        "email": email,
+        "password": password,
+        "password_confirmation": password_confirmation
+      } })
+      .end((err, res) => {
+        if(JSON.parse(res.text).consumer.authentication_token != undefined) {
+          localStorage.token = JSON.parse(res.text).consumer.authentication_toke
+          cb({
+            authenticated: true
+          })
+          this.onChange(true)
+        } else {
+          cb({ authenticated: false })
+        }
+      });
   },
 
   getToken: function () {
