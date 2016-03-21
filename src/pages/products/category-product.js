@@ -24,7 +24,7 @@ var CategoryProduct = React.createClass({
 
     var style = {height: this.props.height};
     var titleMapping = {
-      self_sale: '开街县货',
+      self_sale: '开县自营',
       kaixian_special: '开县特产',
       imported: '进口商品',
       daily_usage: '生活用品',

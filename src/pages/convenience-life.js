@@ -23,65 +23,43 @@ var ConvenienceLife = React.createClass({
     return (
       <div className='container'>
         <div className='left-part left-menu'>
-          <NavLink to="/convenience-life/newses">
-            <Block backgroundColor='#f6bb43' width='185px' height='112px' blockIcon='/assets/images/newspaper.png'>
-              <div className='title-cn'>资讯中心</div>
-              <div className='title-en'>information Centre</div>
+          <a href='https://jiaofei.alipay.com/jiaofei.htm?_pdType=aecfbbfgeabbifdfdieh&_scType=bacfajegafddadijhagd' target='_blank'>
+            <Block backgroundColor='#967bdc' width='185px' height='112px' blockIcon='/assets/images/energy.png'>
+              <div className='title-cn'>购票缴费</div>
+              <div className='title-en'>Water, electricity, gas payment</div>
+            </Block>
+          </a>
+          <NavLink to="/convenience-life/articles/jiankang">
+            <Block backgroundColor='#169fa5' width='185px' height='112px' blockIcon='/assets/images/beautiful.png'>
+              <div className='title-cn'>健康服务</div>
+              <div className='title-en'>heath service</div>
             </Block>
           </NavLink>
           <NavLink to="/convenience-life/jobs">
             <Block backgroundColor='#37bd9c' width='185px' height='112px' blockIcon='/assets/images/job-post.png'>
-              <div className='title-cn'>就业信息</div>
+              <div className='title-cn'>就业服务</div>
               <div className='title-en'>Employment Information</div>
             </Block>
           </NavLink>
-          <Block backgroundColor='#ec87c1' width='185px' height='112px'>
-            <a href='http://app.alipay.com/home/appGateway.htm?appId=1000000020' target='_blank'>手机充值
-              <image className='link-image' src='/assets/images/cell-phone.png'/>
-            </a>
-            <a href='https://jiaofei.alipay.com/guhua.htm?_pdType=bbcjbfefaccjfbjdabhd' target='_blank'>固话宽带
-              <image className='link-image' src='/assets/images/old-typical-phone.png'/>
-            </a>
-            <a href='https://jiaofei.alipay.com/fare/ebppChargeEntering.htm?chargeType=catv' target='_blank'>有线电视缴费
-              <image className='link-image' src='/assets/images/tv-monitor.png'/>
-            </a>
-          </Block>
-          <a href='https://jiaofei.alipay.com/jiaofei.htm?_pdType=aecfbbfgeabbifdfdieh&_scType=bacfajegafddadijhagd' target='_blank'>
-            <Block backgroundColor='#967bdc' width='185px' height='112px' blockIcon='/assets/images/energy.png'>
-              <div className='title-cn'>水电煤缴费</div>
-              <div className='title-en'>Water, electricity, gas payment</div>
-            </Block>
-          </a>
-          <Block backgroundColor='#8dc153' width='185px' height='112px'>
-            <a href='https://ccrprod.alipay.com/credit.htm?_pdType=bbcebbcffijdjheiaigf' target='_blank'>信用卡还款
-              <image className='link-image' src='/assets/images/credit-cards.png'/>
-            </a>
-            <a href='https://ebppprod.alipay.com/estate.htm?_pdType=accibafdfbdebceidcae' target='_blank'>物业缴费
-              <image className='link-image' src='/assets/images/home.png'/>
-            </a>
-          </Block>
-          <Block backgroundColor='#fb6e52' width='185px' height='112px'>
-            <a href='https://ebppprod.alipay.com/traffic.htm?_pdType=bbcjbfefaciiiieiijgj' target='_blank'>交通违章
-              <image className='link-image' src='/assets/images/car-icon.png'/>
-            </a>
-            <a href='http://app.alipay.com/appGateway.htm?appId=1000000113' target='_blank'>医院挂号
-              <image className='link-image' src='/assets/images/hospital-building.png'/>
-            </a>
-          </Block>
-          <Block backgroundColor='#22b658' width='185px' height='112px'>
-            <a href='http://kx.cq.gov.cn/' target='_blank'>开县政府网
-              <image className='link-image' src='/assets/images/embassy.png'/>
-            </a>
-            <a href='http://www.kxwsj.gov.cn/' target='_blank'>开县卫生局
-              <image className='link-image' src='/assets/images/heart-insurance-symbol.png'/>
-            </a>
-          </Block>
-          <NavLink to="/convenience-life/articles/kaixian">
-            <Block backgroundColor='#169fa5' width='185px' height='112px' blockIcon='/assets/images/beautiful.png'>
-              <div className='title-cn'>美丽开县</div>
-              <div className='title-en'>Beautiful scenery</div>
+          <NavLink to="/convenience-life/articles/canyin">
+            <Block backgroundColor='#f6bb43' width='185px' height='112px' blockIcon='/assets/images/incubators.png'>
+              <div className='title-cn'>餐饮娱乐</div>
+              <div className='title-en'>Catering</div>
             </Block>
           </NavLink>
+          <NavLink to="/convenience-life/articles/fangwuzhongjie">
+            <Block backgroundColor='#22b658' width='185px' height='112px' blockIcon='/assets/images/incubators.png'>
+              <div className='title-cn'>房屋中介</div>
+              <div className='title-en'>Agency</div>
+            </Block>
+          </NavLink>
+          <NavLink to="/convenience-life/articles/jiazheng">
+            <Block backgroundColor='#fb6e52' width='185px' height='112px' blockIcon='/assets/images/incubators.png'>
+              <div className='title-cn'>家政服务</div>
+              <div className='title-en'>Family service</div>
+            </Block>
+          </NavLink>
+
         </div>
         {this.props.children}
       </div>

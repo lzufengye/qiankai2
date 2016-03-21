@@ -49,12 +49,12 @@ var Header =
         {name: '虚拟旅游', link: '#'},
         {name: '驴友之家', link: '#'}
       ];
-      var convenienceLifeItems = [{name: '购票缴费', link: '#'},
-        {name: '健康服务', link: '#'},
+      var convenienceLifeItems = [{name: '购票缴费', link: 'https://jiaofei.alipay.com/jiaofei.htm?_pdType=aecfbbfgeabbifdfdieh&_scType=bacfajegafddadijhagd'},
+        {name: '健康服务', link: '/convenience-life/articles/jiankang'},
         {name: '就业服务', link: '/convenience-life/jobs'},
-        {name: '餐饮娱乐', link: '#'},
-        {name: '房屋中介', link: '#'},
-        {name: '家政服务', link: '#'}
+        {name: '餐饮娱乐', link: '/convenience-life/articles/canyin'},
+        {name: '房屋中介', link: '/convenience-life/articles/fangwuzhongjie'},
+        {name: '家政服务', link: '/convenience-life/articles/jiazheng'}
       ];
       var financeServiceItems = [{name: '投资理财', link: '/finance-service/articles/investment'},
         {name: '融资担保', link: '/finance-service/articles/financing_guarantee'},
