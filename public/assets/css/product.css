@@ -341,7 +341,7 @@ ul, ol, li {
 }
 
 .appItem--is-inBasket {
-  border: 3px solid #FB4065;
+  /*border: 3px solid #FB4065;*/
 }
 
 .goods-name {

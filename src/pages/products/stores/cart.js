@@ -58,11 +58,11 @@ var CartStore = Reflux.createStore({
   },
   //建订单
   onCreateOrder: function (data, callback) {
-    layer.msg('模拟支付，提交订单中...');
+    layer.msg('Ping++正在申请中，请稍后完成支付');
 
     request.get('/data/order.create.json')
       .end((err, resp) => {
-        layer.msg('模拟支付，提交订单中...');
+        layer.msg('Ping++正在申请中，请稍后完成支付');
         if (!resp.error && 'function' == typeof callback) {
           callback(resp);
         }
