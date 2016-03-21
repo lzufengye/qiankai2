@@ -46,7 +46,7 @@ var Products = React.createClass({
           {advertisements}
           </CustomerSlider>
         </div>
-        <ProductSection backgroundImage='http://7xjdwj.com1.z0.glb.clouddn.com/section-title.jpg' width='190px' height='500px' title='开县自营' link='/products-by-category/self_sale' type='self_sale'>
+        <ProductSection backgroundImage='http://7xjdwj.com1.z0.glb.clouddn.com/ziying.jpg' width='190px' height='500px' title='' link='/products-by-category/self_sale' type='self_sale'>
           <ul className='section-menu'>
             <li>开县县馆</li>
             <li>满月镇</li>
@@ -57,12 +57,12 @@ var Products = React.createClass({
             <li>南雅镇</li>
           </ul>
         </ProductSection>
-        <ProductSection backgroundImage='/assets/images/products/ziying.png' width='190px' height='420px' title='名特产品' link='/products-by-category/kaixian_special' type='kaixian_special'/>
-        <ProductSection backgroundImage='/assets/images/products/riyong.png' width='190px' height='420px' title='乡村土货' link='/products-by-category/xiangcuntuhuo' type='xiangcuntuhuo'/>
-        <ProductSection backgroundImage='/assets/images/products/jiushui.png' width='190px' height='420px' title='工艺产品' link='/products-by-category/gongyichanping' type='gongyichanping'/>
-        <ProductSection backgroundImage='/assets/images/products/hufu.png' width='190px' height='420px' title='县外产品' link='/products-by-category/xianwaichanping' type='xianwaichanping'/>
-        <ProductSection backgroundImage='/assets/images/products/xiangji.png' width='190px' height='420px' title='进口产品' link='/products-by-category/imported' type='imported'/>
-        <ProductSection backgroundImage='/assets/images/products/jiadian.png' width='190px' height='420px' title='智慧旅游' link='/products-by-category/zhihuilvyou' type='zhihuilvyou'/>
+        <ProductSection backgroundImage='http://7xjdwj.com1.z0.glb.clouddn.com/mingte.jpg' width='190px' height='420px' title='' link='/products-by-category/kaixian_special' type='kaixian_special'/>
+        <ProductSection backgroundImage='http://7xjdwj.com1.z0.glb.clouddn.com/tuhuo.jpg' width='190px' height='420px' title='' link='/products-by-category/xiangcuntuhuo' type='xiangcuntuhuo'/>
+        <ProductSection backgroundImage='http://7xjdwj.com1.z0.glb.clouddn.com/gongyi.jpg' width='190px' height='420px' title='' link='/products-by-category/gongyichanping' type='gongyichanping'/>
+        <ProductSection backgroundImage='http://7xjdwj.com1.z0.glb.clouddn.com/xianwai.jpg' width='190px' height='420px' title='' link='/products-by-category/xianwaichanping' type='xianwaichanping'/>
+        <ProductSection backgroundImage='http://7xjdwj.com1.z0.glb.clouddn.com/jinkou.jpg' width='190px' height='420px' title='' link='/products-by-category/imported' type='imported'/>
+        <ProductSection backgroundImage='http://7xjdwj.com1.z0.glb.clouddn.com/lvyou.jpg' width='190px' height='420px' title='' link='/products-by-category/zhihuilvyou' type='zhihuilvyou'/>
       </div>
     );
   }
