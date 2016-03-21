@@ -7,6 +7,7 @@ import RegionStore from '../stores/region'
 import _ from 'lodash'
 import Qing from '../../../utils/qing'
 import request from 'superagent'
+import ServerConfig from '../../../config/server-config'
 
 var Member = Reflux.createStore({
   listenables: [MemberActions],
@@ -56,7 +57,8 @@ var Member = Reflux.createStore({
     this.trigger({'selectedAddressId': this.selectedAddressId, 'list': this.list});
   },
   onSaveAddress: function (data, callback) {
-    request.get('/data/member.saveAddress.json')
+    request.post(ServerConfig.serverUrl + '/api/addresses?token='  + localStorage.token)
+      .send(data)
       .end((err, resp) => {
         if ('function' == typeof callback) {
           callback(resp);
@@ -81,7 +83,7 @@ var Member = Reflux.createStore({
     this.addressData.phone = addressObject['phone'];
     this.addressData.address = addressObject['address'];
     this.addressData.selectedProvinceId = addressObject['provinceId'];
-    this.addressData.selectedCityId = addressObject['cityId'];
+    this.addressData.selectedCityId = addressObject['name'];
     this.addressData.id = addressObject['id'];
     this.addressData.isDefault = addressObject['isDefault'];
     this.addressData.selectedRegion = addressObject['provinceName'] + '/' + addressObject['cityName'];
@@ -92,7 +94,7 @@ var Member = Reflux.createStore({
     });
     var $this = this;
     RegionActions.selectProvince(this.addressData.selectedProvince, function () {
-      $this.addressData.selectedCityId = addressObject['cityId'];
+      $this.addressData.selectedCityId = addressObject['name'];
       $this.addressData.selectedCity = _.find($this.addressData.cityList, function (c) {
         return c.id === $this.addressData.selectedCityId;
       });
@@ -109,17 +111,17 @@ var Member = Reflux.createStore({
   onLoadAddressList: function () {
     var $this = this;
 
-    request.get('/data/member.addressList.json')
+    request.get(ServerConfig.serverUrl + '/api/addresses?token=' + localStorage.token)
       .end((err, resp) => {
-        $this.list = JSON.parse(resp.text).data['list'];
-        $this.trigger({'list': JSON.parse(resp.text).data['list']});
+        console.log('address', JSON.parse(resp.text));
+
+        $this.list = JSON.parse(resp.text).addresses;
+        $this.trigger({'list': JSON.parse(resp.text).addresses});
         //选中默认
         if (!this.selectedAddressId && _.isArray($this.list) && $this.list.length > 0) {
           var defaultAddr = _.find($this.list, function (item) {
             return item['isDefault'] == 1;
           });
-          //console.log('set default');
-          //console.log(defaultAddr);
           MemberActions.selectAddress(defaultAddr);
         }
       });

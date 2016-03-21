@@ -49,7 +49,7 @@ const Login = React.createClass({
               </tr>
               <tr>
                 <td>密 码: </td>
-                <td><input ref="pass" placeholder="password" /></td>
+                <td><input type='password' ref="pass" placeholder="password" /></td>
               </tr>
               <tr>
                 <td></td>

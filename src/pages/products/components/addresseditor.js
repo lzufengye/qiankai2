@@ -81,16 +81,13 @@ var AddressEditor = React.createClass({
       phone: this.state.phone,
       receiver: this.state.receiver,
       address: this.state.address,
-      cityId: this.state.selectedCity['id'],
+      cityId: this.state.selectedRegion,
       provinceId: this.state.selectedProvince['id'],
       isDefault: this.state.isDefault,
       id: this.state.id
     };
 
-
-    if ($('#addressEditForm').valid()) {
-      this.props.saveHandler(data);
-    }
+    this.props.saveHandler(data);
   },
   cancelSave: function () {
     this.props.cancelSave()
@@ -171,7 +168,7 @@ var AddressEditor = React.createClass({
                     <div id="cityTab" className="tab-pane fade in">
                       <ul>
 												{_.map(this.state.cityList, function (city) {
-                          return <CityItem selectCity={this.selectCity} selected={this.state.selectedCity} data={city} key={"city-" + city['id']}/>
+                          return <CityItem selectCity={this.selectCity} selected={this.state.selectedCity} data={city} key={"city-" + city['name']}/>
                         }, this)}
                       </ul>
                     </div>

@@ -49,11 +49,9 @@ var CartItem = React.createClass({
       <div className="qing-table-row">
 					{cbxHtml}
         <div className="qing-col-td cart-col-name align-left">
-          <img src={item['imgurl']} className="cart-item-img" width="120" height="120"/>
+          <img src={item['images'][0]} className="cart-item-img" width="120" height="120"/>
           <ul className="cart-item-title">
-            <li>{item['productName']}</li>
-            <li>{item['sn']}</li>
-            <li>{item['skuNameString']}</li>
+            <li>{item['name']}</li>
           </ul>
 
         </div>

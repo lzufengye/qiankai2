@@ -74,15 +74,13 @@ var CartStore = Reflux.createStore({
     var $this = this;
 
     $this.list = [];
-    request.get('/data/cart.json')
-      .end((err, res) => {
-        $this.list = JSON.parse(res.text).data;
-        _.map($this.list, function (item) {
-          item['selected'] = false
-        });
-        $this.loaded = true;
-        $this.trigger({'list': $this.list, 'loaded': $this.loaded});
-      });
+
+    $this.list = JSON.parse(localStorage.basket).basketItems;
+    _.map($this.list, function (item) {
+      item['selected'] = false
+    });
+    $this.loaded = true;
+    $this.trigger({'list': $this.list, 'loaded': $this.loaded});
   },
   onToggleSelectAll: function (selected) {
     this.list = _.map(this.list, function (item) {

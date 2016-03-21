@@ -79,8 +79,15 @@ export default {
               cb(null, User)
             })
           }
+        },
+        {
+          path: '/shopping-cart-to-order',
+          getComponent: (location, cb) => {
+            require.ensure([], (require) => {
+              cb(null, CartToOrder)
+            })
+          }
         }
-        // ...
       ]
     },
     {
@@ -104,14 +111,6 @@ export default {
       getComponent: (location, cb) => {
         require.ensure([], (require) => {
           cb(null, Cart)
-        })
-      }
-    },
-    {
-      path: '/shopping-cart-to-order',
-      getComponent: (location, cb) => {
-        require.ensure([], (require) => {
-          cb(null, CartToOrder)
         })
       }
     },

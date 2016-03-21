@@ -113,7 +113,7 @@ var AddressList = React.createClass({
     return (
       <div className="cart-mod row">
         <h2 className="cart-mod-title">
-          <i className="icon iconfont">&#xe646;</i> {'收货地址'}</h2>
+           {'收货地址'}</h2>
         <div className="cart-addr-list qing-pad-bottom-10">
 					{_.map(this.state.list, function (addr, i) {
             if (i >= this.state.showItemLimit) {

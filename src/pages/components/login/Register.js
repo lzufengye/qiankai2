@@ -51,12 +51,12 @@ const Login = React.createClass({
               </tr>
               <tr>
                 <td>密 码: </td>
-                <td><input ref="password" placeholder="密码" /></td>
+                <td><input type='password' ref="password" placeholder="密码" /></td>
                 <td>(请输入10位以上密码)</td>
               </tr>
               <tr>
                 <td>密码确认: </td>
-                <td><input ref="password_confirmation" placeholder="密码确认" /></td>
+                <td><input type='password' ref="password_confirmation" placeholder="密码确认" /></td>
                 <td></td>
               </tr>
               <tr>

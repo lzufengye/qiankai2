@@ -35,7 +35,7 @@ var Region = Reflux.createStore({
     this.regionData.selectedProvinceId = province['id'];
     this.regionData.selectedCityId = '';
 
-    request.get('/data/region.cityList.json')
+    request.get('/data/region.cityList.'+ province['id'] +'.json')
       .end((err, resp) => {
         $this.regionData.cityList = JSON.parse(resp.text).data.list;
         $this.regionData.selectedProvince = province;

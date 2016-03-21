@@ -16,7 +16,7 @@ module.exports = {
       } })
       .end((err, res) => {
         if(JSON.parse(res.text).consumer.authentication_token != undefined) {
-          localStorage.token = JSON.parse(res.text).consumer.authentication_toke
+          localStorage.token = JSON.parse(res.text).consumer.authentication_token
           cb({
             authenticated: true
           })
@@ -45,7 +45,7 @@ module.exports = {
       } })
       .end((err, res) => {
         if(JSON.parse(res.text).consumer.authentication_token != undefined) {
-          localStorage.token = JSON.parse(res.text).consumer.authentication_toke
+          localStorage.token = JSON.parse(res.text).consumer.authentication_token
           cb({
             authenticated: true
           })
