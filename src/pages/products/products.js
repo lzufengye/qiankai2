@@ -62,7 +62,6 @@ var Products = React.createClass({
         <ProductSection backgroundImage='http://7xjdwj.com1.z0.glb.clouddn.com/gongyi.jpg' width='190px' height='420px' title='' link='/products-by-category/gongyichanping' type='gongyichanping'/>
         <ProductSection backgroundImage='http://7xjdwj.com1.z0.glb.clouddn.com/xianwai.jpg' width='190px' height='420px' title='' link='/products-by-category/xianwaichanping' type='xianwaichanping'/>
         <ProductSection backgroundImage='http://7xjdwj.com1.z0.glb.clouddn.com/jinkou.jpg' width='190px' height='420px' title='' link='/products-by-category/imported' type='imported'/>
-        <ProductSection backgroundImage='http://7xjdwj.com1.z0.glb.clouddn.com/lvyou.jpg' width='190px' height='420px' title='' link='/products-by-category/zhihuilvyou' type='zhihuilvyou'/>
       </div>
     );
   }
