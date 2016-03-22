@@ -16,18 +16,14 @@ var ProductStore = Reflux.createStore({
   },
 
   loadProduct(id) {
-    if(this.data.product.id == '') {
-      request.get(ServerConfig['serverUrl'] + '/api/products/' + id)
-        .end((err, res) => {
-          this.data.product = JSON.parse(res.text).product;
-          if(this.data.product.images.length > 0) {
-            this.data.displayImage = this.data.product.images[0];
-          }
-          this.trigger(this.data);
-        });
-    } else {
-      this.trigger(this.data);
-    }
+    request.get(ServerConfig['serverUrl'] + '/api/products/' + id)
+      .end((err, res) => {
+        this.data.product = JSON.parse(res.text).product;
+        if (this.data.product.images.length > 0) {
+          this.data.displayImage = this.data.product.images[0];
+        }
+        this.trigger(this.data);
+      });
     $('.image-zoom-main').zoom();
   },
 
