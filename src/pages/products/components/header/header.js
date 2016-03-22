@@ -35,7 +35,7 @@ var Header =
 
     render() {
       var that = this;
-      var shoppingMallItems = [{name: '开街县货', link: '/products-by-category/self_sale'},
+      var shoppingMallItems = [{name: '开县自营', link: '/products-by-category/self_sale'},
         {name: '名特产品', link: '/products-by-category/kaixian_special'},
         {name: '乡村土货', link: '/products-by-category/village_product'},
         {name: '工艺产品', link: '/products-by-category/hand_craft'},
