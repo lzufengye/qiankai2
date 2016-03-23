@@ -15,14 +15,16 @@ module.exports = {
         "password": pass
       } })
       .end((err, res) => {
-        if(JSON.parse(res.text).consumer.authentication_token != undefined) {
+        if(JSON.parse(res.text).consumer != undefined && JSON.parse(res.text).consumer.authentication_token != undefined) {
           localStorage.token = JSON.parse(res.text).consumer.authentication_token
           cb({
             authenticated: true
           })
           this.onChange(true)
         } else {
-          cb({ authenticated: false })
+          if(cb != undefined) {
+            cb({ authenticated: false })
+          }
         }
       });
   },
@@ -44,14 +46,16 @@ module.exports = {
         "password_confirmation": password_confirmation
       } })
       .end((err, res) => {
-        if(JSON.parse(res.text).consumer.authentication_token != undefined) {
+        if(JSON.parse(res.text).consumer != undefined && JSON.parse(res.text).consumer.authentication_token != undefined) {
           localStorage.token = JSON.parse(res.text).consumer.authentication_token
           cb({
             authenticated: true
           })
           this.onChange(true)
         } else {
-          cb({ authenticated: false })
+          if(cb != undefined) {
+            cb({ authenticated: false })
+          }
         }
       });
   },

@@ -800,3 +800,9 @@ ul, ol, li {
   color: #333;
   font-size: 26px;
 }
+
+.treasure-hunt-container {
+  width: 1190px;
+  margin: 40px auto 0;
+  background-image: url('http://7xjdwj.com1.z0.glb.clouddn.com/treasure-hunt.jpg');
+}
