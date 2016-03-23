@@ -37,9 +37,9 @@ var Header =
       var that = this;
       var shoppingMallItems = [{name: '开县自营', link: '/products-by-category/self_sale'},
         {name: '名特产品', link: '/products-by-category/kaixian_special'},
-        {name: '乡村土货', link: '/products-by-category/village_product'},
-        {name: '工艺产品', link: '/products-by-category/hand_craft'},
-        {name: '县外产品', link: '/products-by-category/out_kaixian'},
+        {name: '乡村土货', link: '/products-by-category/xiangcuntuhuo'},
+        {name: '工艺产品', link: '/products-by-category/gongyichanpin'},
+        {name: '县外产品', link: '/products-by-category/xianwaichanping'},
         {name: '进口产品', link: '/products-by-category/imported'}
       ];
       var travelItems = [{name: '热门产品', link: '#'},
