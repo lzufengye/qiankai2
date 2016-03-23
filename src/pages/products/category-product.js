@@ -67,7 +67,10 @@ var CategoryProduct = React.createClass({
       zhuxi: "竹溪",
       zishui: "紫水",
       manyue: "满月",
-      vilage: "乡镇"
+      vilage: "乡镇",
+      xiangcuntuhuo: "乡村土货",
+      gongyichanpin: "工艺产品",
+      xianwaichanping: "县外产品"
     };
 
     return (
