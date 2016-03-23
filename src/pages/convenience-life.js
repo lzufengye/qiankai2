@@ -29,31 +29,31 @@ var ConvenienceLife = React.createClass({
               <div className='title-en'>Water, electricity, gas payment</div>
             </Block>
           </a>
-          <NavLink to="/convenience-life/articles/jiankang">
+          <NavLink to="http://bbs.cqkx.com/forum.php?mod=forumdisplay&fid=288">
             <Block backgroundColor='#169fa5' width='185px' height='112px' blockIcon='/assets/images/beautiful.png'>
               <div className='title-cn'>健康服务</div>
               <div className='title-en'>heath service</div>
             </Block>
           </NavLink>
-          <NavLink to="/convenience-life/jobs">
+          <NavLink to="http://www.kzrc.gov.cn/">
             <Block backgroundColor='#37bd9c' width='185px' height='112px' blockIcon='/assets/images/job-post.png'>
               <div className='title-cn'>就业服务</div>
               <div className='title-en'>Employment Information</div>
             </Block>
           </NavLink>
-          <NavLink to="/convenience-life/articles/canyin">
+          <NavLink to="http://bbs.cqkx.com/forum-129-1.html">
             <Block backgroundColor='#f6bb43' width='185px' height='112px' blockIcon='/assets/images/incubators.png'>
               <div className='title-cn'>餐饮娱乐</div>
               <div className='title-en'>Catering</div>
             </Block>
           </NavLink>
-          <NavLink to="/convenience-life/articles/fangwuzhongjie">
+          <NavLink to="http://bbs.cqkx.com/forum-131-1.html">
             <Block backgroundColor='#22b658' width='185px' height='112px' blockIcon='/assets/images/incubators.png'>
               <div className='title-cn'>房屋中介</div>
               <div className='title-en'>Agency</div>
             </Block>
           </NavLink>
-          <NavLink to="/convenience-life/articles/jiazheng">
+          <NavLink to="http://job.cqkx.com/index.php?m=com&c=search&hy=&jobids=&cityid=&pr=&mun=&exp=&salary=&edu=&up">
             <Block backgroundColor='#fb6e52' width='185px' height='112px' blockIcon='/assets/images/incubators.png'>
               <div className='title-cn'>家政服务</div>
               <div className='title-en'>Family service</div>

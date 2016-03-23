@@ -44,24 +44,24 @@ var Header =
       ];
       var travelItems = [{name: '热门产品', link: '#'},
         {name: '乡村旅游', link: '#'},
-        {name: '自驾旅游', link: '#'},
+        {name: '自驾旅游', link: 'http://bbs.cqkx.com/forum-142-1.html'},
         {name: '酒店预订', link: '#'},
         {name: '虚拟旅游', link: '#'},
-        {name: '驴友之家', link: '#'}
+        {name: '驴友之家', link: 'http://bbs.cqkx.com/forum-129-1.html'}
       ];
       var convenienceLifeItems = [{name: '购票缴费', link: 'https://jiaofei.alipay.com/jiaofei.htm?_pdType=aecfbbfgeabbifdfdieh&_scType=bacfajegafddadijhagd'},
-        {name: '健康服务', link: '/convenience-life/articles/jiankang'},
-        {name: '就业服务', link: '/convenience-life/jobs'},
-        {name: '餐饮娱乐', link: '/convenience-life/articles/canyin'},
-        {name: '房屋中介', link: '/convenience-life/articles/fangwuzhongjie'},
-        {name: '家政服务', link: '/convenience-life/articles/jiazheng'}
+        {name: '健康服务', link: 'http://bbs.cqkx.com/forum.php?mod=forumdisplay&fid=288'},
+        {name: '就业服务', link: 'http://www.kzrc.gov.cn/'},
+        {name: '餐饮娱乐', link: 'http://bbs.cqkx.com/forum-129-1.html'},
+        {name: '房屋中介', link: 'http://bbs.cqkx.com/forum-131-1.html'},
+        {name: '家政服务', link: 'http://job.cqkx.com/index.php?m=com&c=search&hy=&jobids=&cityid=&pr=&mun=&exp=&salary=&edu=&up'}
       ];
-      var financeServiceItems = [{name: '投资理财', link: '/finance-service/articles/investment'},
-        {name: '融资担保', link: '/finance-service/articles/financing_guarantee'},
-        {name: '小额贷款', link: '/finance-service/articles/microfinance'},
+      var financeServiceItems = [{name: '投资理财', link: 'www.kqjr.cn'},
+        {name: '融资担保', link: 'http://www.cqkxxn.com/'},
+        {name: '小额贷款', link: 'www.kqjr.cn'},
         {name: '银行服务', link: '/finance-service/articles/bank_services'},
-        {name: '保险服务', link: '/finance-service/articles/insurance_services'},
-        {name: '证券资讯', link: '/finance-service/articles/securities_information'}
+        {name: '保险服务', link: 'https://yebprod.alipay.com/yeb/index.htm'},
+        {name: '证券资讯', link: 'http://www.kqjr.cn/Article/Index?code=news'}
       ];
       var innovationSpaceItems = [{name: '商家展示', link: '/innovation-space/articles/customer_show'},
         {name: '孵化体验', link: '/innovation-space/articles/incubation'},
