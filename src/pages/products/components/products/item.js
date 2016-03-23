@@ -53,7 +53,7 @@ var Item = React.createClass({
       <li style={itemStyle} className='pure-u-1 pure-u-md-1-3 pure-u-lg-1-4' >
         <Link to={'/product/' + this.props.id} className={"appItem appItem--"+ statusClassName}>
           <img className={'img-responsive'} src={this.props.item.image} alt="" />
-          <div className="goods-name truncate">{this.props.item.name}</div>
+            <div className="goods-name truncate">{this.props.item.name}</div>
           <div className="appItem-price">¥ {this.props.item.price}</div>
         </Link>
       </li>

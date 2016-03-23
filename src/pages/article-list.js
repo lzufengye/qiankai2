@@ -19,7 +19,6 @@ var ArticleList = React.createClass({
         cache: false,
         success: function (data) {
           this.setState({infoList: data['result']});
-          console.log(data);
         }.bind(this),
         error: function (xhr, status, err) {
           console.error(ServerConfig['serverUrl'] + '/api/search/' + searchValue, status, err.toString());

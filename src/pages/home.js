@@ -108,7 +108,6 @@ var Home = React.createClass({
     this.loadJobInfosFromServer();
     this.loadArticlesFromServer();
     this.loadActivitiesFromServer();
-    console.log('ENV', process.env.NODE_ENV)
   },
 
   render() {

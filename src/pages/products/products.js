@@ -48,7 +48,7 @@ var Products = React.createClass({
         </div>
         <ProductSection backgroundImage='http://7xjdwj.com1.z0.glb.clouddn.com/ziying.jpg' width='190px' height='500px' title='' link='/products-by-category/self_sale' type='self_sale'>
           <ul className='section-menu'>
-            <li>开县寻宝</li>
+            <li><a href='/treasure-hunt'>开县寻宝</a></li>
             <li>满月镇</li>
             <li>紫水镇</li>
             <li>大德镇</li>

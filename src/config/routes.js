@@ -16,6 +16,7 @@ import FinanceService from '../pages/finance-service'
 import CompanyService from '../pages/company-service'
 import About from '../pages/about'
 import Article from '../pages/article'
+import TreasureHunt from '../pages/products/treasure-hunt'
 
 function redirectToLogin(nextState, replace) {
   if (!auth.loggedIn()) {
@@ -113,6 +114,15 @@ export default {
           cb(null, Cart)
         })
       }
+    },
+    {
+      path: '/treasure-hunt',
+      getComponent: (location, cb) => {
+        require.ensure([], (require) => {
+          cb(null, TreasureHunt)
+        })
+      }
+
     },
     {
       path: '/convenience-life',

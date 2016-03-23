@@ -126,7 +126,7 @@ ul, ol, li {
 }
 
 .middle-nav .logo-title {
-  width: 380px;
+  width: 560px;
   display: inline-block;
   vertical-align: middle;
 }
@@ -767,6 +767,10 @@ ul, ol, li {
   background: url('/assets/images/products/feature.png') no-repeat -165px 0;
 }
 
+.section-menu li a {
+  color: #df3627;
+}
+
 .product-sub-page {
   width: 1190px;
   margin: 0 auto;
@@ -802,7 +806,35 @@ ul, ol, li {
 }
 
 .treasure-hunt-container {
-  width: 1190px;
-  margin: 40px auto 0;
+  width: 100%;
+  min-width: 1190px;
+  height: 950px;
   background-image: url('http://7xjdwj.com1.z0.glb.clouddn.com/treasure-hunt.jpg');
+  background-size: cover;
+}
+
+.treasure-hunt-container svg {
+  width: 100%;
+  height: 950px;
+}
+
+.treasure-hunt-container .sample-product {
+  width: 125px;
+  height: 200px;
+  padding: 0;
+  text-align: center;
+  position: absolute;
+  top: 180px;
+  right: 20%;
+  display: none;
+}
+
+.treasure-hunt-container .sample-product a {
+  border: none;
+  display: block;
+  color: #333;
+}
+
+.treasure-hunt-container .sample-product .goods-name {
+  width: auto;
 }
