@@ -7,7 +7,6 @@
 body {
 	font-family: "微软雅黑";
 	font-size: 12px;
-	background: #FAFAFA;
 	height:1000px;
 	width: 100%;
 }
@@ -151,18 +150,6 @@ ul.nav-right{
 	width: 7px;
 	height: 7px;
 	background: url('../img/down-icon.png') no-repeat;
-}
-/*图标向上旋转*/
-.hover-up{
-	transition-duration: .5s;
-	transform: rotate(180deg);
-	-webkit-transform: rotate(180deg);
-}
-/*图标向下旋转*/
-.hover-down{
-	transition-duration: .5s;
-	transform: rotate(0deg);
-	-webkit-transform: rotate(0deg);
 }
 ul.nav-right li {
 	float: left;

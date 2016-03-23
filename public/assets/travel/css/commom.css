@@ -8,6 +8,7 @@
 
 .logo img{
     float: left;
+    width: 700px;
 }
 
 /*顶部工具栏样式*/
@@ -387,6 +388,20 @@ ul.nav-travel li {
 .special img{
     width: 50%;
     height: 100%;
+}
+
+#main-text {
+    width: 960px;
+    margin: 0 auto;
+    font-size: 14px;
+}
+
+#main-text img {
+    width: 80%;
+}
+
+#main-text h1 {
+    text-align: center;
 }
 
 
