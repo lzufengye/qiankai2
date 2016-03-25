@@ -135,7 +135,9 @@ ul, ol, li {
   background-color: white;
   color: rgb(72, 82, 85);
   padding: 20px 100px 5px;
-  width: 1440px;
+  width: 100%;
+  max-width: 1440px;
+  min-width: 1190px;
   margin: 0 auto;
   box-sizing: border-box;
 }
