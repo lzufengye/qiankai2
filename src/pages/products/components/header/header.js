@@ -56,9 +56,9 @@ var Header =
         {name: '房屋中介', link: 'http://bbs.cqkx.com/forum-131-1.html'},
         {name: '家政服务', link: 'http://job.cqkx.com/index.php?m=com&c=search&hy=&jobids=&cityid=&pr=&mun=&exp=&salary=&edu=&up'}
       ];
-      var financeServiceItems = [{name: '投资理财', link: 'www.kqjr.cn'},
+      var financeServiceItems = [{name: '投资理财', link: 'http://www.kqjr.cn'},
         {name: '融资担保', link: 'http://www.cqkxxn.com/'},
-        {name: '小额贷款', link: 'www.kqjr.cn'},
+        {name: '小额贷款', link: 'http://www.kqjr.cn'},
         {name: '银行服务', link: '/finance-service/articles/bank_services'},
         {name: '保险服务', link: 'https://yebprod.alipay.com/yeb/index.htm'},
         {name: '证券资讯', link: 'http://www.kqjr.cn/Article/Index?code=news'}

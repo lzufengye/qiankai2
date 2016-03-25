@@ -17,42 +17,42 @@ var FinanceService = React.createClass({
     return (
       <div className='container'>
         <div className='left-part left-menu'>
-          <NavLink to="www.kqjr.cn">
+          <a href="http://www.kqjr.cn" target='_blank'>
             <Block backgroundColor='#ec87c1' width='185px' height='112px' blockIcon='/assets/images/activities.png'>
               <div className='title-cn'>投资理财</div>
               <div className='title-en'>Investment</div>
             </Block>
-          </NavLink>
-          <NavLink to="http://www.cqkxxn.com/">
+          </a>
+          <a href="http://www.cqkxxn.com/" target='_blank'>
             <Block backgroundColor='#967bdc' width='185px' height='112px' blockIcon='/assets/images/project.png'>
               <div className='title-cn'>融资担保</div>
               <div className='title-en'>Financing Guarantee</div>
             </Block>
-          </NavLink>
-          <NavLink to="www.kqjr.cn">
+          </a>
+          <a href="http://www.kqjr.cn" target='_blank'>
             <Block backgroundColor='#22b658' width='185px' height='112px' blockIcon='/assets/images/services.png'>
               <div className='title-cn'>小额贷款</div>
               <div className='title-en'>Microfinance</div>
             </Block>
-          </NavLink>
-          <NavLink to="/finance-service/articles/bank_services">
-          <Block backgroundColor='#fb6e52' width='185px' height='112px' blockIcon='/assets/images/incubators.png'>
-            <div className='title-cn'>银行服务</div>
-            <div className='title-en'>Bank Services</div>
-          </Block>
-        </NavLink>
-          <NavLink to="https://yebprod.alipay.com/yeb/index.htm">
+          </a>
+          <a href="/finance-service/articles/bank_services" target='_blank'>
+            <Block backgroundColor='#fb6e52' width='185px' height='112px' blockIcon='/assets/images/incubators.png'>
+              <div className='title-cn'>银行服务</div>
+              <div className='title-en'>Bank Services</div>
+            </Block>
+          </a>
+          <a href="https://yebprod.alipay.com/yeb/index.htm" target='_blank'>
             <Block backgroundColor='#f6bb43' width='185px' height='112px' blockIcon='/assets/images/incubators.png'>
               <div className='title-cn'>保险服务</div>
               <div className='title-en'>Insurance Services</div>
             </Block>
-          </NavLink>
-          <NavLink to="http://www.kqjr.cn/Article/Index?code=news">
+          </a>
+          <a href="http://www.kqjr.cn/Article/Index?code=news" target='_blank'>
             <Block backgroundColor='#169fa5' width='185px' height='112px' blockIcon='/assets/images/support.png'>
               <div className='title-cn'>证券资讯</div>
               <div className='title-en'>Securities Information</div>
             </Block>
-          </NavLink>
+          </a>
         </div>
         {this.props.children}
       </div>
