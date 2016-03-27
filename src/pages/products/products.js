@@ -49,12 +49,12 @@ var Products = React.createClass({
         <ProductSection backgroundImage='http://7xjdwj.com1.z0.glb.clouddn.com/ziying.jpg' width='190px' height='500px' title='' link='/products-by-category/self_sale' type='self_sale'>
           <ul className='section-menu'>
             <li><a href='/treasure-hunt'>开县寻宝</a></li>
-            <li>满月镇</li>
-            <li>紫水镇</li>
-            <li>大德镇</li>
-            <li>麻柳镇</li>
-            <li>五通镇</li>
-            <li>南雅镇</li>
+            <li><a href='/treasure-hunt'>满月镇</a></li>
+            <li><a href='/treasure-hunt'>紫水镇</a></li>
+            <li><a href='/treasure-hunt'>大德镇</a></li>
+            <li><a href='/treasure-hunt'>麻柳镇</a></li>
+            <li><a href='/treasure-hunt'>五通镇</a></li>
+            <li><a href='/treasure-hunt'>南雅镇</a></li>
           </ul>
         </ProductSection>
         <ProductSection backgroundImage='http://7xjdwj.com1.z0.glb.clouddn.com/mingte.jpg' width='190px' height='420px' title='' link='/products-by-category/kaixian_special' type='kaixian_special'/>
