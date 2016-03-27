@@ -18,8 +18,6 @@ var Customers = React.createClass({
   },
 
   render() {
-    var that = this;
-
     var customers = this.state.customers.map((customer,i) => {
       return <Customer key={customer.id} item={customer} id={customer.id} index={i} />;
     });

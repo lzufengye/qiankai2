@@ -78,8 +78,6 @@ var Header =
         {name: '协会服务', link: '/company-service/articles/association_service'}
       ];
 
-      console.log(this.state.loggedIn);
-
       return (
         <div className="pure-g">
           <header className="appHeader pure-u-1">

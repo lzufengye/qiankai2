@@ -6,6 +6,7 @@ import Register from '../pages/components/login/Register'
 import Products from '../pages/products/products'
 import Product from '../pages/products/product'
 import CategoryProduct from '../pages/products/category-product'
+import CustomerProducts from '../pages/products/customer-product'
 import Cart from '../pages/products/cart'
 import CartToOrder from '../pages/products/components/cart-to-order'
 import ConvenienceLife from '../pages/convenience-life'
@@ -113,6 +114,14 @@ export default {
       getComponent: (location, cb) => {
         require.ensure([], (require) => {
           cb(null, Customers)
+        })
+      }
+    },
+    {
+      path: '/customers/:id',
+      getComponent: (location, cb) => {
+        require.ensure([], (require) => {
+          cb(null, CustomerProducts)
         })
       }
     },

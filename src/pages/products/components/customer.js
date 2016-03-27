@@ -13,7 +13,7 @@ var Customer = React.createClass({
       };
     return (
       <li style={itemStyle} className='pure-u-1 pure-u-md-1-3 pure-u-lg-1-4' >
-        <Link to={'/product/' + this.props.id}>
+        <Link to={'/customers/' + this.props.item.id}>
           <img className={'img-responsive'} src={this.props.item.image} alt="" />
           <div className="appItem-price">{this.props.item.name}</div>
           <div className="goods-name truncate">{this.props.item.description}</div>

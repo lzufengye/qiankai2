@@ -882,3 +882,22 @@ ul, ol, li {
   margin: 0 15px;
   text-align: left;
 }
+
+.customer-products {
+  margin-top: 20px;
+}
+
+.customer-products .product-section {
+  margin-top: 0;
+}
+
+.customer-header {
+  width: 1190px;
+  height: 100px;
+  background-color: rgba(211, 33, 31, 0.8);
+  margin: 0 auto;
+  font: 700 30px/25px Tahoma;
+  text-align: center;
+  line-height: 100px;
+  margin-bottom: 10px;
+}

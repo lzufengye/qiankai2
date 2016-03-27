@@ -7,10 +7,13 @@ var CustomerStore = Reflux.createStore({
 
   init() {
     this.data = {
-      customers: []
+      customers: [],
+      products: [],
+      currentCustomer: ''
     };
 
     this.listenTo(actions.loadCustomers, this.loadCustomers);
+    this.listenTo(actions.loadCustomerProducts, this.loadCustomerProducts);
   },
 
   loadCustomers(cached) {
@@ -23,6 +26,15 @@ var CustomerStore = Reflux.createStore({
     } else {
       this.trigger(this.data);
     }
+  },
+
+  loadCustomerProducts(customer_id) {
+    request.get(ServerConfig['serverUrl'] + '/api/customers/' + customer_id)
+      .end((err, res) => {
+        this.data.products = JSON.parse(res.text).products;
+        this.data.currentCustomer = JSON.parse(res.text).customer;
+          this.trigger(this.data);
+      })
   },
 
   getInitialState() {
