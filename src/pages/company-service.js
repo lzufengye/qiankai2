@@ -17,7 +17,7 @@ var CompanyService = React.createClass({
     return (
       <div className='container'>
         <div className='left-part left-menu'>
-          <NavLink to="/company-service/articles/company_settlement">
+          <NavLink to="/customers">
             <Block backgroundColor='#ec87c1' width='185px' height='112px' blockIcon='/assets/images/activities.png'>
               <div className='title-cn'>企业入驻</div>
               <div className='title-en'>Company Settlement</div>

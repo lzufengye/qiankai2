@@ -847,3 +847,38 @@ ul, ol, li {
 .treasure-hunt-container .sample-product .goods-name {
   width: auto;
 }
+
+.customer-container {
+  width: 1190px;
+  min-height: 450px;
+  margin: 15px auto;
+}
+
+.customer-container .appItems {
+  width: 100%;
+}
+
+.customer-container .appItems li {
+  width: 33%;
+  height: 450px;
+  box-sizing: border-box;
+  padding: 15px;
+  vertical-align: top;
+}
+
+.customer-container .appItems li a {
+  height: 450px;
+  display: block;
+}
+
+.customer-container .appItems li img {
+  width: 100%;
+  height: 300px;
+}
+
+.customer-container .appItems li .goods-name {
+  height: 80px;
+  width: 100%;
+  margin: 0 15px;
+  text-align: left;
+}

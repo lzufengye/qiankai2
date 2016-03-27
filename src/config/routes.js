@@ -16,6 +16,7 @@ import FinanceService from '../pages/finance-service'
 import CompanyService from '../pages/company-service'
 import About from '../pages/about'
 import Article from '../pages/article'
+import Customers from '../pages/products/customers'
 import TreasureHunt from '../pages/products/treasure-hunt'
 
 function redirectToLogin(nextState, replace) {
@@ -104,6 +105,14 @@ export default {
       getComponent: (location, cb) => {
         require.ensure([], (require) => {
           cb(null, Product)
+        })
+      }
+    },
+    {
+      path: '/customers',
+      getComponent: (location, cb) => {
+        require.ensure([], (require) => {
+          cb(null, Customers)
         })
       }
     },

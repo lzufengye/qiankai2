@@ -70,7 +70,7 @@ var Header =
         {name: '教育培训', link: '/innovation-space/articles/education'},
         {name: '创客之家', link: '/innovation-space/articles/guest_house'}
       ];
-      var companyItems = [{name: '企业入驻', link: '/company-service/articles/company_settlement'},
+      var companyItems = [{name: '企业入驻', link: '/customers'},
         {name: '政策咨询', link: '/company-service/articles/company_policies'},
         {name: '专家把脉', link: '/company-service/articles/experts'},
         {name: '商务运作', link: '/company-service/articles/business_running'},
