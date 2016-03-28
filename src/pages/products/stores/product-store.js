@@ -7,7 +7,7 @@ var ProductStore = Reflux.createStore({
 
   init() {
     this.data = {
-      product: {id: '', images: [], comments: [], customer: {}},
+      product: {id: '', images: [], comments: [], customer: {}, product_details: [], services: []},
       displayImage: ''
     };
 

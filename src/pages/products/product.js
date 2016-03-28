@@ -145,7 +145,7 @@ var Product = React.createClass({
             </div>
           </div>
           <div className='right-column'>
-            <ProductMoreInfo product_detail={this.state.product.product_detail} service={this.state.product.service}/>
+            <ProductMoreInfo product_details={this.state.product.product_details} services={this.state.product.services}/>
           </div>
         </div>
       </div>

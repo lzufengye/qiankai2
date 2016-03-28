@@ -2,7 +2,13 @@ import React from 'react'
 
 var ProductMoreInfo = React.createClass({
   render() {
-    console.log(this.props);
+    let product_details = this.props.product_details.map(function (image, index) {
+      return <div className='product-more-image'><image src={image} data-src={image}/></div>
+    });
+
+    let services = this.props.services.map(function (image, index) {
+      return <div className='product-more-image'><image src={image} data-src={image}/></div>
+    });
 
     return (
       <div >
@@ -13,12 +19,8 @@ var ProductMoreInfo = React.createClass({
           <li>咨询</li>
           <li>售后保障</li>
         </ul>
-        <div>
-          <image src={this.props.product_detail}/>
-        </div>
-        <div>
-          <image src={this.props.service}/>
-        </div>
+        {product_details}
+        {services}
       </div>
     );
   }
