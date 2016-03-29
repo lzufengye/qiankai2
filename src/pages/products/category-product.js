@@ -28,7 +28,6 @@ var CategoryProduct = React.createClass({
       kaixian_special: '开县特产',
       imported: '进口商品',
       daily_usage: '生活用品',
-      wine_drink: '食品酒水',
       beautify: '美妆护肤',
       camera: '数码相机',
       home_machine: '家用电器',
