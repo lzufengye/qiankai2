@@ -39,7 +39,6 @@ var CartInvoice = React.createClass({
     this.editorLayerIndex = layer.open({
       type: 1,
       skin: 'layui-layer-demo', //样式类名
-      closeBtn: false, //不显示关闭按钮
       shift: 2,
       shadeClose: true, //开启遮罩关闭
       maxWidth: 900,
