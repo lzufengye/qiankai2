@@ -5,6 +5,7 @@ import NavLink from '../../../../header/nav-link'
 import ProductCategory from './product-category'
 import MenuItem from './menu-item'
 import auth from '../../../../utils/auth'
+import SearchBar from '../../../../header/search-bar'
 
 var Header =
   React.createClass({
@@ -102,6 +103,7 @@ var Header =
             <div className="middle-nav">
               <image className='logo-image' src='/assets/images/products/logo.jpg' />
               <image className='logo-title' src='/assets/images/products/logo-title.png' />
+              <SearchBar />
             </div>
             <div className="bottom-nav">
               <ProductCategory display={this.props.display}/>
@@ -112,7 +114,6 @@ var Header =
               <MenuItem menuIndex={5} subMenu={innovationSpaceItems} name='众创空间' link='/innovation-space/activities' />
               <MenuItem menuIndex={6} subMenu={companyItems} name='企业服务' link='/company-service/articles/company_settlement' />
             </div>
-              { this.props.children }
           </header>
           <div className='basket-container' onMouseOver={that.displayBasket} onMouseOut={that.hideBasket}>
             <Basket />

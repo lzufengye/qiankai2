@@ -54,7 +54,7 @@ var Item = React.createClass({
         <Link to={'/product/' + this.props.id} className={"appItem appItem--"+ statusClassName}>
           <img className={'img-responsive'} src={this.props.item.image} alt="" />
             <div className="goods-name truncate">{this.props.item.name}</div>
-          <div className="appItem-price">¥ {this.props.item.price} / {this.props.item.unit}</div>
+          <div className="appItem-price">¥ {this.props.item.price} {this.props.item.unit}</div>
         </Link>
       </li>
     );

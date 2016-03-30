@@ -19,6 +19,7 @@ import About from '../pages/about'
 import Article from '../pages/article'
 import Customers from '../pages/products/customers'
 import TreasureHunt from '../pages/products/treasure-hunt'
+import SearchProducts from '../pages/products/search-product'
 
 function redirectToLogin(nextState, replace) {
   if (!auth.loggedIn()) {
@@ -284,7 +285,7 @@ export default {
       path: '/search/:searchValue',
       getComponent: (location, cb) => {
         require.ensure([], (require) => {
-          cb(null, ArticleList)
+          cb(null, SearchProducts)
         })
       }
     },

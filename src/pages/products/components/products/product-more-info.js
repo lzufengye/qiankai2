@@ -15,9 +15,6 @@ var ProductMoreInfo = React.createClass({
         <ul className='titles'>
           <li>商品详情</li>
           <li>包装及参数</li>
-          <li>评价</li>
-          <li>咨询</li>
-          <li>售后保障</li>
         </ul>
         {product_details}
         {services}
