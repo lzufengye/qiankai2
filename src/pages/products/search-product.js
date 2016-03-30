@@ -16,6 +16,10 @@ var SearchProduct = React.createClass({
     actions.searchProducts(this.props.params.searchValue);
   },
 
+  componentWillReceiveProps(nextProps) {
+    actions.searchProducts(nextProps.params.searchValue);
+  },
+
   render() {
     var items = this.state.products.search_result.map((item, i) => {
       item.type = this.props.params.category;
