@@ -258,13 +258,13 @@ li img{
     position: relative;
 }
 .travel-show-right{
-    width: 50%;
+    width: 40%;
     height: 100%;
     margin-left: 5%;
     float: right;
     position: absolute;
     top: 20px;
-    right: 8%;
+    right: 12%;
 }
 
 .travel-show-right label{
