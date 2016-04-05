@@ -1,1 +1,1 @@
-export default {serverUrl: 'http://10.117.220.237:32770'}
+export default {serverUrl: 'http://120.26.86.197:32770'}
