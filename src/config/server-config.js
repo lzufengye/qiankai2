@@ -1,1 +1,1 @@
-export default {serverUrl: 'http://qiankai-admin.daoapp.io'}
+export default {serverUrl: 'http://10.117.220.237:32770'}
