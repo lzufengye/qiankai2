@@ -59,7 +59,7 @@ var Products = React.createClass({
         </ProductSection>
         <ProductSection backgroundImage='http://7xjdwj.com1.z0.glb.clouddn.com/mingte.jpg' width='190px' height='420px' title='' link='/products-by-category/kaixian_special' type='kaixian_special'/>
         <ProductSection backgroundImage='http://7xjdwj.com1.z0.glb.clouddn.com/tuhuo.jpg' width='190px' height='420px' title='' link='/products-by-category/xiangcuntuhuo' type='xiangcuntuhuo'/>
-        <ProductSection backgroundImage='http://7xjdwj.com1.z0.glb.clouddn.com/gongyi.jpg' width='190px' height='420px' title='' link='/products-by-category/gongyichanping' type='gongyichanping'/>
+        <ProductSection backgroundImage='http://7xjdwj.com1.z0.glb.clouddn.com/gongyechanpin.jpg' width='190px' height='420px' title='' link='/products-by-category/gongyechanping' type='gongyechanping'/>
         <ProductSection backgroundImage='http://7xjdwj.com1.z0.glb.clouddn.com/xianwai.jpg' width='190px' height='420px' title='' link='/products-by-category/xianwaichanping' type='xianwaichanping'/>
         <ProductSection backgroundImage='http://7xjdwj.com1.z0.glb.clouddn.com/jinkou.jpg' width='190px' height='420px' title='' link='/products-by-category/imported' type='imported'/>
       </div>

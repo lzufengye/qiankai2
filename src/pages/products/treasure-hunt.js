@@ -12,7 +12,6 @@ var TreasureHunt = React.createClass({
 
   showProduct() {
     $('.sample-product').show();
-    console.log('rtete');
   },
 
   hideProduct() {

@@ -102,7 +102,7 @@ var Header =
             </div>
             <div className="middle-nav">
               <image className='logo-image' src='/assets/images/products/logo.jpg' />
-              <image className='logo-title' src='/assets/images/products/logo-title.png' />
+              <image className='logo-title' src='/assets/images/products/logo-title.jpg' />
               <SearchBar />
             </div>
             <div className="bottom-nav">
