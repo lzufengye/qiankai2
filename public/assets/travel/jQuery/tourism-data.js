@@ -6,11 +6,46 @@
  * 获取json数据
  */
 $(function() {
+
+    var create_hot_div= function(){
+
+        var left_div=$('<div></div>');                //创建一个hot-view
+        left_div.addClass("hot-view");                //添加css样式
+        var left_div_img=$('<a><img></a>');
+        var left_div_title=$('<div></div>');
+        left_div_title.addClass("viewName");
+        left_div_img.appendTo(left_div);
+        left_div_title.appendTo(left_div);
+
+        $("#hot-view").append(left_div);
+    };
+
+    var create_village_div= function(){
+
+        var left_div=$('<div></div>');                //创建一个hot-view
+        left_div.addClass("village-view");            //添加css样式
+        var left_div_img=$('<a><img></a>');
+        var left_div_title=$('<div></div>');
+        left_div_title.addClass("viewName");
+        left_div_img.appendTo(left_div);
+        left_div_title.appendTo(left_div);
+
+        $("#village-view").append(left_div);
+    };
+
     $.ajax({
         url: serverUrl+"hots",
         method: "post",
         dataType: 'json',
         success: function (data) {
+
+            var m=data.length;
+            console.log(m);
+            for (var i=0;i<m;i++){
+                //console.log(i);
+                create_hot_div();
+            }
+
             $(".hot-view .viewName").each(function(index){
                 console.log(data[index].title);
                 $(this).html(data[index].title);
@@ -33,6 +68,14 @@ $(function() {
         method: "post",
         dataType: 'json',
         success: function (data) {
+
+            var m=data.length;
+            console.log(m);
+            for (var i=0;i<m;i++){
+                //console.log(i);
+                create_village_div();
+            }
+            
             $(".village-view .viewName").each(function(index){
                 console.log(data[index].title);
                 $(this).html(data[index].title);

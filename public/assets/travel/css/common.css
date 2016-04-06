@@ -197,10 +197,9 @@ li img{
 .item-wrap{
     margin-top: 10px;
     width: 100%;
-    height: 400px;
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     border-top: 2px solid lightgray;
 
 }
