@@ -22556,7 +22556,7 @@
 	          'div',
 	          { className: 'middle-nav' },
 	          _react2.default.createElement('image', { className: 'logo-image', src: '/assets/images/products/logo.jpg' }),
-	          _react2.default.createElement('image', { className: 'logo-title', src: '/assets/images/products/logo-title.png' })
+	          _react2.default.createElement('image', { className: 'logo-title', src: '/assets/images/products/logo-title.jpg' })
 	        ),
 	        _react2.default.createElement(
 	          'div',

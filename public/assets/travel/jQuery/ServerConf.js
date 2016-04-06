@@ -1,0 +1,1 @@
+ var serverUrl="http://admin.kaijiewang.com/";

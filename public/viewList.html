@@ -1,254 +1,186 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <title>开街网</title>
-    <link href="/assets/travel/css/navbar.css" rel="stylesheet" type="text/css"/>
-    <link href="/assets/travel/css/commom.css" rel="stylesheet" type="text/css"/>
-    <script src="/assets/travel/lib/jquery-1.7.2.min.js"></script>
-    <script src="/assets/travel/lib/jquery.hiSlider.js"></script>
-    <script src="/assets/travel/jQuery/navLeft.js"></script>
-    <script src="/assets/travel/jQuery/navRight.js"></script>
-    <script src="/assets/travel/jQuery/bar.js"></script>
+  <meta charset="utf-8">
+  <title>开街网</title>
+  <link href="/assets/travel/css/nav-bar.css" rel="stylesheet" type="text/css"/>
+  <link href="/assets/travel/css/common.css" rel="stylesheet" type="text/css"/>
+  <script src="/assets/travel/lib/jquery-1.7.2.min.js"></script>
+  <script src="/assets/travel/lib/jquery.hiSlider.js"></script>
+  <script src="/assets/travel/jQuery/navLeft.js"></script>
+  <script src="/assets/travel/jQuery/navRight.js"></script>
+  <script src="/assets/travel/jQuery/bar.js"></script>
+  <script src="/assets/travel/jQuery/tourism-kind-data.js"></script>
+  <script src="/assets/travel/jQuery/ServerConf.js"></script>
 </head>
 <body>
 <header>
-    <div class="tool-bar">
-        <!--顶部工具栏-->
-        <div class="bar">
-            <!--左工具栏（登陆注册）-->
-            <div class="barLeft">
-                <ul>
-                    <li><a href="">请登录</a><span></span></li>
-                    <li><a href="">免费注册</a><span></span></li>
-                </ul>
-            </div>
-            <!--右工具栏-->
-            <div class="barRight">
-                <ul class="bar-right">
-                    <li id="br-1"><a href="">购物车</a><span></span></li>
-                    <li id="br-2"><a href="">我的开街</a><span></span></li>
-                    <li id="br-3"><a href="">我的订单</a><span></span></li>
-                </ul>
-                <!--隐藏盒子-->
-                <div id="bar-1" class="hidden-barBox hidden-bar-index">
-                    <ul>
-                        <li>。。。。</li>
-                        <li>。。。。</li>
-                        <li>。。。。</li>
-                        <li>。。。。</li>
-                    </ul>
-                </div>
-                <div id="bar-2" class="hidden-barBox hidden-bar-us">
-                    <ul>
-                        <li>加入步骤</li>
-                        <li>申请要求</li>
-                    </ul>
-                </div>
-                <div id="bar-3" class="hidden-barBox hidden-bar-info">
-                    <ul>
-                        <li>订单管理</li>
-                        <li>物流跟踪</li>
-                    </ul>
-                </div>
-            </div>
+  <div class="tool-bar">
+    <!--顶部工具栏-->
+    <div class="bar">
+      <!--左工具栏（登陆注册）-->
+      <div class="barLeft">
+      </div>
+      <!--右工具栏-->
+      <div class="barRight">
+        <ul class="bar-right">
+          <li><a style="color: #485255" href="/register">注册</a></li>
+          <li><a style="color: #485255" href="/login">登录</a></li>
+        </ul>
+        <!--隐藏盒子-->
+        <div id="bar-1" class="hidden-barBox hidden-bar-index">
+          <ul>
+            <li>。。。。</li>
+          </ul>
         </div>
+      </div>
     </div>
-    <!--Logo和搜索栏-->
-    <div class="logo">
-        <img src="/assets/travel/img/logo.png">
-        <div class="search-wrap">
-            <input class="search-text"/>
-            <a class="search-btn">搜索</a>
-        </div>
-    </div>
+  </div>
+  <!--Logo和搜索栏-->
+  <div class="logo">
+    <img src="/assets/travel/img/logo.png">
+  </div>
 </header>
 
 <!--导航栏框架-->
 <nav id="navOut">
-    <!--导航栏样式-->
-    <div class="nav">
-        <!--商品分类栏（左导航栏）-->
-        <div class="navLeft">
-            <a href="/"><p>全部商品分类</p></a>
-        </div>
-        <!--右导航栏-->
-        <div class="navRight">
-            <ul class="nav-right">
-                <li id="li-1"><a href="/">开街商城</a><span></span></li>
-                <li id="li-2"><a href="/travel.html">智慧旅游</a><span></span></li>
-                <li id="li-3"><a href="/convenience-life/newses">便民服务</a><span></span></li>
-                <li id="li-4"><a href="/convenience-life/newses">金融服务</a><span></span></li>
-                <li id="li-5"><a href="/innovation-space/activities">众创空间</a><span></span></li>
-                <li id="li-6"><a href="/innovation-space/activities">企业服务</a><span></span></li>
+  <!--导航栏样式-->
+  <div class="nav">
+    <!--右导航栏-->
+    <div class="navRight">
+      <ul class="nav-right">
+        <li id="li-1"><a style="color: #485255" href="/">开街商城</a>
+
+          <div id="list-1" class="hidden-box hidden-loc-box01">
+            <ul>
+              <li><a href="/products-by-category/self_sale">开县自营</a></li>
+              <li><a href="/products-by-category/kaixian_special">名特产品</a></li>
+              <li><a href="/products-by-category/xiangcuntuhuo">乡村土货</a></li>
+              <li><a href="/products-by-category/gongyichanpin">工业产品</a></li>
+              <li><a href="/products-by-category/xianwaichanping">县外产品</a></li>
+              <li><a href="/products-by-category/imported">进口产品</a></li>
             </ul>
-            <!--隐藏盒子-->
-            <div id="list-1" class="hidden-box hidden-loc-box01">
-                <ul>
-                    <li>开县自营</li>
-                    <li>名特产品</li>
-                    <li>乡村土货</li>
-                    <li>工业产品</li>
-                    <li>县外产品</li>
-                    <li>进口产品</li>
-                </ul>
-            </div>
-            <div id="list-2" class="hidden-box hidden-loc-box02">
-                <ul>
-                    <li><a href="#hotview">热门景点</a></li>
-                    <li><a href="#village">乡村旅游</a></li>
-                    <li><a href="http://bbs.cqkx.com/forum-142-1.html"> 自驾旅游</a></li>
-                    <li><a href="#orderhotel">酒店预订</a></li>
-                    <li><a href="#virtual">虚拟旅游</a></li>
-                    <li><a href="http://bbs.cqkx.com/forum-273-1.html">驴友之家</a></li>
-                </ul>
-            </div>
-            <div id="list-3" class="hidden-box hidden-loc-box03">
-                <ul>
-                    <li>购票缴费</li>
-                    <li>健康服务</li>
-                    <li>就业服务</li>
-                    <li>餐饮娱乐</li>
-                    <li>房屋中介</li>
-                    <li>家政服务</li>
-                </ul>
-            </div>
-            <div id="list-4" class="hidden-box hidden-loc-box04">
-                <ul>
-                    <li>投资理财</li>
-                    <li>融资担保</li>
-                    <li>小额贷款</li>
-                    <li>银行服务</li>
-                    <li>保险服务</li>
-                    <li>证券资讯</li>
-                </ul>
-            </div>
-            <div id="list-5" class="hidden-box hidden-loc-box05">
-                <ul>
-                    <li>商家展示</li>
-                    <li>孵化体验</li>
-                    <li>合作配套</li>
-                    <li>活动发布</li>
-                    <li>教育培训</li>
-                    <li>创客之家</li>
-                </ul>
-            </div>
-            <div id="list-6" class="hidden-box hidden-loc-box06">
-                <ul>
-                    <li>企业入驻</li>
-                    <li>政策咨询</li>
-                    <li>专家把脉</li>
-                    <li>商务运作</li>
-                    <li>法务服务</li>
-                    <li>协会服务</li>
-                </ul>
-            </div>
-        </div>
+          </div>
+        </li>
+        <li id="li-2"><a style="color: #485255" href="travel.html">智慧旅游</a>
+
+          <div id="list-2" class="hidden-box hidden-loc-box02">
+            <ul>
+              <li><a href="viewList.html?kind=hot">热门景点</a></li>
+              <li><a href="viewList.html?kind=village">乡村旅游</a></li>
+              <li><a href="http://bbs.cqkx.com/forum-142-1.html"> 自驾旅游</a></li>
+              <li>酒店预订</li>
+              <li>虚拟旅游</li>
+              <li><a href="http://bbs.cqkx.com/forum-273-1.html">驴友之家</a></li>
+            </ul>
+          </div>
+        </li>
+        <li id="li-3"><a style="color: #485255" href="/convenience-life/newses">便民服务</a>
+
+          <div id="list-3" class="hidden-box hidden-loc-box03">
+            <ul>
+              <li><a
+                  href="https://jiaofei.alipay.com/jiaofei.htm?_pdType=aecfbbfgeabbifdfdieh&_scType=bacfajegafddadijhagd">购票缴费</a>
+              </li>
+              <li><a href="http://bbs.cqkx.com/forum.php?mod=forumdisplay&fid=288">健康服务</a></li>
+              <li><a href="http://www.kzrc.gov.cn/">就业服务</a></li>
+              <li><a href="http://bbs.cqkx.com/forum-129-1.html">餐饮娱乐</a></li>
+              <li><a href="http://bbs.cqkx.com/forum-131-1.html">房屋中介</a></li>
+              <li><a href="http://job.cqkx.com/index.php">家政服务</a></li>
+            </ul>
+          </div>
+        </li>
+        <li id="li-4"><a style="color: #485255" href="/finance-service/articles/investment">金融服务</a>
+
+          <div id="list-4" class="hidden-box hidden-loc-box04">
+            <ul>
+              <li><a href="http://www.kqjr.cn/">投资理财</a></li>
+              <li><a href="http://www.cqkxxn.com/">融资担保</a></li>
+              <li><a href="http://www.kqjr.cn/">小额贷款</a></li>
+              <li><a href="/finance-service/articles/bank_services">银行服务</a></li>
+              <li><a href="https://yebprod.alipay.com/yeb/index.htm">保险服务</a></li>
+              <li><a href="http://www.kqjr.cn/Article/Index?code=news">证券资讯</a></li>
+            </ul>
+          </div>
+        </li>
+        <li id="li-5"><a style="color: #485255" href="/innovation-space/activities">众创空间</a>
+
+          <div id="list-5" class="hidden-box hidden-loc-box05">
+            <ul>
+              <li><a href="/innovation-space/articles/customer_show">商家展示</a></li>
+              <li><a href="/innovation-space/articles/incubation">孵化体验</a></li>
+              <li><a href="/innovation-space/articles/cooperation">合作配套</a></li>
+              <li><a href="/innovation-space/activities">活动发布</a></li>
+              <li><a href="/innovation-space/articles/education">教育培训</a></li>
+              <li><a href="/innovation-space/articles/guest_house">创客之家</a></li>
+            </ul>
+          </div>
+        </li>
+        <li id="li-6"><a style="color: #485255" href="/company-service/articles/company_settlement">企业服务</a>
+
+          <div id="list-6" class="hidden-box hidden-loc-box06">
+            <ul>
+              <li><a href="/customers">企业入驻</a></li>
+              <li><a href="/company-service/articles/company_policies">政策咨询</a></li>
+              <li><a href="/company-service/articles/experts">专家把脉</a></li>
+              <li><a href="/company-service/articles/business_running">商务运作</a></li>
+              <li><a href="/company-service/articles/law_services">法务服务</a></li>
+              <li><a href="/company-service/articles/association_service">协会服务</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
     </div>
+  </div>
 </nav>
 
 <!--滚动栏-->
 <div id="banner">
-    <ul class="hiSlider hiSlider1">
-        <li data-title="11111" class="hiSlider-item"><a href=""><img class="img-item" src="http://7xryaq.com1.z0.glb.clouddn.com/travel-index01.jpg" alt="11111"></a></li>
-        <li data-title="11111" class="hiSlider-item"><a href=""><img class="img-item" src="http://7xryaq.com1.z0.glb.clouddn.com/travel-index02.jpg" alt="11111"></a></li>
-        <li data-title="11111" class="hiSlider-item"><a href=""><img class="img-item" src="http://7xryaq.com1.z0.glb.clouddn.com/travel-index03.jpg" alt="11111"></a></li>
-    </ul>
+  <ul class="hiSlider hiSlider1">
+    <li data-title="11111" class="hiSlider-item"><a href=""><img class="img-item"
+                                                                 src="http://7xryaq.com1.z0.glb.clouddn.com/travel-index01.jpg"
+                                                                 alt="11111"></a></li>
+    <li data-title="11111" class="hiSlider-item"><a href=""><img class="img-item"
+                                                                 src="http://7xryaq.com1.z0.glb.clouddn.com/travel-index02.jpg"
+                                                                 alt="11111"></a></li>
+    <li data-title="11111" class="hiSlider-item"><a href=""><img class="img-item"
+                                                                 src="http://7xryaq.com1.z0.glb.clouddn.com/travel-index03.jpg"
+                                                                 alt="11111"></a></li>
+  </ul>
 </div>
 
 <!--旅游景点展示-->
-    <div id="content">
-        <div class="part-wrap">
-            <div id="part1" class="list-wrap">
-                <div class="list-wrap-item">
-                    <div class="travel-show" style="float: left">
-                        <a href=""><img src="http://7xryaq.com1.z0.glb.clouddn.com/longzuishan.jpg"></a>
-                        <div class="introduce">龙头嘴森林公园</div>
-                    </div>
-                    <div class="travel-show-right">
-                        <label>避暑胜地，龙头嘴森林公园</label>
-                        <div class="jianjie">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;重庆市龙头嘴
-                            森林运动公园是国家3A级旅游景区，位于开县西北部紫水乡境内。公园总面积307.0hm²。公园距开县
-                            县城60km， 2013年5月，经重庆市林业局批准设立重庆市龙头嘴森林公园。公园地理位置较优越，森
-                            林景观壮美，地貌景观雄奇，传统文化厚重，是一个具有较高价值的生态旅游区。公园海拔高度1100
-                            -1600m，山势雄伟。公园气候凉爽宜人，加之园内大多数林区地势平缓开阔，人烟稀少，生态环境十
-                            分优美，是开展养生避署疗养活动的理想场所。
-                        </div>
-                    </div>
-                    <div class="more"><a href="view01.html"> 了解更多 >></a></div>
-                </div>
-                <div class="list-wrap-item">
-                    <div class="travel-show" style="float: left">
-                        <a href=""><img src="http://7xryaq.com1.z0.glb.clouddn.com/hanfenghu.jpg"></a>
-                        <div class="introduce">汉丰湖</div>
-                    </div>
-                    <div class="travel-show-right">
-                        <label>汉土丰盛--汉丰湖</label>
-                        <div class="jianjie">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;汉丰湖因三峡工程而生，由境
-                            内两江汇成，常年蓄水170.28米以上, 水域面积15平方公里。秦巴古道上的无人区——雪宝山，系
-                            汉丰湖的重要水源地。汉丰湖四山环抱、与城市和谐共生，拥有独特的滨湖湿地、风雨廊桥、举子
-                            公园、刘伯承同志纪念馆（故居）等自然与人文景观。湿地观鸟、赏荷野钓、画舫游湖、水上婚庆、
-                            运动休闲等旅游产品深受游客青睐，2013年开县跻身“中国十大休闲小城”，2014年汉丰湖评为“国
-                            家级湿地公园”、国家AAAA级旅游景区。
-                        </div>
-                    </div>
-                    <div class="more"><a href="view02.html"> 了解更多 >></a></div>
-                </div>
-                <div class="list-wrap-item">
-                    <div class="travel-show" style="float: left">
-                        <a href=""><img src="http://7xryaq.com1.z0.glb.clouddn.com/shilizhuxi.jpg"></a>
-                        <div class="introduce">十里竹溪</div>
-                    </div>
-                    <div class="travel-show-right">
-                        <label>美不胜收，十里竹溪</label>
-                        <div class="jianjie">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;十里竹溪休闲农业观光园是
-                            国家AAA级旅游景区，位于开县竹溪镇灵泉村汉丰湖畔，占地1200亩，南靠渝巫公路，距开县城8
-                            公里，庄园以蔬菜产业为基础，以休闲观光体验为特色。观光园因境内竹多、溪多而得名，包括
-                            生态蔬菜观光园、春秋荷塘、蔬菜博览园、开心农场、十里翠竹长廊等观光项目，是独具“美丽
-                            乡村”特色、“竹海桑田”景观的现代都市农业新区。
-                        </div>
-                    </div>
-                    <div class="more"><a href="view03.html"> 了解更多 >></a></div>
-                </div>
-                <div class="list-wrap-item">
-                    <div class="travel-show" style="float: left">
-                        <a href=""><img src="http://7xryaq.com1.z0.glb.clouddn.com/shuiyunhouba.JPG"></a>
-                        <div class="introduce">水韵厚坝</div>
-                    </div>
-                    <div class="travel-show-right">
-                        <label>厚坝镇的田园风光</label>
-                        <div class="jianjie">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;水韵厚坝休闲农业观光园是
-                            国家AAA级旅游景区，位于开县东部，距开县新县城约15公里，交通便捷，紧邻汉丰湖，湿地空阔，
-                            拥有三峡库区惟一的 “三峡水下农场”。厚坝镇以万亩农田、万亩水面以及中山万亩柑橘果园为
-                            支撑，大力发展特色、绿色产业。全面打造乡村旅游示范试点，先后建成了草莓园、开心农场、华
-                            健葡萄城、水云天等多家休闲度假农庄，金孝农庄等二十余家旅游接待点。
-                        </div>
-                    </div>
-                    <div class="more"><a href="view04.html"> 了解更多 >></a></div>
-                </div>
-            </div>
+<div id="content">
+  <div class="part-wrap">
+    <div class="list-wrap">
 
-        </div>
     </div>
+
+  </div>
+</div>
 
 <footer>
-    <div style="text-align: center;margin-top: 40px">
-    <img src="src/img/footer/footer.png">
+  <div class='footer'>
+    <div>
+      <a style="color: white" href="/about">网站介绍</a>
+      |
+      <a style="color: white" href="/about">公司介绍</a>
+      |
+      <a style="color: white" href="/about">联系方式</a>
     </div>
+    <div>
+      重庆乾开电子商务有限公司版权所有
+    </div>
+  </div>
 </footer>
 
 <script>
-    $('.hiSlider1').hiSlider({
-        isShowTitle: false,
-        affectTime:1000,
-        intervalTime:3000
+  $('.hiSlider1').hiSlider({
+    isShowTitle: false,
+    affectTime: 1000,
+    intervalTime: 3000
 
-    });
-
-    var oBox=document.getElementById('demo');
-    var demoHtml = oBox.innerHTML.substring(0,250)+'...';
-    // 填充至指定位置
-    oBox.innerHTML = demoHtml;
+  });
 
 </script>
 </body>
