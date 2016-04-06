@@ -11,6 +11,21 @@
     margin-left: 10%;
 }
 
+.footer{
+    margin-top: 20px;
+    height: 90px;
+    background-color: #313131;
+    color: white;
+    border-top: 1px solid #eee;
+    font-size: 10px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.footer div{
+    margin-top: 5px;
+}
+
 /*顶部工具栏样式*/
 .tool-bar{
     width: 100%;

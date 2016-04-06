@@ -13,7 +13,7 @@ body {
 }
 
 a, a:hover {
-	color: rgba(62, 62, 62, 0.79);
+	color: white;
 	text-decoration: none;
 }
 
@@ -21,7 +21,7 @@ a, a:hover {
 #navOut {
 	width: 100%;
 	height: 40px;
-	border-bottom: 2px solid gray;
+	border-bottom: 2px solid black;
 	background: #FFFFFF;
 }
 
@@ -31,109 +31,9 @@ a, a:hover {
 	height: 40px;
 	margin: 20px auto 0;
 	position: relative;
+	padding-left: 25%;
 }
 
-/*左导航栏（全部商品分类）*/
-.navLeft {
-	width: 250px;
-	height: 40px;
-	background: black;
-	float: left;
-}
-.navLeft p {
-	height: 40px;
-	line-height: 40px;
-	text-align: center;
-	color: #FFFFFF;
-	font-size: 20px;
-}
-
-/*商品分类二级菜单*/
-.fenLei{
-	width: 248px;
-	height: 420px;
-	position: absolute;
-	background-color: #e03627;
-	border: 1px solid #e03627;
-	top: 40px;
-	left: 0;
-	z-index: 100;
-	color: #ffffff;
-}
-.fenLei ul {
-	overflow: hidden;
-}
-.fenLei ul li {
-	background-color:#e03627;
-	overflow: hidden;
-	height: 69px;
-	border-bottom: 1px solid #d4281a;
-
-}
-.fenLeiLeft {
-	background-color:#e03627;
-	overflow: hidden;
-}
-.fenLeiLeft dt {
-	width: 100%;
-	height: 25px;
-	padding: 10px 0 0 15px;
-	font-size: 18px;
-	font-weight: bold;
-}
-.fenLeiLeft dt a{
-	color: white;
-}
-.fenLeiLeft dd {
-	float: left;
-	width: 220px;
-	overflow: hidden;
-	color:#ffffff;
-}
-.fenLeiLeft dd a {
-	margin: 10px 0 0 12px;
-	float: left;
-	color:#ffffff;
-}
-.fenLeiLeft dd a:hover{color: #f60;}
-
-/*商品分类三级菜单*/
-.fenLeiRight {
-	width: 0;
-	height: 420px;
-	border: 1px solid #EEEEEE;
-	border-left: 0;
-	background: #FFFFFF;
-	position: absolute;
-	top: 0;
-	left: 248px;
-	overflow: hidden;
-}
-
-.flRight {
-	height: 90px;
-	padding: 20px 0 0 20px;
-	overflow: hidden;
-}
-.flRight dt {
-	height: 24px;
-	line-height: 24px;
-	font-size: 18px;
-	font-weight: bold;
-	color: #3E3E3E;
-}
-.flRight dd {
-	height: 66px;
-	overflow: hidden;
-}
-.flRight dd a {
-	float: left;
-	padding-right: 10px;
-	height: 33px;
-	line-height: 33px;
-	font-size: 15px;
-}
-.flRight dd a:hover{color: #f60;}
 
 /*右导航栏*/
 .navRight {
@@ -146,40 +46,22 @@ ul.nav-right{
 	height: 100%;
 	list-style-type: none;
 }
-.nav-right span{
-	display: inline-block;
-	margin-left: 10px;
-	width: 7px;
-	height: 7px;
-	background: url('../img/down-icon.png') no-repeat;
-}
-/*图标向上旋转*/
-.hover-up{
-	transition-duration: .5s;
-	transform: rotate(180deg);
-	-webkit-transform: rotate(180deg);
-}
-/*图标向下旋转*/
-.hover-down{
-	transition-duration: .5s;
-	transform: rotate(0deg);
-	-webkit-transform: rotate(0deg);
-}
+
 ul.nav-right li {
 	float: left;
-	width: 165px;
+	width: 120px;
 	height: 40px;
 	line-height: 40px;
 	text-align: center;
-	font-size: large;
+	font-size: 16px;
 }
 
 /*右导航栏下拉菜单设置*/
 div.hidden-box{
 	width: 119px;
 	border-top: 0;
-	background: #dd3f39;
-	top: 40px;
+	background: #D3211F;
+	top: 35px;
 	display: none;
 	position: absolute;
 	z-index: 10;
@@ -192,32 +74,32 @@ div.hidden-box{
 .hidden-box li{
 	padding-top: 5px;
 	padding-bottom: 5px;
-	border-bottom: 1px solid darkgray;
+	border-bottom: 1px solid rgba(93, 93, 93, 0.17);
 	color: white;
-	font-size: large;
+	font-size: 14px;
 }
 .hidden-box li:hover{
-	background: #a93430;
+	background: #C51316;
 	color: #fff;
 }
 /*右导航栏下拉菜单位置*/
 .hidden-loc-box01{
-	left: 21.5%;
+	left: 27.5%;
 }
 .hidden-loc-box02{
-	left: 35%;
+	left: 34.5%;
 }
 .hidden-loc-box03{
-	left: 48%;
+	left: 41.5%;
 }
 .hidden-loc-box04 {
-	left: 61.5%;
+	left: 48.5%;
 }
 .hidden-loc-box05{
-	left: 75%;
+	left: 55.5%;
 }
 .hidden-loc-box06 {
-	left: 88%;
+	left: 62.5%;
 }
 
 /*右导航栏-生活服务设置*/

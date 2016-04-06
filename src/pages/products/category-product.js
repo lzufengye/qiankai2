@@ -69,7 +69,7 @@ var CategoryProduct = React.createClass({
       manyue: "满月",
       vilage: "乡镇",
       xiangcuntuhuo: "乡村土货",
-      gongyichanpin: "工艺产品",
+      gongyichanpin: "工业产品",
       xianwaichanping: "县外产品"
     };
 

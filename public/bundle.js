@@ -22497,7 +22497,7 @@
 	  },
 	  render: function render() {
 	    var that = this;
-	    var shoppingMallItems = [{ name: '开县自营', link: '/products-by-category/self_sale' }, { name: '名特产品', link: '/products-by-category/kaixian_special' }, { name: '乡村土货', link: '/products-by-category/xiangcuntuhuo' }, { name: '工艺产品', link: '/products-by-category/gongyichanpin' }, { name: '县外产品', link: '/products-by-category/xianwaichanping' }, { name: '进口产品', link: '/products-by-category/imported' }];
+	    var shoppingMallItems = [{ name: '开县自营', link: '/products-by-category/self_sale' }, { name: '名特产品', link: '/products-by-category/kaixian_special' }, { name: '乡村土货', link: '/products-by-category/xiangcuntuhuo' }, { name: '工业产品', link: '/products-by-category/gongyichanpin' }, { name: '县外产品', link: '/products-by-category/xianwaichanping' }, { name: '进口产品', link: '/products-by-category/imported' }];
 	    var travelItems = [{ name: '热门产品', link: '#' }, { name: '乡村旅游', link: '#' }, { name: '自驾旅游', link: 'http://bbs.cqkx.com/forum-142-1.html' }, { name: '酒店预订', link: '#' }, { name: '虚拟旅游', link: '#' }, { name: '驴友之家', link: 'http://bbs.cqkx.com/forum-129-1.html' }];
 	    var convenienceLifeItems = [{ name: '购票缴费', link: 'https://jiaofei.alipay.com/jiaofei.htm?_pdType=aecfbbfgeabbifdfdieh&_scType=bacfajegafddadijhagd' }, { name: '健康服务', link: 'http://bbs.cqkx.com/forum.php?mod=forumdisplay&fid=288' }, { name: '就业服务', link: 'http://www.kzrc.gov.cn/' }, { name: '餐饮娱乐', link: 'http://bbs.cqkx.com/forum-129-1.html' }, { name: '房屋中介', link: 'http://bbs.cqkx.com/forum-131-1.html' }, { name: '家政服务', link: 'http://job.cqkx.com/index.php?m=com&c=search&hy=&jobids=&cityid=&pr=&mun=&exp=&salary=&edu=&up' }];
 	    var financeServiceItems = [{ name: '投资理财', link: 'www.kqjr.cn' }, { name: '融资担保', link: 'http://www.cqkxxn.com/' }, { name: '小额贷款', link: 'www.kqjr.cn' }, { name: '银行服务', link: '/finance-service/articles/bank_services' }, { name: '保险服务', link: 'https://yebprod.alipay.com/yeb/index.htm' }, { name: '证券资讯', link: 'http://www.kqjr.cn/Article/Index?code=news' }];
@@ -22556,7 +22556,7 @@
 	          'div',
 	          { className: 'middle-nav' },
 	          _react2.default.createElement('image', { className: 'logo-image', src: '/assets/images/products/logo.jpg' }),
-	          _react2.default.createElement('image', { className: 'logo-title', src: '/assets/images/products/logo-title.png' })
+	          _react2.default.createElement('image', { className: 'logo-title', src: '/assets/images/products/logo-title.jpg' })
 	        ),
 	        _react2.default.createElement(
 	          'div',
@@ -49704,7 +49704,7 @@
 	      manyue: "满月",
 	      vilage: "乡镇",
 	      xiangcuntuhuo: "乡村土货",
-	      gongyichanpin: "工艺产品",
+	      gongyichanpin: "工业产品",
 	      xianwaichanping: "县外产品"
 	    };
 
