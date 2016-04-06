@@ -9,6 +9,7 @@
 .logo img{
     float: left;
     margin-left: 10%;
+    width: 450px;
 }
 
 .footer{
@@ -17,7 +18,7 @@
     background-color: #313131;
     color: white;
     border-top: 1px solid #eee;
-    font-size: 10px;
+    font-size: 12px;
     text-align: center;
     padding-top: 20px;
 }
