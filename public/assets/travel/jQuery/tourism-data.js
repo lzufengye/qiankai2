@@ -7,7 +7,7 @@
  */
 $(function() {
     $.ajax({
-        url: "http://localhost:3000/hots",
+        url: serverUrl+"hots",
         method: "post",
         dataType: 'json',
         success: function (data) {
@@ -23,13 +23,13 @@ $(function() {
                 $(this).attr("id",data[index].id);
             }).click(function(){
                 var temp_id = $(this).attr("id");
-                $(this).attr("href","http://localhost:63342/qiankai/qiankai/view.html?kind=hots&id="+temp_id);
+                $(this).attr("href","http://www.kaijiewang.com/view.html?kind=hots&id="+temp_id);
             })
         }
     });
 
     $.ajax({
-        url: "http://localhost:3000/villages",
+        url: serverUrl+"villages",
         method: "post",
         dataType: 'json',
         success: function (data) {
@@ -45,7 +45,7 @@ $(function() {
                 $(this).attr("id",data[index].id);
             }).click(function(){
                 var temp_id = $(this).attr("id");
-                $(this).attr("href","http://localhost:63342/qiankai/qiankai/view.html?kind=villages&id="+temp_id);
+                $(this).attr("href","http://www.kaijiewang.com/view.html?kind=villages&id="+temp_id);
             })
         }
     });

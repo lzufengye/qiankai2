@@ -56,7 +56,7 @@ $(function() {
     };
 
     $.ajax({
-        url: "http://localhost:3000/"+kind,
+        url: serverUrl+kind,
         method: "post",
         dataType: 'json',
         success: function (data) {
@@ -82,7 +82,7 @@ $(function() {
                 $(this).attr("id",data[index].id);
             }).click(function(){
                 var temp_id = $(this).attr("id");
-                $(this).attr("href","http://localhost:63342/qiankai/qiankai/view.html?kind="+kind+"&id="+temp_id);
+                $(this).attr("href","http://www.kaijiewang.com/view.html?kind="+kind+"&id="+temp_id);
             })
         }
     });
