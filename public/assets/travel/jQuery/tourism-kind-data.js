@@ -56,33 +56,34 @@ $(function() {
     };
 
     $.ajax({
-        url: serverUrl+kind,
-        method: "post",
+        url: serverUrl+"api/tourisms?tourism_tag=" + kind,
+        method: "get",
         dataType: 'json',
         success: function (data) {
 
-            var m=data.length;
+            tourisms = data['tourisms'];
+            var m=tourisms.length;
             for (var i=0;i<m;i++){
                 create_div();
             }
 
             $(".hot-view .viewName").each(function(index){
-                $(this).html(data[index].title);
+                $(this).html(tourisms[index].title);
             });
             $(".hot-view img").each(function(index){
-                $(this).attr("src",data[index].images[0]);
+                $(this).attr("src",tourisms[index].image);
             });
             $(".travel-show-right label").each(function(index){
-                $(this).html(data[index].title);
+                $(this).html(tourisms[index].title);
             });
             $(".travel-show-right .abstract").each(function(index){
-                $(this).html(data[index].description);
+                $(this).html(tourisms[index].description);
             });
             $(".more a").each(function(index){
-                $(this).attr("id",data[index].id);
+                $(this).attr("id",tourisms[index].id);
             }).click(function(){
                 var temp_id = $(this).attr("id");
-                $(this).attr("href","http://www.kaijiewang.com/view.html?kind="+kind+"&id="+temp_id);
+                $(this).attr("href","/view.html?kind=hots&id="+temp_id);
             })
         }
     });
