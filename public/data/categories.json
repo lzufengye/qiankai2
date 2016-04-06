@@ -175,19 +175,10 @@
       },
       {
         "id": 4,
-        "display": "工艺产品",
+        "display": "工业产品",
         "name": "gongyichanpin",
         "subCategories": [
-          {
-            "id": 12,
-            "display": "水竹",
-            "name": "shuizhu"
-          },
-          {
-            "id": 13,
-            "display": "香绸扇",
-            "name": "xiangchoushan"
-          }
+        
         ]
       },
       {

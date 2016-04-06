@@ -39,7 +39,7 @@ var Header =
       var shoppingMallItems = [{name: '开街自营', link: '/products-by-category/self_sale'},
         {name: '名特产品', link: '/products-by-category/kaixian_special'},
         {name: '乡村土货', link: '/products-by-category/xiangcuntuhuo'},
-        {name: '工艺产品', link: '/products-by-category/gongyichanpin'},
+        {name: '工业产品', link: '/products-by-category/gongyichanpin'},
         {name: '县外产品', link: '/products-by-category/xianwaichanping'},
         {name: '进口产品', link: '/products-by-category/imported'}
       ];
