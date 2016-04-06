@@ -23,7 +23,7 @@ $(function() {
     });
 
     var kind = $.getUrlVar('kind');
-    var temp_id=$.getUrlVar('id')-1;
+    var temp_id=$.getUrlVar('id');
     //alert("http://localhost:3000/"+kind+"/"+temp_id);
 
     $.ajax({

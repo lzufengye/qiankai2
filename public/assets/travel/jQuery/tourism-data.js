@@ -73,7 +73,7 @@ $(function() {
                 //console.log(i);
                 create_village_div();
             }
-            
+
             $(".village-view .viewName").each(function(index){
                 $(this).html(tourisms[index].title);
             });
