@@ -1,1 +1,1 @@
- var serverUrl="http://localhost:3000/";
+ var serverUrl="http://admin.kaijiewang.com/";
