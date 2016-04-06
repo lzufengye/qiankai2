@@ -27,13 +27,13 @@ $(function() {
     //alert("http://localhost:3000/"+kind+"/"+temp_id);
 
     $.ajax({
-        url: "http://localhost:3000/"+kind+"/"+temp_id,
-        method: "post",
+        url: serverUrl+"api/tourisms/"+temp_id,
+        method: "get",
         dataType: 'json',
         success: function (data) {
             $(".mainText").each(function(){
                 //console.log(data.content);
-                $(this).html(data.content);
+                $(this).html(data['tourism'].content);
             });
         }
     });

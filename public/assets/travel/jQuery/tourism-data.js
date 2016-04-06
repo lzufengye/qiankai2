@@ -34,61 +34,57 @@ $(function() {
     };
 
     $.ajax({
-        url: serverUrl+"hots",
-        method: "post",
+        url: serverUrl+"api/tourisms?tourism_tag=hot",
+        method: "get",
         dataType: 'json',
         success: function (data) {
 
-            var m=data.length;
-            console.log(m);
+            var tourisms = data['tourisms'];
+            var m=tourisms.length;
             for (var i=0;i<m;i++){
                 //console.log(i);
                 create_hot_div();
             }
 
             $(".hot-view .viewName").each(function(index){
-                console.log(data[index].title);
-                $(this).html(data[index].title);
+                $(this).html(tourisms[index].title);
             });
             $(".hot-view img").each(function(index){
-                console.log(data[index].images[0]);
-                $(this).attr("src",data[index].images[0]);
+                $(this).attr("src",tourisms[index].image);
             });
             $(".hot-view a").each(function(index){
-                $(this).attr("id",data[index].id);
+                $(this).attr("id",tourisms[index].id);
             }).click(function(){
                 var temp_id = $(this).attr("id");
-                $(this).attr("href","http://www.kaijiewang.com/view.html?kind=hots&id="+temp_id);
+                $(this).attr("href","/view.html?kind=hots&id="+temp_id);
             })
         }
     });
 
     $.ajax({
-        url: serverUrl+"villages",
-        method: "post",
+        url: serverUrl+"api/tourisms?tourism_tag=village",
+        method: "get",
         dataType: 'json',
         success: function (data) {
 
-            var m=data.length;
-            console.log(m);
+            var tourisms = data['tourisms'];
+            var m=tourisms.length;
             for (var i=0;i<m;i++){
                 //console.log(i);
                 create_village_div();
             }
             
             $(".village-view .viewName").each(function(index){
-                console.log(data[index].title);
-                $(this).html(data[index].title);
+                $(this).html(tourisms[index].title);
             });
             $(".village-view img").each(function(index){
-                console.log(data[index].images[0]);
-                $(this).attr("src",data[index].images[0]);
+                $(this).attr("src",tourisms[index].image);
             });
             $(".village-view a").each(function(index){
-                $(this).attr("id",data[index].id);
+                $(this).attr("id",tourisms[index].id);
             }).click(function(){
                 var temp_id = $(this).attr("id");
-                $(this).attr("href","http://www.kaijiewang.com/view.html?kind=villages&id="+temp_id);
+                $(this).attr("href","/view.html?kind=villages&id="+temp_id);
             })
         }
     });
