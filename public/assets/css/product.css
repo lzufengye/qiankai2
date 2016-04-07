@@ -139,10 +139,8 @@ ul, ol, li {
 .bottom-nav {
   background-color: white;
   color: rgb(72, 82, 85);
-  padding: 20px 100px 5px;
-  width: 100%;
-  max-width: 1440px;
-  min-width: 1190px;
+  padding-top: 20px;
+  width: 1190px;
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -188,7 +186,7 @@ ul, ol, li {
 .product-category {
   display: inline-block;
   width: 200px;
-  padding: 0 20px;
+  padding-right: 40px;
 }
 
 .product-category a {
@@ -206,7 +204,7 @@ ul, ol, li {
   background-color: rgb(211, 33, 31);
   position: absolute;
   width: 200px;
-  height: 457px;
+  height: 452px;
   z-index: 1000;
   display: block;
 }
