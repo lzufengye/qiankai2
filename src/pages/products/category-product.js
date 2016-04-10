@@ -5,6 +5,7 @@ import ReactCSSTransitionGroup from 'react/lib/ReactCSSTransitionGroup'
 import Item from './components/products/item'
 import Header from './components/header/header'
 import Footer from '../../footer'
+import mobileUtils from '../../utils/mobile-utils'
 
 import store from './stores/category-products-store'
 import actions from './actions/product-actions'
@@ -73,8 +74,10 @@ var CategoryProduct = React.createClass({
       xianwaichanping: "县外产品"
     };
 
+    var containerClass = 'products-container' + (mobileUtils.mobileCheck() ? ' mobile-products-container' : '');
+
     return (
-      <div className='products-container' style={style}>
+      <div className={containerClass} style={style}>
         <div className='product-sub-page'>
           <div className='product-list-container'>
             <h1>{titleMapping[this.props.params.category]}</h1>

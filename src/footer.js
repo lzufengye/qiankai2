@@ -3,8 +3,10 @@ import NavLink from './header/nav-link'
 
 var Footer = React.createClass({
   render() {
+    var className='footer' + (this.props.isMobile ? ' mobile-footer' : '');
+
     return (
-      <div className='footer'>
+      <div className={className}>
         <div>
           <NavLink to="/about" onlyActiveOnIndex>网站介绍</NavLink>
           |

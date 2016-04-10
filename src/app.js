@@ -2,6 +2,7 @@ import React from 'react'
 import Header from './pages/products/components/header/header'
 import Footer from './footer'
 import auth from './utils/auth'
+import mobileUtils from './utils/mobile-utils'
 
 export default React.createClass({
   getInitialState() {
@@ -24,9 +25,9 @@ export default React.createClass({
   render() {
     return (
       <div>
-        <Header/>
+        <Header isMobile={mobileUtils.mobileCheck()}/>
         {this.props.children}
-        <Footer />
+        <Footer isMobile={mobileUtils.mobileCheck()}/>
       </div>
     )
   }

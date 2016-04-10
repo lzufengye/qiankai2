@@ -79,8 +79,10 @@ var Header =
         {name: '协会服务', link: '/company-service/articles/association_service'}
       ];
 
+      var className='pure-g' + (this.props.isMobile ? ' mobile-header' : '');
+
       return (
-        <div className="pure-g">
+        <div className={className}>
           <header className="appHeader pure-u-1">
             <div className="top-nav">
               <ul className="right clear">
