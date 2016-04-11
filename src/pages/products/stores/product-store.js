@@ -2,6 +2,7 @@ import Reflux from 'reflux'
 import request from 'superagent'
 import productActions from '../actions/product-actions'
 import ServerConfig from '../../../config/server-config'
+import mobileUtils from '../../../utils/mobile-utils'
 
 var ProductStore = Reflux.createStore({
 
@@ -24,7 +25,9 @@ var ProductStore = Reflux.createStore({
         }
         this.trigger(this.data);
       });
-    $('.image-zoom-main').zoom();
+    if(!mobileUtils.mobileCheck()) {
+      $('.image-zoom-main').zoom();
+    }
   },
 
   changeDisplayImage(index) {

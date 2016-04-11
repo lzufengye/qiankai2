@@ -7,6 +7,8 @@ import AddToBasket from './components/basket/add-to-basket'
 import RemoveFromBasket from './components/basket/remove-from-basket'
 import Basket from './components/basket/basket'
 import ProductMoreInfo from './components/products/product-more-info'
+import mobileUtils from '../../utils/mobile-utils'
+import CustomerSlider from '../components/slider'
 
 import actions from './actions/product-actions'
 import store from './stores/product-store'
@@ -14,6 +16,8 @@ import basketStore from './stores/basket-store'
 import { browserHistory } from 'react-router'
 
 import { Link } from 'react-router'
+
+var Slider = require('react-slick');
 
 var Product = React.createClass({
   mixins: [Reflux.connect(store), Reflux.ListenerMixin],
@@ -35,7 +39,7 @@ var Product = React.createClass({
     actions.changeDisplayImage(index);
   },
 
-  clickShopNow () {
+  clickShopNow() {
     actions.addItem(this.state.product);
     browserHistory.push('/shopping-cart');
   },
@@ -54,27 +58,47 @@ var Product = React.createClass({
 
   render() {
     var that = this;
-    let imgZoomThumb = this.state.product.images.map(function (image, index) {
+    var imgZoomThumb = this.state.product.images.map(function (image, index) {
       return <li className='imgzoom-thumb'  onClick={that.clickHandler.bind(this, index)} key={index}>
         <image src={image} data-src={image}/>
       </li>
     });
 
-    return (
-      <div className='products-container'>
-        <div className='product-detail'>
-          <div className='image-zoom'>
-            <div className='image-zoom-main-container' onMouseEnter={that.startZoom}>
-              <div className='image-zoom-main' onMouseOut={that.destroyZoom}>
-                <image src={this.state.displayImage}/>
-              </div>
-            </div>
-            <div className='imgzoom-thumb-main'>
-              <ul>
-                {imgZoomThumb}
-              </ul>
-            </div>
+    var pcImageDisplay = (<div className='image-zoom'>
+        <div className='image-zoom-main-container' onMouseEnter={that.startZoom}>
+          <div className='image-zoom-main' onMouseOut={that.destroyZoom}>
+            <image src={this.state.displayImage}/>
           </div>
+        </div>
+        <div className='imgzoom-thumb-main'>
+          <ul>
+                {imgZoomThumb}
+          </ul>
+        </div>
+    </div>);
+
+    var productImages = this.state.product.images.map(function (image, index) {
+      return <li><image src={image} data-src={image} key={index}/></li>;
+    });
+
+    var settings = {
+      dots: true,
+      arrows: false,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1
+    };
+
+    var mobileImageDisplay = (<Slider {...settings}>{productImages}</Slider>);
+
+    var containerClass = 'products-container' + (mobileUtils.mobileCheck() ? ' mobile-products-container' : '');
+
+    return (
+      <div className={containerClass}>
+        <div className='product-detail'>
+          {mobileUtils.mobileCheck() ? mobileImageDisplay : pcImageDisplay}
+
           <div className='product-info'>
             <h1 className='product-name'>
             {this.state.product.name}
@@ -101,7 +125,8 @@ var Product = React.createClass({
               评价
             </div>
             <div className='buy-service'>
-              <span className='small-lable'>{'服'}<div className='lable-spaces'> </div>{'务'}</span>
+              <span className='small-lable'>{'服'}
+                <div className='lable-spaces'> </div>{'务'}</span>
               <div className='buy-service-content'>
                 {this.state.product.service_description}
               </div>
@@ -116,8 +141,8 @@ var Product = React.createClass({
             </div>
             <div className='proinfo-line'></div>
             <div className='shop-actions'>
-              <div className='buy-action buy-now' onClick={that.clickShopNow}></div>
-              <AddToBasket className='buy-action add-to-cart' item={this.state.product}/>
+              <div className='buy-action buy-now' onClick={that.clickShopNow}>{mobileUtils.mobileCheck() ? '立即购买' : ''}</div>
+              <AddToBasket className='buy-action add-to-cart' item={this.state.product} text={mobileUtils.mobileCheck() ? '加入购物车' : ''}/>
             </div>
           </div>
         </div>
@@ -126,17 +151,25 @@ var Product = React.createClass({
             <div className='title'>{'商家:' + this.state.product.customer.name}</div>
             <ul className='satisfactions'>
               <li>商家满意度</li>
-              <li>商品评分: <span className='value'>{this.state.product.score}</span> 分</li>
-              <li>服务态度: <span className='value'>{this.state.product.attitude}</span> 分</li>
-              <li>物流态度: <span className='value'>{this.state.product.logistics}</span> 分</li>
+              <li>商品评分:
+                <span className='value'>{this.state.product.score}</span>
+                分</li>
+              <li>服务态度:
+                <span className='value'>{this.state.product.attitude}</span>
+                分</li>
+              <li>物流态度:
+                <span className='value'>{this.state.product.logistics}</span>
+                分</li>
             </ul>
             <div className='customer-info'>
               <table>
                 <tr>
-                  <td>公司: </td><td>{this.state.product.customer.name}</td>
+                  <td>公司: </td>
+                  <td>{this.state.product.customer.name}</td>
                 </tr>
                 <tr>
-                  <td>电话: </td><td>{this.state.product.customer.telephone}</td>
+                  <td>电话: </td>
+                  <td>{this.state.product.customer.telephone}</td>
                 </tr>
               </table>
             </div>

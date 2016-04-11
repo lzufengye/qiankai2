@@ -12,6 +12,7 @@ var CustomerSlider = React.createClass({
       autoplay: true,
       slidesToScroll: 1
     };
+
     return (
       <Slider {...settings}>
       {this.props.children}

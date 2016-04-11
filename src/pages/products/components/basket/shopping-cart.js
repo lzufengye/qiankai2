@@ -30,9 +30,13 @@ var ShoppingCart = React.createClass({
 
     return (
       <li>
-        <span><image src='/assets/images/products/shopping-cart.png'/></span>
-        购物车
-        <span className="shopping-number">{this.state.qty}</span>
+        <a href="/shopping-cart">
+          <span>
+            <image src='/assets/images/products/shopping-cart.png'/>
+          </span>
+          <span className='shopping-cart-text'>购物车</span>
+          <span className="shopping-number">{this.state.qty}</span>
+        </a>
       </li>
     );
   }
