@@ -1,5 +1,6 @@
 import React from 'react'
 import request from 'superagent'
+import ServerConfig from '../../config/server-config'
 
 var WechatCallback = React.createClass({
   getInitialState() {
@@ -12,7 +13,7 @@ var WechatCallback = React.createClass({
     if(this.props.params['state'] != 'WECHAT' || this.props.params['code'] == 'authdeny') {
       this.setState({oauthInfo: '登录失败'})
     } else {
-      request.post(ServerConfig['serverUrl'] + '/oauth_sign_in')
+      request.post(ServerConfig['serverUrl'] + '/api/oauth_sign_in')
         .send({ code: this.props.params['code'] })
         .end((err, res) => {
           if(JSON.parse(res.text).consumer != undefined && JSON.parse(res.text).consumer.authentication_token != undefined) {
@@ -31,22 +32,8 @@ var WechatCallback = React.createClass({
   },
 
   render () {
-    var style = {
-      backgroundImage: 'url(' + this.props.backgroundImage + ')'
-    };
-
-    var shadowMarginLeft = {
-      marginLeft: this.props.shadowMarginLeft
-    };
-
     return (
-      <a className='section-title' style={style} href={this.props.href}>
-        <div className='section-shadow' style={shadowMarginLeft}>
-          <image src={this.props.sectionIcon}/>
-          <br/>
-          {this.props.sectionTitle}
-        </div>
-      </a>
+      <div>{this.state.oauthInfo}</div>
     );
   }
 });
