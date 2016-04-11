@@ -61,6 +61,16 @@
   padding: 10px;
 }
 
+.mobile-customers-container {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.mobile-customers-container .appItems li {
+  width: 100%;
+}
+
 .mobile-products-container .product-list-container {
   margin: 0;
 }
