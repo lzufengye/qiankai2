@@ -1,4 +1,8 @@
-.mobile-header .middle-nav, .bottom-nav{
+.mobile-header .middle-nav{
+  display: none;
+}
+
+.mobile-header .bottom-nav {
   display: none;
 }
 
@@ -192,7 +196,11 @@
   font-size: 14px;
 }
 
-.mobile-products-container .exist-price .star, .score {
+.mobile-products-container .exist-price .star {
+  display: none;
+}
+
+.mobile-products-container .exist-price .score {
   display: none;
 }
 
@@ -268,7 +276,7 @@
   display: block;
 }
 
-.mobile-products-container .qing-table .qing-col-td, .qing-col-th {
+.mobile-products-container .qing-table .qing-col-td {
   display: block;
 }
 
