@@ -2,6 +2,7 @@ import React from 'react'
 import InformationBoard from './components/information-board'
 import NavLink from '../header/nav-link'
 import ServerConfig from '../config/server-config'
+import mobileUtils from '../utils/mobile-utils'
 
 var ArticleList = React.createClass({
   getInitialState() {
@@ -82,7 +83,7 @@ var ArticleList = React.createClass({
     }
 
     return (
-      <InformationBoard className={className} backgroundColor='#f8f8f8' width='630px' color='#888' title={title}>
+      <InformationBoard className={className} backgroundColor='#f8f8f8' height={mobileUtils.mobileCheck() ? '100%' : '300px'} width={mobileUtils.mobileCheck() ? '100%' : '630px'} color='#888' title={title}>
           {infoList}
       </InformationBoard>
     );

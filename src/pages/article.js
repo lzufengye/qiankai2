@@ -2,6 +2,7 @@ import React from 'react'
 import InformationBoard from './components/information-board'
 import NavLink from '../header/nav-link'
 import ServerConfig from '../config/server-config'
+import mobileUtils from '../utils/mobile-utils'
 
 var Article = React.createClass({
   getInitialState() {
@@ -35,8 +36,10 @@ var Article = React.createClass({
   },
 
   render() {
+    var containerClass = 'wrapper container' + (mobileUtils.mobileCheck() ? ' mobile-products-container' : '');
+
     return (
-      <div className='wrapper container'>
+      <div className={containerClass}>
         <div className='information-board article'>
           <div className='information-title'>{this.state.article.title}</div>
           <span className='article-content' dangerouslySetInnerHTML={{__html: this.state.article.text}} />
