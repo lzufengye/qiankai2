@@ -113,8 +113,6 @@ var Member = Reflux.createStore({
 
     request.get(ServerConfig.serverUrl + '/api/addresses?token=' + localStorage.token)
       .end((err, resp) => {
-        console.log('address', JSON.parse(resp.text));
-
         $this.list = JSON.parse(resp.text).addresses;
         $this.trigger({'list': JSON.parse(resp.text).addresses});
         //选中默认

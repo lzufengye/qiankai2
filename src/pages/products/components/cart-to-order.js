@@ -13,6 +13,7 @@ import CartActions from '../actions/cart'
 import InvoiceEditor from './invoice-editor'
 import Header from './header/header'
 import Footer from '../../../footer'
+import mobileUtils from '../../../utils/mobile-utils'
 
 //待付商品列表
 var WaitingForPayCartItemList = React.createClass({
@@ -196,9 +197,10 @@ var CartToOrder = React.createClass({
     });
   },
   render: function () {
+    var containerClass = 'products-container' + (mobileUtils.mobileCheck() ? ' mobile-products-container' : '');
 
     return (
-      <div className="products-container">
+      <div className={containerClass}>
         <div className="cart-to-order-container">
           <div className="col-md-12">
             <MyAddressList />

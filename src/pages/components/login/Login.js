@@ -1,5 +1,6 @@
 import React from 'react'
 import auth from '../../../utils/auth'
+import mobileUtils from '../../../utils/mobile-utils'
 
 const Login = React.createClass({
 
@@ -38,8 +39,10 @@ const Login = React.createClass({
   },
 
   render() {
+    var containerClass = 'container' + (mobileUtils.mobileCheck() ? ' mobile-products-container' : '');
+
     return (
-      <div className='container'>
+      <div className={containerClass}>
         <div className='login'>
           <form onSubmit={this.handleSubmit}>
             <table>

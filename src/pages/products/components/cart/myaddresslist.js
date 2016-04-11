@@ -61,9 +61,10 @@ var AddressList = React.createClass({
       type: 1,
       skin: 'layui-layer-demo', //样式类名
       shift: 2,
+      offsetTop: '140px',
       shadeClose: true, //开启遮罩关闭
       maxWidth: 900,
-      area: '500px',
+      area: '100%',
       closeBtn: 1,
       title: '新建收货地址',
       content: $('#addressEditor')
@@ -86,7 +87,7 @@ var AddressList = React.createClass({
       shift: 2,
       shadeClose: true, //开启遮罩关闭
       maxWidth: 900,
-      area: '500px',
+      area: '100%',
       closeBtn: 1,
       title: '修改收货地址',
       content: $('#addressEditor')

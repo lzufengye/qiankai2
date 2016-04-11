@@ -43,6 +43,7 @@
 
 .mobile-products-container {
   margin-top: 35px;
+  width: 100%;
 }
 
 .mobile-products-container .product-sub-page {
@@ -306,4 +307,41 @@
   width: 100%;
   position: fixed;
   bottom: 0;
+}
+
+.mobile-products-container .layui-layer {
+  width: 100%;
+}
+
+.mobile-products-container .cart-to-order-container {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.mobile-products-container .cart-to-order-container .cart-mod-title {
+  margin: 0;
+}
+
+.mobile-products-container .cart-to-order-container .qing-table {
+  margin-bottom: 100px;
+}
+
+.mobile-products-container .cart-beforepay-summary {
+  padding: 0;
+  margin: 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #ffffff;
+  font-size: 12px;
+}
+
+.mobile-products-container .cart-beforepay-summary .col-md-12 {
+  margin: 0;
+  padding: 5px;
+}
+
+.mobile-products-container .cart-beforepay-summary .cart-should-pay {
+  margin: 0;
 }
