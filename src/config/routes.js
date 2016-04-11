@@ -20,6 +20,7 @@ import Article from '../pages/article'
 import Customers from '../pages/products/customers'
 import TreasureHunt from '../pages/products/treasure-hunt'
 import SearchProducts from '../pages/products/search-product'
+import WechatCallback from '../pages/components/wechat-callback'
 
 function redirectToLogin(nextState, replace) {
   if (!auth.loggedIn()) {
@@ -101,6 +102,15 @@ export default {
           cb(null, CategoryProduct)
         })
       }
+    },
+    {
+      path: '/wechat-callback',
+      getComponent: (location, cb) => {
+        require.ensure([], (require) => {
+          cb(null, WechatCallback)
+        })
+      }
+
     },
     {
       path: '/product/:id',
