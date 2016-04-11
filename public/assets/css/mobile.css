@@ -416,3 +416,12 @@
 .mobile-products-container .left-part .block-wrapper img {
   display: none;
 }
+
+.mobile-products-container .customer-header {
+  width: 100%;
+  font-size: 20px;
+}
+
+.mobile-products-container  .product-section {
+  width: 100%;
+}

@@ -8,6 +8,7 @@ import { Link } from 'react-router'
 import ReactCSSTransitionGroup from 'react/lib/ReactCSSTransitionGroup'
 
 import Item from './components/products/item'
+import mobileUtils from '../../utils/mobile-utils'
 
 var CustomerProducts = React.createClass({
   mixins: [Reflux.connect(store), Reflux.ListenerMixin],
@@ -27,8 +28,10 @@ var CustomerProducts = React.createClass({
 
     var style = {height: this.props.height};
 
+    var containerClass = 'customer-products' + (mobileUtils.mobileCheck() ? ' mobile-products-container' : '');
+
     return (
-      <div className='customer-products'>
+      <div className={containerClass}>
         <div className='customer-header'>{this.state.currentCustomer}</div>
         <div className='product-section' style={style}>
           <ReactCSSTransitionGroup component="ul" className="pure-g appItems list-reset" id="item-group"  transitionName="itemTransition" transitionLeave={false}>
