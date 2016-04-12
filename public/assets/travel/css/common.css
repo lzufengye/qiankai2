@@ -212,6 +212,8 @@ li img{
     border: 1px solid gray;
     margin-top: 20px;
     position: relative;
+    box-sizing: border-box;
+    display: inline-block;
 }
 .hot-view{
     width: 32%;
@@ -372,6 +374,7 @@ ul.nav-travel li {
     border: 1px solid gray;
     margin-top: 20px;
     position: relative;
+    box-sizing: border-box;
     display: inline-block;
 }
 
