@@ -372,6 +372,7 @@ ul.nav-travel li {
     border: 1px solid gray;
     margin-top: 20px;
     position: relative;
+    display: inline-block;
 }
 
 .hotel-show img{
