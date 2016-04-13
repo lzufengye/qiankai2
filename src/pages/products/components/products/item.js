@@ -50,7 +50,7 @@ var Item = React.createClass({
           transitionDelay: this.props.index * 0.1 + 's'
         };
 
-    var soldOutClass = 'sold-out' + this.props.item.stock_number == 0 ? '' : ' hidden';
+    var soldOutClass = 'sold-out' + (this.props.item.stock_number == 0 ? '' : ' hidden');
 
     return (
       <li style={itemStyle} className='pure-u-1 pure-u-md-1-3 pure-u-lg-1-4' >
