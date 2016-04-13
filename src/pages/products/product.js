@@ -65,20 +65,22 @@ var Product = React.createClass({
     });
 
     var pcImageDisplay = (<div className='image-zoom'>
-        <div className='image-zoom-main-container' onMouseEnter={that.startZoom}>
-          <div className='image-zoom-main' onMouseOut={that.destroyZoom}>
-            <image src={this.state.displayImage}/>
-          </div>
+      <div className='image-zoom-main-container' onMouseEnter={that.startZoom}>
+        <div className='image-zoom-main' onMouseOut={that.destroyZoom}>
+          <image src={this.state.displayImage}/>
         </div>
-        <div className='imgzoom-thumb-main'>
-          <ul>
+      </div>
+      <div className='imgzoom-thumb-main'>
+        <ul>
                 {imgZoomThumb}
-          </ul>
-        </div>
+        </ul>
+      </div>
     </div>);
 
     var productImages = this.state.product.images.map(function (image, index) {
-      return <li><image src={image} data-src={image} key={index}/></li>;
+      return <li>
+        <image src={image} data-src={image} key={index}/>
+      </li>;
     });
 
     var settings = {
@@ -93,6 +95,19 @@ var Product = React.createClass({
     var mobileImageDisplay = (<Slider {...settings}>{productImages}</Slider>);
 
     var containerClass = 'products-container' + (mobileUtils.mobileCheck() ? ' mobile-products-container' : '');
+    var changeQuantity = this.state.product.stock_number == 0 ?
+      (<div></div>) :
+      (<div className='change-quantity'>
+        <RemoveFromBasket item={this.state.product} />
+        <span className='quantity'>{this.state.inBasketQty}</span>
+        <AddToBasket text="+" item={this.state.product} />
+      </div>);
+    var shopActions = this.state.product.stock_number == 0 ?
+      (<div className='shop-actions'>已售完</div>) :
+      (<div className='shop-actions'>
+        <div className='buy-action buy-now' onClick={that.clickShopNow}>{mobileUtils.mobileCheck() ? '立即购买' : ''}</div>
+        <AddToBasket className='buy-action add-to-cart' item={this.state.product} text={mobileUtils.mobileCheck() ? '加入购物车' : ''}/>
+      </div>);
 
     return (
       <div className={containerClass}>
@@ -133,17 +148,10 @@ var Product = React.createClass({
             </div>
             <div className='buy-count'>
               <span className='small-lable'>购买数量</span>
-              <div className='change-quantity'>
-                <RemoveFromBasket item={this.state.product} />
-                <span className='quantity'>{this.state.inBasketQty}</span>
-                <AddToBasket text="+" item={this.state.product} />
-              </div>
+              {changeQuantity}
             </div>
             <div className='proinfo-line'></div>
-            <div className='shop-actions'>
-              <div className='buy-action buy-now' onClick={that.clickShopNow}>{mobileUtils.mobileCheck() ? '立即购买' : ''}</div>
-              <AddToBasket className='buy-action add-to-cart' item={this.state.product} text={mobileUtils.mobileCheck() ? '加入购物车' : ''}/>
-            </div>
+            {shopActions}
           </div>
         </div>
         <div className='more-info'>
