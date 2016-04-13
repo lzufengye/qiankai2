@@ -913,3 +913,14 @@ ul, ol, li {
   line-height: 100px;
   margin-bottom: 10px;
 }
+
+.beian img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.beian div {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5px;
+}
