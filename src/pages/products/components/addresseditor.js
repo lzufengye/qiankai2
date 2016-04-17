@@ -184,7 +184,7 @@ var AddressEditor = React.createClass({
               <input type="text" className="form-control required" valueLink={this.linkState('phone')}  name="addrPhone" maxLength="30"/>
             </div>
           </div>
-          <div className="form-group clearfix">
+        {/*<div className="form-group clearfix">
             <label className="col-md-3 align-right control-label">{'默认地址'}</label>
 
             <div className="col-md-9">
@@ -198,7 +198,7 @@ var AddressEditor = React.createClass({
                 <i></i>{'否'}
               </label>
             </div>
-          </div>
+          </div>*/}
           <div className="form-group align-center clearfix">
             <button id="submit-address" className="btn " onClick={this.saveAddress} type="button">{'保存'}</button>
           &nbsp;

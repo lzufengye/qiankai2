@@ -6,6 +6,7 @@ import Qing from '../../../utils/qing'
 import request from 'superagent'
 import layer from '../../../utils/layer'
 import MemberActions from '../actions/member'
+import ServerConfig from '../../../config/server-config'
 
 var CartStore = Reflux.createStore({
   listenables: [CartActions],
@@ -58,13 +59,11 @@ var CartStore = Reflux.createStore({
   },
   //建订单
   onCreateOrder: function (data, callback) {
-    layer.msg('Ping++正在申请中，请稍后完成支付');
-
-    request.get('/data/order.create.json')
+    request.post(ServerConfig.serverUrl + '/api/orders?token='  + localStorage.token)
+      .send(data)
       .end((err, resp) => {
-        layer.msg('Ping++正在申请中，请稍后完成支付');
         if (!resp.error && 'function' == typeof callback) {
-          callback(resp);
+          callback(JSON.parse(resp.text));
         }
         layer.msg(JSON.parse(resp.text).msg);
       });

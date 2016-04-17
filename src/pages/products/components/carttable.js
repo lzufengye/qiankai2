@@ -68,7 +68,7 @@ var CartSummary = React.createClass({
 		});
 		if (_.isArray(selectedList) && selectedList.length > 0) {
 			CartActions.selectItemToOrder(selectedList);
-			cookie.save('selectedList', selectedList, { path: '/' });
+			localStorage.basket = JSON.stringify(selectedList)
 			browserHistory.push('/shopping-cart-to-order');
 		} else
 			layer.msg('请选择要购买的商品');

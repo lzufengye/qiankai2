@@ -31,19 +31,24 @@ var Basket = React.createClass({
 
   render() {
     var statusClassName = this.state.qty === 0 ? 'appBasket--is-empty ' : '';
-    var list = this.getBasketData().map((item, n)=> {
-      return (
-        <li key={n} className="pure-g">
-          <div className="pure-u-1-2">
-            <span className="appBasket-itemDetails">
+    var list;
+
+    if(this.getBasketData() != undefined) {
+      list = this.getBasketData().map((item, n)=> {
+        return (
+          <li key={n} className="pure-g">
+            <div className="pure-u-1-2">
+              <span className="appBasket-itemDetails">
               {item.name} : £{item.price}.00
-            </span>
-            <span className="appBasket-qty">x {item.qty}</span>
-            <AddToBasket text="+" item={item} />
-            <RemoveFromBasket item={item} />
-          </div>
-        </li>);
-    });
+              </span>
+              <span className="appBasket-qty">x {item.qty}</span>
+              <AddToBasket text="+" item={item} />
+              <RemoveFromBasket item={item} />
+            </div>
+          </li>);
+      })
+    }
+
     var emptyBasket = this.state.qty === 0 ? '您的购物车是空的' : ''
     var checkOut = this.state.qty === 0 ? '' : <a href='/shopping-cart'>去结算</a>
     return (

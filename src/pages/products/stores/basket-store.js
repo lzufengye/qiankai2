@@ -9,7 +9,7 @@ var BasketStore = Reflux.createStore({
         basketItems: []
       };
 
-      if(localStorage.basket) {
+      if(localStorage.basket && Array.isArray(localStorage.basket)) {
         this.data = JSON.parse(localStorage.basket)
       }
       //this.listenToMany(actions);
@@ -50,10 +50,12 @@ var BasketStore = Reflux.createStore({
     getBasketTotals() {
       var qty = 0,
         total = 0;
-      this.data.basketItems.forEach(function(basketItem) {
-        qty += basketItem.qty;
-        total += basketItem.qty * basketItem.price;
-      });
+      if(this.data.basketItems != undefined) {
+        this.data.basketItems.forEach(function(basketItem) {
+          qty += basketItem.qty;
+          total += basketItem.qty * basketItem.price;
+        });
+      }
       return {
         'qty': qty,
         'total': total
