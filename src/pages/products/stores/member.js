@@ -45,9 +45,11 @@ var Member = Reflux.createStore({
   },
   //选中某地址用于配货
   onSelectAddress: function (addr) {
-    this.selectedAddressId = addr['id'];
+    if(addr != undefined) {
+      this.selectedAddressId = addr['id'];
+    }
     this.list = _.map(this.list, function (item) {
-      if (item['id'] == addr['id']) {
+      if (this && item['id'] == this.selectedAddressId) {
         item['selected'] = 1;
       } else {
         item['selected'] = 0;

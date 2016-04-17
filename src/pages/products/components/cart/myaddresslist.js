@@ -14,12 +14,14 @@ var MyAddressItem = React.createClass({
   selectAddrItem: function () {
     this.props.selectHandler(this.props.data);
   },
+
+
   render: function () {
     return (
       <div className="col-md-3 qing-no-padding">
         <div className={(this.props.data['id'] == this.props.selectedId) ? 'cart-addr-item cart-addr-active' : 'cart-addr-item'} onClick={this.selectAddrItem}>
           <div className="cart-addr-title">
-						{this.props.data['provinceName'] + this.props.data['cityName']} （{this.props.data['receiver'] + '收'}）
+						{this.props.data['city_name']} （{this.props.data['receiver'] + '收'}）
           </div>
           <div className="cart-addr-detail" >
 						{this.props.data['address'] + ' ' + this.props.data['phone']}

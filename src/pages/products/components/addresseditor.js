@@ -74,6 +74,7 @@ var AddressEditor = React.createClass({
   selectCity: function (city) {
     RegionActions.selectCity(city);
     $('#addressEditForm').valid();
+    $('.cart-region-list').addClass('hide');
   },
   //保存收货地址
   saveAddress: function () {
@@ -130,18 +131,6 @@ var AddressEditor = React.createClass({
       <div className="row address-editor">
         <form method="post" className="qing-pad-tb-10 col-md-12 form-horizontal" id="addressEditForm">
           <div className="form-group">
-            <label className="col-md-3 align-right control-label">{'收货人姓名'}</label>
-            <div className="col-md-9">
-              <input type="text"  className="form-control required" valueLink={this.linkState('receiver')}  name="addrMan" maxLength="30"/>
-            </div>
-          </div>
-          <div className="form-group">
-            <label className="col-md-3 align-right control-label">{'收货人电话'}</label>
-            <div className="col-md-9">
-              <input type="text" className="form-control required" valueLink={this.linkState('phone')}  name="addrPhone" maxLength="30"/>
-            </div>
-          </div>
-          <div className="form-group">
             <label className="col-md-3 align-right control-label">{'所在地区'}</label>
             <div className="col-md-9">
               <div className="cart-region-selector">
@@ -183,6 +172,18 @@ var AddressEditor = React.createClass({
               <input type="text" className="form-control required" valueLink={this.linkState('address')}  name="addrDetail" maxLength="100"/>
             </div>
           </div>
+          <div className="form-group">
+            <label className="col-md-3 align-right control-label">{'收货人姓名'}</label>
+            <div className="col-md-9">
+              <input type="text"  className="form-control required" valueLink={this.linkState('receiver')}  name="addrMan" maxLength="30"/>
+            </div>
+          </div>
+          <div className="form-group">
+            <label className="col-md-3 align-right control-label">{'收货人电话'}</label>
+            <div className="col-md-9">
+              <input type="text" className="form-control required" valueLink={this.linkState('phone')}  name="addrPhone" maxLength="30"/>
+            </div>
+          </div>
           <div className="form-group clearfix">
             <label className="col-md-3 align-right control-label">{'默认地址'}</label>
 
@@ -199,7 +200,7 @@ var AddressEditor = React.createClass({
             </div>
           </div>
           <div className="form-group align-center clearfix">
-            <button className="btn " onClick={this.saveAddress} type="button">{'保存'}</button>
+            <button id="submit-address" className="btn " onClick={this.saveAddress} type="button">{'保存'}</button>
           &nbsp;
             <button className="btn " onClick={this.cancelSave} type="button">{'取消'}</button>
           </div>

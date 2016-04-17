@@ -41,12 +41,12 @@ var CartStore = Reflux.createStore({
 
     if (this.shipFee)
       layer.msg('地址变更，重新计算运费');
-    // console.log('this.shipFee'+this.shipFee);
-    // console.log('this.productTotalFee'+this.productTotalFee);
     request.get('/data/shipping.getFee.json')
       .end((err, resp) => {
         if (!resp.error) {
-          $this.selectedAddressId = addr['id'];
+          if(addr != undefined) {
+            $this.selectedAddressId = addr['id'];
+          }
           $this.shipFee = parseFloat(JSON.parse(resp.text).data.fee);
           $this.trigger({'shipFee': $this.shipFee, 'selectedAddressId': $this.selectedAddressId});
         } else {

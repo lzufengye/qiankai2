@@ -26,7 +26,9 @@ var CartToOrder = Reflux.createStore({
     request.get('/data/shipping.getFee.json')
       .end((err, resp) => {
         if (!resp.error) {
-          $this.selectedAddressId = addr['id'];
+          if(addr != undefined) {
+            $this.selectedAddressId = addr['id'];
+          }
           $this.shipFee = parseFloat(JSON.parse(resp.text).data.fee);
           $this.trigger({'shipFee': $this.shipFee, 'selectedAddressId': $this.selectedAddressId});
         } else {

@@ -31,8 +31,11 @@ var Region = Reflux.createStore({
   //根据省份载入城市
   onSelectProvince: function (province, callback) {
     var $this = this;
+
     this.regionData.selectedProvince = province;
-    this.regionData.selectedProvinceId = province['id'];
+    if(province != undefined) {
+      this.regionData.selectedProvinceId = province['id'];
+    }
     this.regionData.selectedCityId = '';
 
     request.get('/data/region.cityList.'+ province['id'] +'.json')
