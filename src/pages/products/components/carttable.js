@@ -17,6 +17,7 @@ import layer from '../../../utils/layer'
 import LinkedStateRadioGroupMixin from '../../../utils/linkedStateRadioGroupMixin'
 import CartTableHead from './cart/cart-table-header'
 import CartTableBody from './cart/cart-table-body'
+import mobileUtils from '../../../utils/mobile-utils'
 
 //空购物车
 var EmptyShoppingCart = React.createClass({
@@ -88,6 +89,9 @@ var CartSummary = React.createClass({
 				totalPay += parseInt(item['qty']) * parseFloat(item['price'])
 			}
 		});
+
+		var gotoOrderButton = mobileUtils.mobileCheck() ? <a  className="btn" href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx95d402cee77415c9&redirect_uri=http%3A%2F%2Fwww.kaijiewang.com%2Fwechat-callback&response_type=code&scope=snsapi_userinfo&state=WECHAT#wechat_redirect">去结算</a> : <button className="btn cart-goto-order" onClick={this.readyCreateOrder} type="button">{'去结算'}</button>
+
 		return (
 			<div id="cart-summary" className={this.state.className}>
 				<div className="pull-left"></div>
@@ -99,7 +103,7 @@ var CartSummary = React.createClass({
 						<em>
 							<i className="fa fa-rmb"></i>{totalPay}</em>
 					</span>
-					<button className="btn cart-goto-order" onClick={this.readyCreateOrder} type="button">{'去结算'}</button>
+				{gotoOrderButton}
 				</div>
 			</div>
 		)
