@@ -16,16 +16,16 @@ var WechatCallback = React.createClass({
       .end((err, res) => {
         if (JSON.parse(res.text).consumer != undefined && JSON.parse(res.text).consumer.authentication_token != undefined) {
           localStorage.token = JSON.parse(res.text).consumer.authentication_token
-          browserHistory.push('/shopping-cart-to-order')
+          //browserHistory.push('/shopping-cart-to-order')
         } else {
-          browserHistory.push('/shopping-cart')
+          //browserHistory.push('/shopping-cart')
         }
       })
   },
 
   render() {
     return (
-      <div>{this.state.oauthInfo}</div>
+      <div>{this.state.oauthInfo}  <span>{this.props.params}</span></div>
     );
   }
 });
