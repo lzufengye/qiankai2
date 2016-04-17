@@ -13,8 +13,17 @@ const Login = React.createClass({
     }
   },
 
+  componentWillMount() {
+    if(mobileUtils.mobileCheck()) {
+      window.location.href = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx95d402cee77415c9&redirect_uri=http%3A%2F%2Fwww.kaijiewang.com%2Fwechat-callback&response_type=code&scope=snsapi_userinfo&state=WECHAT#wechat_redirect'
+    }
+  },
+
   componentDidMount() {
     $('.product-category').css('visibility', 'hidden')
+    if(mobileUtils.mobileCheck()) {
+      window.location.href = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx95d402cee77415c9&redirect_uri=http%3A%2F%2Fwww.kaijiewang.com%2Fwechat-callback&response_type=code&scope=snsapi_userinfo&state=WECHAT#wechat_redirect'
+    }
   },
 
   handleSubmit(event) {
