@@ -33,7 +33,7 @@ module.exports = {
       });
   },
 
-  register(email, password, password_confirmation, cb) {
+  register(user_name, phone, email, password, password_confirmation, cb) {
     cb = arguments[arguments.length - 1]
     if (localStorage.token) {
       if (cb) cb(true)
@@ -45,6 +45,8 @@ module.exports = {
     }
     request.post(ServerConfig['serverUrl'] + '/consumers')
       .send({ "consumer": {
+        "user_name": user_name,
+        "phone": phone,
         "email": email,
         "password": password,
         "password_confirmation": password_confirmation

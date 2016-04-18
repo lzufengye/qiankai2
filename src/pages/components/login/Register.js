@@ -31,11 +31,13 @@ const Login = React.createClass({
     event.preventDefault()
 
     const email = this.refs.email.value
+    const user_name = this.refs.user_name.value
+    const phone = this.refs.phone.value
     const password = this.refs.password.value
     const password_confirmation = this.refs.password_confirmation.value
 
     if(email != '' && password != '' && password_confirmation != '' && password == password_confirmation) {
-      auth.register(email, password, password_confirmation, (loggedIn) => {
+      auth.register(user_name, phone, email, password, password_confirmation, (loggedIn) => {
         if (!loggedIn)
           return this.setState({ error: true })
 
@@ -63,7 +65,17 @@ const Login = React.createClass({
           <form onSubmit={this.handleSubmit}>
             <table>
               <tr>
-                <td>用户名: </td>
+                <td>姓名: </td>
+                <td><input ref="user_name" placeholder="姓名" /></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>电话: </td>
+                <td><input ref="phone" placeholder="电话" /></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>邮箱: </td>
                 <td><input ref="email" placeholder="邮箱" defaultValue="joe@example.com" /></td>
                 <td></td>
               </tr>
