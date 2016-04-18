@@ -15,7 +15,11 @@ module.exports = {
         "password": pass
       } })
       .end((err, res) => {
-        if(JSON.parse(res.text).consumer != undefined && JSON.parse(res.text).consumer.authentication_token != undefined) {
+        if(JSON.parse(res.text).status == 401 ) {
+          if(cb != undefined) {
+            cb({ authenticated: false, errors: JSON.parse(res.text).message})
+          }
+        } else if( JSON.parse(res.text).consumer != undefined && JSON.parse(res.text).consumer.authentication_token != undefined) {
           localStorage.token = JSON.parse(res.text).consumer.authentication_token
           cb({
             authenticated: true
@@ -23,7 +27,7 @@ module.exports = {
           this.onChange(true)
         } else {
           if(cb != undefined) {
-            cb({ authenticated: false })
+            cb({ authenticated: false, errors: '未知异常' })
           }
         }
       });
@@ -46,7 +50,12 @@ module.exports = {
         "password_confirmation": password_confirmation
       } })
       .end((err, res) => {
-        if(JSON.parse(res.text).consumer != undefined && JSON.parse(res.text).consumer.authentication_token != undefined) {
+
+        if(JSON.parse(res.text).state == 'failed') {
+          if(cb != undefined) {
+            cb({ authenticated: false, errors: JSON.parse(res.text).messages })
+          }
+        } else if(JSON.parse(res.text).consumer != undefined && JSON.parse(res.text).consumer.authentication_token != undefined) {
           localStorage.token = JSON.parse(res.text).consumer.authentication_token
           cb({
             authenticated: true
@@ -54,7 +63,7 @@ module.exports = {
           this.onChange(true)
         } else {
           if(cb != undefined) {
-            cb({ authenticated: false })
+            cb({ authenticated: false, errors: '未知异常' })
           }
         }
       });

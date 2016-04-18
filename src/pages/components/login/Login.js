@@ -40,10 +40,14 @@ const Login = React.createClass({
 
       const { location } = this.props
 
-      if (location.state && location.state.nextPathname) {
-        this.context.router.replace(location.state.nextPathname)
+      if(loggedIn['authenticated']) {
+        if (location.state && location.state.nextPathname) {
+          this.context.router.replace(location.state.nextPathname)
+        } else {
+          this.context.router.replace('/')
+        }
       } else {
-        this.context.router.replace('/')
+        layer.msg(loggedIn['errors']);
       }
     })
   },

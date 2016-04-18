@@ -1,8 +1,9 @@
 import React from 'react'
 import auth from '../../../utils/auth'
+import mobileUtils from '../../../utils/mobile-utils'
+import layer from '../../../utils/layer'
 
 const Login = React.createClass({
-
   contextTypes: {
     router: React.PropTypes.object
   },
@@ -33,18 +34,26 @@ const Login = React.createClass({
     const password = this.refs.password.value
     const password_confirmation = this.refs.password_confirmation.value
 
-    auth.register(email, password, password_confirmation, (loggedIn) => {
-      if (!loggedIn)
-        return this.setState({ error: true })
+    if(email != '' && password != '' && password_confirmation != '' && password == password_confirmation) {
+      auth.register(email, password, password_confirmation, (loggedIn) => {
+        if (!loggedIn)
+          return this.setState({ error: true })
 
-      const { location } = this.props
+        const { location } = this.props
 
-      if (location.state && location.state.nextPathname) {
-        this.context.router.replace(location.state.nextPathname)
-      } else {
-        this.context.router.replace('/')
-      }
-    })
+        if(loggedIn['authenticated']) {
+          if (location.state && location.state.nextPathname) {
+            this.context.router.replace(location.state.nextPathname)
+          } else {
+            this.context.router.replace('/')
+          }
+        } else {
+          layer.msg(loggedIn['errors']);
+        }
+      })
+    } else {
+      layer.msg('请输入合法的邮箱和密码');
+    }
   },
 
   render() {
