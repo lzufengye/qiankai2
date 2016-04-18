@@ -189,9 +189,8 @@ var CartToOrder = React.createClass({
       }
     }, function (resp) {
       if (resp.order['sn']) {
-        //订单号：
         localStorage.basket = JSON.stringify({basketItems: []});
-        console.log('订单号：' + resp.order['sn']);
+        $('.cart-to-order-container').html('您的订单已提交，订单号：' + resp.order['sn'] + ', 请货到付款');
       }
     });
   },

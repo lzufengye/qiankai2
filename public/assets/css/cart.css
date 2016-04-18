@@ -575,6 +575,7 @@ h2.cart-mod-title:before {
 
 .cart-to-order-container {
   width: 1190px;
+  min-height: 400px;
   margin: 0 auto;
   padding-top: 15px;
 }
