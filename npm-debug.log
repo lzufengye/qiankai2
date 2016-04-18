@@ -1,36 +1,36 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/usr/local/Cellar/node/5.0.0/bin/node',
-1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli [ 'D:\\NodeJS\\node.exe',
+1 verbose cli   'D:\\NodeJS\\node_modules\\npm\\bin\\npm-cli.js',
 1 verbose cli   'start' ]
-2 info using npm@3.7.2
-3 info using node@v5.0.0
+2 info using npm@3.6.0
+3 info using node@v5.7.1
 4 verbose run-script [ 'prestart', 'start', 'poststart' ]
 5 info lifecycle qiankai@1.0.0~prestart: qiankai@1.0.0
 6 silly lifecycle qiankai@1.0.0~prestart: no script for prestart, continuing
 7 info lifecycle qiankai@1.0.0~start: qiankai@1.0.0
 8 verbose lifecycle qiankai@1.0.0~start: unsafe-perm in lifecycle true
-9 verbose lifecycle qiankai@1.0.0~start: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/gqzhao/Project/react/qiankai/node_modules/.bin:/usr/local/Cellar/node/5.0.0/bin:/usr/local/sbin:/opt/apache-maven-3.3.3/bin:/Users/gqzhao/.rvm/gems/ruby-2.1.5/bin:/Users/gqzhao/.rvm/gems/ruby-2.1.5@global/bin:/Users/gqzhao/.rvm/rubies/ruby-2.1.5/bin:./bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/gqzhao/.rvm/bin:/Users/gqzhao/bin:/Users/gqzhao/.rvm/gems/ruby-2.0.0-p451/gems/rea-ec2-300.467/bin:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home:/Library/Grails/grails-2.4.3:/Library/Grails/grails-2.4.3/bin:/Library/Groovy/groovy-2.4.0-beta-3/bin:/Users/gqzhao/.asgard:/Users/gqzhao/Project/go/bin
-10 verbose lifecycle qiankai@1.0.0~start: CWD: /Users/gqzhao/Project/react/qiankai
-11 silly lifecycle qiankai@1.0.0~start: Args: [ '-c',
+9 verbose lifecycle qiankai@1.0.0~start: PATH: D:\NodeJS\node_modules\npm\bin\node-gyp-bin;D:\git项目\qiankai2\node_modules\.bin;D:\RailsInstaller\ImageMagick-6.9.3-Q16;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;D:\JDK\bin;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\SWTOOLS\ReadyApps;C:\Program Files (x86)\Common Files\Lenovo;C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin;D:\NodeJS\;F:\Skype\Phone\;D:\RailsInstaller\Git\cmd;D:\RailsInstaller\Ruby2.2.0\bin;C:\Users\123\AppData\Roaming\npm;D:\Docker Toolbox
+10 verbose lifecycle qiankai@1.0.0~start: CWD: D:\git项目\qiankai2
+11 silly lifecycle qiankai@1.0.0~start: Args: [ '/d /s /c',
 11 silly lifecycle   'if-env NODE_ENV=production && npm run start:prod || npm run start:dev' ]
 12 silly lifecycle qiankai@1.0.0~start: Returned: code: 1  signal: null
 13 info lifecycle qiankai@1.0.0~start: Failed to exec start script
 14 verbose stack Error: qiankai@1.0.0 start: `if-env NODE_ENV=production && npm run start:prod || npm run start:dev`
 14 verbose stack Exit status 1
-14 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:239:16)
-14 verbose stack     at emitTwo (events.js:87:13)
-14 verbose stack     at EventEmitter.emit (events.js:172:7)
-14 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:24:14)
-14 verbose stack     at emitTwo (events.js:87:13)
-14 verbose stack     at ChildProcess.emit (events.js:172:7)
-14 verbose stack     at maybeClose (internal/child_process.js:818:16)
+14 verbose stack     at EventEmitter.<anonymous> (D:\NodeJS\node_modules\npm\lib\utils\lifecycle.js:232:16)
+14 verbose stack     at emitTwo (events.js:100:13)
+14 verbose stack     at EventEmitter.emit (events.js:185:7)
+14 verbose stack     at ChildProcess.<anonymous> (D:\NodeJS\node_modules\npm\lib\utils\spawn.js:24:14)
+14 verbose stack     at emitTwo (events.js:100:13)
+14 verbose stack     at ChildProcess.emit (events.js:185:7)
+14 verbose stack     at maybeClose (internal/child_process.js:827:16)
 14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
 15 verbose pkgid qiankai@1.0.0
-16 verbose cwd /Users/gqzhao/Project/react/qiankai
-17 error Darwin 14.5.0
-18 error argv "/usr/local/Cellar/node/5.0.0/bin/node" "/usr/local/bin/npm" "start"
-19 error node v5.0.0
-20 error npm  v3.7.2
+16 verbose cwd D:\git项目\qiankai2
+17 error Windows_NT 6.1.7601
+18 error argv "D:\\NodeJS\\node.exe" "D:\\NodeJS\\node_modules\\npm\\bin\\npm-cli.js" "start"
+19 error node v5.7.1
+20 error npm  v3.6.0
 21 error code ELIFECYCLE
 22 error qiankai@1.0.0 start: `if-env NODE_ENV=production && npm run start:prod || npm run start:dev`
 22 error Exit status 1
