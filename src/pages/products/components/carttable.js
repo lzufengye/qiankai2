@@ -69,7 +69,7 @@ var CartSummary = React.createClass({
 		});
 		if (_.isArray(selectedList) && selectedList.length > 0) {
 			CartActions.selectItemToOrder(selectedList);
-			localStorage.basket = JSON.stringify(selectedList)
+			localStorage.basket = JSON.stringify({basketItems: selectedList});
 			browserHistory.push('/shopping-cart-to-order');
 		} else
 			layer.msg('请选择要购买的商品');
