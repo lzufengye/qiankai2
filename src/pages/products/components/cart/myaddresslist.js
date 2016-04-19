@@ -89,7 +89,7 @@ var AddressList = React.createClass({
       skin: 'layui-layer-demo', //样式类名
       shift: 2,
       shadeClose: true, //开启遮罩关闭
-      maxWidth: 900,
+      maxWidth: '900px',
       area: '100%',
       closeBtn: 1,
       title: '修改收货地址',

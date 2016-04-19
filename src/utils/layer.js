@@ -334,7 +334,8 @@ Class.pt.offset = function (times) {
     var that = this, times = times || that.index, config = that.config, layero = $('#' + doms[0] + times);
     var area = [layero.outerWidth(), layero.outerHeight()];
     var type = typeof config.offset === 'object';
-    that.offsetTop = (win.height() - area[1])/2;
+    var windowHeight = Math.min(600, win.height());
+    that.offsetTop = (windowHeight - area[1])/2;
     that.offsetLeft = (win.width() - area[0])/2;
     if(type){
         that.offsetTop = config.offset[0];

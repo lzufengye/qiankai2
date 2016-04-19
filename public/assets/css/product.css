@@ -4,6 +4,7 @@ ul, ol, li {
 
 .products-container {
   width: 100%;
+  min-height: 380px;
   color: rgb(72, 82, 85);
   box-sizing: border-box;
   background-color: #ffffff;
@@ -946,4 +947,8 @@ ul, ol, li {
 
 .hidden {
   display: none;
+}
+
+.qing-empty-cart {
+  text-align: center;
 }
