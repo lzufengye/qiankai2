@@ -50,12 +50,18 @@ var Header =
         {name: '虚拟旅游', link: '#'},
         {name: '驴友之家', link: 'http://bbs.cqkx.com/forum-129-1.html'}
       ];
-      var convenienceLifeItems = [{name: '购票缴费', link: 'https://jiaofei.alipay.com/jiaofei.htm?_pdType=aecfbbfgeabbifdfdieh&_scType=bacfajegafddadijhagd'},
+      var convenienceLifeItems = [{
+        name: '购票缴费',
+        link: 'https://jiaofei.alipay.com/jiaofei.htm?_pdType=aecfbbfgeabbifdfdieh&_scType=bacfajegafddadijhagd'
+      },
         {name: '健康服务', link: 'http://bbs.cqkx.com/forum.php?mod=forumdisplay&fid=288'},
         {name: '就业服务', link: 'http://www.kzrc.gov.cn/'},
         {name: '餐饮娱乐', link: 'http://bbs.cqkx.com/forum-129-1.html'},
         {name: '房屋中介', link: 'http://bbs.cqkx.com/forum-131-1.html'},
-        {name: '家政服务', link: 'http://job.cqkx.com/index.php?m=com&c=search&hy=&jobids=&cityid=&pr=&mun=&exp=&salary=&edu=&up'}
+        {
+          name: '家政服务',
+          link: 'http://job.cqkx.com/index.php?m=com&c=search&hy=&jobids=&cityid=&pr=&mun=&exp=&salary=&edu=&up'
+        }
       ];
       var financeServiceItems = [{name: '投资理财', link: 'http://www.kqjr.cn'},
         {name: '融资担保', link: 'http://www.cqkxxn.com/'},
@@ -79,7 +85,7 @@ var Header =
         {name: '协会服务', link: '/company-service/articles/association_service'}
       ];
 
-      var className='pure-g' + (this.props.isMobile ? ' mobile-header' : '');
+      var className = 'pure-g' + (this.props.isMobile ? ' mobile-header' : '');
 
       return (
         <div className={className}>
@@ -98,7 +104,9 @@ var Header =
                 {this.state.loggedIn ? ('') : (<li>
                   <a href="/register">注册</a>
                 </li>)}
-                <li>我的订单</li>
+                <li>
+                  <a href="/consumer">我的订单</a>
+                </li>
                 <ShoppingCart />
               </ul>
             </div>
