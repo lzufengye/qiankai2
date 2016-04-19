@@ -5,13 +5,9 @@ import _ from 'lodash'
 var BasketStore = Reflux.createStore({
 
   init() {
-      this.data = {
+      this.data = JSON.parse(localStorage.basket) || {
         basketItems: []
       };
-
-      if(localStorage.basket) {
-        this.data = JSON.parse(localStorage.basket)
-      }
 
       //this.listenToMany(actions);
       this.listenTo(actions.addItem, this.onAddItem);
