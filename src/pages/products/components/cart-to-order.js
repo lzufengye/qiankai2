@@ -156,7 +156,7 @@ var CartToOrder = React.createClass({
   mixins: [Reflux.connect(CartStore), LinkedStateMixin],
 
   componentWillMount: function () {
-    var selectedList = JSON.parse(localStorage.basket);
+    var selectedList = JSON.parse(localStorage.basket)['basketItems'];
     if (!_.isArray(selectedList) || selectedList.length == 0) {
       browserHistory.push('/shopping-cart');
     }
@@ -169,7 +169,7 @@ var CartToOrder = React.createClass({
   },
 
   componentDidMount() {
-    var selectedList = JSON.parse(localStorage.basket);
+    var selectedList = JSON.parse(localStorage.basket)['basketItems'];
     this.setState({'selectedList': selectedList});
     $('.product-category').css('visibility', 'hidden');
   },
