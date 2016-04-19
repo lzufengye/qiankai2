@@ -9,8 +9,8 @@ var BasketStore = Reflux.createStore({
         basketItems: []
       };
 
-      if(localStorage.basket) {
-        this.data = JSON.parse(localStorage.basket)
+      if(localStorage.qwezst) {
+        this.data = JSON.parse(localStorage.qwezst)
       }
 
       //this.listenToMany(actions);
@@ -29,7 +29,7 @@ var BasketStore = Reflux.createStore({
         this.data.basketItems[itemIndex].qty++;
       }
 
-      localStorage.basket = JSON.stringify(this.data)
+      localStorage.qwezst = JSON.stringify(this.data)
     },
 
     onRemoveItem(item){
@@ -45,7 +45,7 @@ var BasketStore = Reflux.createStore({
         }
       }
 
-      localStorage.basket = JSON.stringify(this.data)
+      localStorage.qwezst = JSON.stringify(this.data)
     },
 
     getBasketTotals() {

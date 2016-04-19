@@ -73,7 +73,7 @@ var CartStore = Reflux.createStore({
     var $this = this;
 
     $this.list = [];
-    $this.list = JSON.parse(localStorage.basket).basketItems;
+    $this.list = JSON.parse(localStorage.qwezst).basketItems;
     _.map($this.list, function (item) {
       item['selected'] = false
     });
@@ -123,7 +123,7 @@ var CartStore = Reflux.createStore({
   updateList: function (list) {
     this.list = list;
     this.trigger({'list': list});
-    localStorage.basket = JSON.stringify({basketItems: this.list})
+    localStorage.qwezst = JSON.stringify({basketItems: this.list})
   },
   updateQty: function (qty, foundItem, reload) {
     reload = typeof reload == 'undefined' ? true : false;
