@@ -9,9 +9,10 @@ var BasketStore = Reflux.createStore({
         basketItems: []
       };
 
-      if(localStorage.basket && Array.isArray(localStorage.basket)) {
+      if(localStorage.basket) {
         this.data = JSON.parse(localStorage.basket)
       }
+
       //this.listenToMany(actions);
       this.listenTo(actions.addItem, this.onAddItem);
       this.listenTo(actions.removeItem, this.onRemoveItem);
