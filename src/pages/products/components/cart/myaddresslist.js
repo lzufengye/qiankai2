@@ -5,6 +5,7 @@ import MemberActions from '../../actions/member'
 import MemberStore from '../../stores/member'
 import AddressEditor from '../addresseditor'
 import layer from '../../../../utils/layer'
+import mobileUtils from '../../../../utils/mobile-utils'
 //地址项
 var MyAddressItem = React.createClass({
   editAddrItem: function (e) {
@@ -65,8 +66,8 @@ var AddressList = React.createClass({
       shift: 2,
       offsetTop: '140px',
       shadeClose: true, //开启遮罩关闭
-      maxWidth: 900,
-      area: '100%',
+      maxWidth: '900px',
+      area: mobileUtils.mobileCheck() ? '100%' : '400px',
       closeBtn: 1,
       title: '新建收货地址',
       content: $('#addressEditor')
