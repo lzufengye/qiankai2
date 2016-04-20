@@ -18,7 +18,7 @@
     background-color: #33302B;
     color: white;
     border-top: 1px solid #eee;
-    font-size: 12px;
+    font-size: 10px;
     text-align: center;
     padding-top: 20px;
 }
@@ -224,6 +224,10 @@ li img{
     border: 1px solid gray;
     margin-top: 20px;
     position: relative;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4a07b98db4bc72bc7c8000e25885f1f1df1ba6d4
 }
 .hot-view{
     width: 32%;
@@ -323,7 +327,7 @@ li img{
     width: 30%;
     margin-left: 35%;
     margin-top: 30px;
-
+    text-align: center;
 }
 .mainText label{
     width: 100%;
@@ -352,6 +356,10 @@ li img{
 .mainText li{
     margin-bottom: 10px;
     color: #2292DD;
+}
+
+.mainText img{
+    width: 100%;
 }
 
 .viewImg{

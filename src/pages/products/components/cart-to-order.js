@@ -156,7 +156,7 @@ var CartToOrder = React.createClass({
   mixins: [Reflux.connect(CartStore), LinkedStateMixin],
 
   componentWillMount: function () {
-    var selectedList = JSON.parse(localStorage.basket);
+    var selectedList = JSON.parse(localStorage.qwezst)['basketItems'];
     if (!_.isArray(selectedList) || selectedList.length == 0) {
       browserHistory.push('/shopping-cart');
     }
@@ -169,7 +169,7 @@ var CartToOrder = React.createClass({
   },
 
   componentDidMount() {
-    var selectedList = JSON.parse(localStorage.basket);
+    var selectedList = JSON.parse(localStorage.qwezst)['basketItems'];
     this.setState({'selectedList': selectedList});
     $('.product-category').css('visibility', 'hidden');
   },
@@ -181,18 +181,22 @@ var CartToOrder = React.createClass({
       lineItems.push({id: item['id'], quantity: item['qty']});
     });
 
-    CartActions.createOrder({
-      order: {
-        address_id: this.state.selectedAddressId,
-        products: lineItems,
-        ship_fee: this.state.shipFee
-      }
-    }, function (resp) {
-      if (resp.order['sn']) {
-        localStorage.basket = JSON.stringify({basketItems: []});
-        $('.cart-to-order-container').html('您的订单已提交，订单号：' + resp.order['sn'] + ', 请货到付款');
-      }
-    });
+    if(this.state.selectedAddressId) {
+      CartActions.createOrder({
+        order: {
+          address_id: this.state.selectedAddressId,
+          products: lineItems,
+          ship_fee: this.state.shipFee
+        }
+      }, function (resp) {
+        if (resp.order['sn']) {
+          localStorage.qwezst = JSON.stringify({basketItems: []});
+          $('.cart-to-order-container').html('您的订单已提交，订单号：' + resp.order['sn'] + ', 请货到付款');
+        }
+      });
+    } else {
+      layer.msg('请输入配送地址');
+    }
   },
   render: function () {
     var containerClass = 'products-container' + (mobileUtils.mobileCheck() ? ' mobile-products-container' : '');

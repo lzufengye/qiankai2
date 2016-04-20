@@ -4,6 +4,7 @@ ul, ol, li {
 
 .products-container {
   width: 100%;
+  min-height: 380px;
   color: rgb(72, 82, 85);
   box-sizing: border-box;
   background-color: #ffffff;
@@ -946,4 +947,72 @@ ul, ol, li {
 
 .hidden {
   display: none;
+}
+
+.qing-empty-cart {
+  text-align: center;
+}
+
+.order-container {
+  color: #3c3c3c;
+  border: 1px solid #e8e8e8;
+  box-sizing: border-box;
+  margin-top: 15px;
+  font-size: 12px;
+}
+
+.order-container .order-header {
+  background-color: rgb(241, 242, 244);
+  height: 45px;
+  padding: 0 30px;
+}
+
+.order-container .order-header .order-header-item {
+  display: inline-block;
+  width: 200px;
+  height: 45px;
+  vertical-align: middle;
+  line-height: 45px;
+}
+
+.order-created-date {
+  font-weight: bold;
+}
+
+.order-container .order-line-item-container {
+  width: 80%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.order-container .order-line-item-container img{
+  border: 1px solid #E8E8E8;
+  width: 80px;
+}
+
+.order-container .order-line-item-container a {
+  display: inline-block;
+}
+
+.order-container .order-line-item-container .line-item {
+  margin-bottom: 6px;
+}
+
+.order-container .order-line-item-container .line-item-item {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 30px;
+}
+
+.order-container .order-line-item-container .line-item-item-name {
+  width: 200px;
+}
+
+.order-container .order-price-container {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.order-container .order-detail {
+  padding: 15px 30px;
 }

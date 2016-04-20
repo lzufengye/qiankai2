@@ -1,6 +1,6 @@
-import es5Shim from 'es5-shim'
-import es5Sham from 'es5-shim/es5-sham'
-import consolePolyfill from 'console-polyfill'
+require('es5-shim');
+require('es5-shim/es5-sham');
+require('console-polyfill');
 
 import React from 'react'
 import ReactDOM from 'react-dom'
@@ -22,6 +22,14 @@ import OrderPay from './src/pages/products/order-pay'
 import { Router, Route, browserHistory, IndexRoute } from 'react-router'
 
 import routes from './src/config/routes'
+
+if (typeof Array.prototype.forEach != 'function') {
+  Array.prototype.forEach = function(callback){
+    for (var i = 0; i < this.length; i++){
+      callback.apply(this, [this[i], i, this]);
+    }
+  };
+}
 
 ReactDOM.render(
   <Router history={browserHistory} routes={routes}/>,
