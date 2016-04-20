@@ -1,6 +1,6 @@
 if (!Array.prototype.forEach) {
 
-  Array.prototype.forEach = function(callback, thisArg) {
+  Array.prototype.forEach = function (callback, thisArg) {
 
     var T, k;
 
@@ -18,8 +18,7 @@ if (!Array.prototype.forEach) {
     var len = O.length >>> 0;
 
     // 4. If isCallable(callback) is false, throw a TypeError
-    exception. // See: http://es5.github.com/#x9.11
-      if (typeof callback !== "function") {
+    if (typeof callback !== "function") {
       throw new TypeError(callback + ' is not a function');
     }
 
