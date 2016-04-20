@@ -350,8 +350,8 @@ ul, ol, li {
 
 .appItems li .sold-out {
   position: absolute;
-  left: 5px;
-  top: 5px;
+  left: -1px;
+  top: -1px;
 }
 
 .appItems li .sold-out .sold-out-label {
