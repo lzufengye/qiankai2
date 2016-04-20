@@ -23,6 +23,14 @@ import { Router, Route, browserHistory, IndexRoute } from 'react-router'
 
 import routes from './src/config/routes'
 
+if (typeof Array.prototype.forEach != 'function') {
+  Array.prototype.forEach = function(callback){
+    for (var i = 0; i < this.length; i++){
+      callback.apply(this, [this[i], i, this]);
+    }
+  };
+}
+
 ReactDOM.render(
   <Router history={browserHistory} routes={routes}/>,
   document.getElementById('content')
