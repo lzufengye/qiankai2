@@ -112,7 +112,7 @@ var Header =
               </ul>
             </div>
             <div className="middle-nav">
-              <image className='logo-image' src='/assets/images/products/logo.jpg' />
+              <a href='/'><image className='logo-image' src='/assets/images/products/logo.jpg' /></a>
               <image className='logo-title' src='/assets/images/products/logo-title.jpg' />
               <SearchBar />
             </div>

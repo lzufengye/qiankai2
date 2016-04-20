@@ -306,7 +306,8 @@ ul, ol, li {
   height: 420px;
   margin: 10px auto;
   overflow: hidden;
-  border-top: 2px solid #df3627;
+  border-top: 1px solid #df3627;
+  background-color: #f8f8f8;
 }
 
 .product-section-title {
@@ -335,11 +336,15 @@ ul, ol, li {
 }
 
 .appItems li {
-  width: 200px;
-  height: 210px;
+  width: 196px;
+  height: 206px;
   display: inline-block;
   text-align: center;
   position: relative;
+  border: 1px solid #eee;
+  margin-top: 4px;
+  margin-left: 4px;
+  background-color: white;
 }
 
 .appItems li .sold-out {
@@ -363,7 +368,6 @@ ul, ol, li {
 .appItem {
   height: 100%;
   width: 100%;
-  border-right: 1px solid #eee;
   overflow: hidden;
   padding-top: 25px;
 }
