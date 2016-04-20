@@ -14,17 +14,28 @@
 
 .footer{
     margin-top: 20px;
-    height: 90px;
-    background-color: #313131;
+    height: 120px;
+    background-color: #33302B;
     color: white;
     border-top: 1px solid #eee;
-    font-size: 12px;
+    font-size: 10px;
     text-align: center;
     padding-top: 20px;
 }
 
 .footer div{
-    margin-top: 5px;
+    margin-top: 7px;
+}
+
+.beian img {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.beian div {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
 }
 
 /*顶部工具栏样式*/
@@ -181,6 +192,7 @@ li img{
 
 /*网站内容展示样式*/
 #content{
+    width: 1240px;
     margin: 30px auto 0;
 }
 .viewName {
@@ -197,6 +209,7 @@ li img{
 .item-wrap{
     margin-top: 10px;
     width: 100%;
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     border-top: 2px solid lightgray;
@@ -211,8 +224,7 @@ li img{
     border: 1px solid gray;
     margin-top: 20px;
     position: relative;
-    box-sizing: border-box;
-    display: inline-block;
+
 }
 .hot-view{
     width: 32%;
