@@ -120,14 +120,15 @@ ul, ol, li {
 
 .middle-nav {
   padding: 10px;
+  max-width: 1190px;
   background-color: white;
+  margin: 0 auto;
 }
 
 .middle-nav .logo-image {
-  width: 100px;
+  width: 120px;
   display: inline-block;
   vertical-align: middle;
-  margin-left: 10%;
   margin-right: 3%;
 }
 
