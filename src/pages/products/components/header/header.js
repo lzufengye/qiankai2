@@ -94,6 +94,7 @@ var Header =
               <ul className="right clear">
                   {this.state.loggedIn ? (
                     <li>
+                      <span className='user-email'>{localStorage.email}</span>
                       <a href="/logout">退出</a>
                     </li>
                   ) : (

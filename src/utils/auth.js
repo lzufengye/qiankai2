@@ -21,6 +21,7 @@ module.exports = {
           }
         } else if( JSON.parse(res.text).consumer != undefined && JSON.parse(res.text).consumer.authentication_token != undefined) {
           localStorage.token = JSON.parse(res.text).consumer.authentication_token
+          localStorage.email = email
           cb({
             authenticated: true
           })
@@ -59,6 +60,7 @@ module.exports = {
           }
         } else if(JSON.parse(res.text).consumer != undefined && JSON.parse(res.text).consumer.authentication_token != undefined) {
           localStorage.token = JSON.parse(res.text).consumer.authentication_token
+          localStorage.email = email
           cb({
             authenticated: true
           })

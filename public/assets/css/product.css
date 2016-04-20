@@ -84,6 +84,11 @@ ul, ol, li {
   padding-left: 10px;
 }
 
+.top-nav .user-email {
+  margin-right: 20px;
+  font-size: 12px;
+}
+
 .top-nav .back-home {
   border-right: solid 1px #425255;
   padding-right: 50px;
