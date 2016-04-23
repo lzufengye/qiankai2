@@ -327,27 +327,16 @@
   box-sizing: border-box;
   display: inline-block;
   vertical-align: middle;
-  width: 28%;
+  width: 20%;
+  min-width: 60px;
 }
 
 .mobile-products-container .qing-table .qing-col-td .cart-item-title {
   margin: 5px 0;
-  width: 100px;
+  width: 60px;
   padding: 0;
   font-size: 12px;
   text-align: center;
-}
-
-.mobile-products-container .qing-table .cart-col-name {
-  width: 40%;
-}
-
-.mobile-products-container .qing-table .cart-col-price {
-  width: 40%;
-}
-
-.mobile-products-container .qing-table .cart-col-qty {
-  margin-left: 40px;
 }
 
 .mobile-products-container .qing-table .cart-checkbox {
@@ -383,7 +372,7 @@
   margin: 0;
   position: fixed;
   bottom: 0;
-  width: 100%;
+  width: 95%;
   background-color: #ffffff;
   font-size: 12px;
 }
@@ -452,4 +441,17 @@
 
 .mobile-products-container  .product-section {
   width: 100%;
+}
+
+.mobile-products-container .qing-table .cart-item-img {
+  width: 60px;
+  height: 60px;
+}
+
+.mobile-products-container .delete-item {
+  float: right;
+}
+
+.mobile-products-container .qing-no-padding {
+  width: 98%;
 }

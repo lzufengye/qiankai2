@@ -31,7 +31,7 @@ var CartItem = React.createClass({
         </label>
       </div>)
       delHtml = (
-        <div className="qing-col-td">
+        <div className="qing-col-td delete-item">
           <a href="#" onClick={this.removeItem}>{'删除'}</a>
         </div>
       )
