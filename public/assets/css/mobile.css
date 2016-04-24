@@ -486,4 +486,9 @@
   position: absolute;
   bottom: 0;
   width: 100%;
+  text-align: center;
+}
+
+.mobile-products-container .disabled {
+  color: rgba(250, 155, 10, 0.3);
 }
