@@ -38,10 +38,10 @@ var OrderPay = React.createClass({
     if(this.state.charge) {
       pingpp.createPayment(this.state.charge, function(result, error){
         if (result == "success") {
+          $('.pay-order').hide();
           layer.msg('支付成功');
           localStorage.qwezstfp = JSON.stringify({});
           this.setState({charge: null});
-          $('.pay-order').addClass('disabled');
         } else if (result == "fail") {
           layer.msg('支付失败，请重试');
         } else if (result == "cancel") {
