@@ -455,3 +455,35 @@
 .mobile-products-container .qing-no-padding {
   width: 98%;
 }
+
+.mobile-products-container .order-container .order-header {
+  height: 95px;
+}
+
+.mobile-products-container .order-container .order-header .order-header-item {
+  width: 50%;
+}
+
+.mobile-products-container .order-detail .order-line-item-container {
+  width: 100%;
+}
+
+.mobile-products-container .order-container .order-line-item-container .line-item-item {
+  margin-right: 20px;
+}
+
+.mobile-products-container .order-container .order-line-item-container .line-item-item-name {
+  width: 40px;
+  color: rgb(250, 155, 10);
+}
+
+.mobile-products-container .order-container .order-price-container {
+  width: 100%;
+  text-align: right;
+}
+
+.mobile-products-container .pay-order {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}

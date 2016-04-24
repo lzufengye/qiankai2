@@ -19,6 +19,7 @@ import About from '../pages/about'
 import Article from '../pages/article'
 import Customers from '../pages/products/customers'
 import Consumer from '../pages/products/consumer'
+import OrderPay from '../pages/products/order-pay'
 import TreasureHunt from '../pages/products/treasure-hunt'
 import SearchProducts from '../pages/products/search-product'
 import WechatCallback from '../pages/components/wechat-callback'
@@ -99,6 +100,14 @@ export default {
           getComponent: (location, cb) => {
             require.ensure([], (require) => {
               cb(null, Consumer)
+            })
+          }
+        },
+        {
+          path: '/order-pay/:sn',
+          getComponent: (location, cb) => {
+            require.ensure([], (require) => {
+              cb(null, OrderPay)
             })
           }
         }

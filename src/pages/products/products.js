@@ -30,8 +30,6 @@ var Products = React.createClass({
   },
 
   render: function () {
-    let pageName = 'food';
-
     var advertisements = this.state.advertisements.map(function (advertisement, index) {
       return <a href={advertisement.link} target='_blank' key={index}>
         <image src={advertisement.imageUrl}/>

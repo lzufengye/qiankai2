@@ -59,7 +59,7 @@ var CartStore = Reflux.createStore({
   },
   //建订单
   onCreateOrder: function (data, callback) {
-    request.post(ServerConfig.serverUrl + '/api/orders?token='  + localStorage.token)
+    request.post(ServerConfig.serverUrl + '/api/orders?token=' + localStorage.token)
       .send(data)
       .end((err, resp) => {
         if (!resp.error && 'function' == typeof callback) {

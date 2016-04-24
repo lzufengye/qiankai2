@@ -7,31 +7,11 @@ import cookie from 'react-cookie'
 import CartStore from '../stores/cart'
 import CartAction from '../actions/cart'
 import MyAddressList from './cart/myaddresslist'
-import CartTableHead from './cart/cart-table-header'
-import CartTableBody from './cart/cart-table-body'
 import CartActions from '../actions/cart'
 import InvoiceEditor from './invoice-editor'
-import Header from './header/header'
-import Footer from '../../../footer'
-import mobileUtils from '../../../utils/mobile-utils'
+import WaitingForPayCartItemList from './cart/waiting-for-pay'
 
-//待付商品列表
-var WaitingForPayCartItemList = React.createClass({
-  render: function () {
-    return (
-      <div className="row">
-        <div className="cart-mod col-md-12">
-          <h2 className="cart-mod-title">
-             {'商品列表'}</h2>
-          <div className="qing-table">
-            <CartTableHead editable={false}/>
-            <CartTableBody data={this.props.list} editable={false}/>
-          </div>
-        </div>
-      </div>
-    )
-  }
-});
+import mobileUtils from '../../../utils/mobile-utils'
 
 //发票
 var CartInvoice = React.createClass({
@@ -191,7 +171,11 @@ var CartToOrder = React.createClass({
       }, function (resp) {
         if (resp.order['sn']) {
           localStorage.qwezst = JSON.stringify({basketItems: []});
-          $('.cart-to-order-container').html('您的订单已提交，订单号：' + resp.order['sn'] + ', 请货到付款');
+          if(mobileUtils.mobileCheck()) {
+            localStorage.qwezstfp = JSON.stringify(resp.order);
+            browserHistory.push('/order-pay/' + resp.order['sn']);
+          }
+          $('.cart-to-order-container').html('您的订单已提交，订单号：' + resp.order['sn'] + ', 支持货到付款');
         }
       });
     } else {
