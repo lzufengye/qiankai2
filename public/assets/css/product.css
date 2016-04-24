@@ -336,7 +336,7 @@ ul, ol, li {
   color: #333;
 }
 
-.appItems li {
+.appItems .product-item {
   width: 194px;
   height: 202px;
   display: inline-block;

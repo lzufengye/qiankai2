@@ -71,10 +71,6 @@
   padding: 10px;
 }
 
-.mobile-customers-container .appItems li {
-  width: 100%;
-}
-
 .mobile-products-container .product-list-container {
   margin: 0;
 }
@@ -101,8 +97,8 @@
   display: none;
 }
 
-.mobile-products-container .appItems li {
-  width: 48%;
+.mobile-products-container .appItems .product-item {
+  width: 48% !important;
   border-bottom: 1px solid #eee;
 }
 

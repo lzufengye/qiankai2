@@ -53,7 +53,7 @@ var Item = React.createClass({
     var soldOutClass = 'sold-out' + (this.props.item.stock_number == 0 ? '' : ' hidden');
 
     return (
-      <li style={itemStyle} className='pure-u-1 pure-u-md-1-3 pure-u-lg-1-4' >
+      <li style={itemStyle} className='product-item pure-u-1 pure-u-md-1-3 pure-u-lg-1-4' >
         <div className={soldOutClass}>
           <img src='/assets/images/products/sold-out.png'/>
           <div className='sold-out-label'>已售完</div>
