@@ -6,15 +6,19 @@
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:dev": "webpack-dev-server --inline --content-base public --history-api-fallback",
-    "start:prod": "webpack && node server.js"
+    "start:prod": "node server.js",
+    "build": "NODE_ENV=production webpack"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "compression": "^1.6.1",
+    "express": "^4.13.4",
+    "if-env": "^1.0.0"
+  },
+  "devDependencies": {
     "console-polyfill": "^0.2.2",
     "es5-shim": "^4.5.8",
-    "if-env": "^1.0.0",
     "jquery-zoom": "^1.7.15",
     "match-media": "^0.2.0",
     "react": "^0.14.7",
@@ -25,9 +29,7 @@
     "react-tab-pane": "0.0.6",
     "react-transform-catch-errors": "^1.0.2",
     "redbox-react": "^1.2.3",
-    "reflux": "^0.2.12"
-  },
-  "devDependencies": {
+    "reflux": "^0.2.12",
     "babel-core": "^6.7.7",
     "babel-loader": "^6.2.2",
     "babel-plugin-react-transform": "^2.0.2",

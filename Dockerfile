@@ -8,4 +8,5 @@ RUN npm install --production
 
 EXPOSE 8080
 
-CMD ["/app/run"]
+#CMD ["/app/run"]
+ENTRYPOINT ["/app/run"]
