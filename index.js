@@ -1,7 +1,8 @@
-require('es5-shim');
-require('es5-shim/es5-sham');
-require('console-polyfill');
+// require('es5-shim');
+// require('es5-shim/es5-sham');
+// require('console-polyfill');
 
+import 'console-polyfill'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './src/app'

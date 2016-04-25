@@ -1,2 +1,3 @@
 #!/bin/bash
-cd /app/ && NODE_ENV=production npm start
+#cd /app/ && NODE_ENV=production node server.js
+cd /app/ && NODE_ENV=production && exec node server.js
