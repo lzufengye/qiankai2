@@ -5,7 +5,7 @@ module.exports = {
     'babel-polyfill',
     './index.js'
   ],
-  debug: true,
+  debug: process.env.NODE_ENV !== 'production',
   devtool: process.env.NODE_ENV === 'production'? undefined :'source-map',
   output: {
     path: 'public',
