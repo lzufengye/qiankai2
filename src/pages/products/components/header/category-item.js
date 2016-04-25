@@ -33,7 +33,7 @@ var CategoryItem = React.createClass({
 
     var displaySubSubCategories = subSubCategories.length > 0 ? <ul onMouseOver={displaySubMenu} onMouseOut={hideSubMenu} className='sub-sub-category' id={this.props.category.name}>
           {subSubCategories}
-    </ul> : ''
+    </ul> : '';
 
     return (
       <div className='category-item' onMouseOver={displaySubMenu} onMouseOut={hideSubMenu}>

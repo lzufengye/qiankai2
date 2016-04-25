@@ -87,6 +87,10 @@ var Header =
 
       var className = 'pure-g' + (this.props.isMobile ? ' mobile-header' : '');
 
+      // <div className='basket-container' onMouseOver={that.displayBasket} onMouseOut={that.hideBasket}>
+      //   <Basket />
+      // </div>
+
       return (
         <div className={className}>
           <header className="appHeader pure-u-1">
@@ -121,14 +125,11 @@ var Header =
               <MenuItem menuIndex={1} subMenu={shoppingMallItems} name='开街商城' link='/' />
               <MenuItem menuIndex={2} subMenu={travelItems} name='智慧旅游' link='/travel.html' />
               <MenuItem menuIndex={3} subMenu={convenienceLifeItems} name='便民服务' link='/convenience-life/articles/jiaofei' />
-              <MenuItem menuIndex={4} subMenu={financeServiceItems} name='金融服务' link='/finance-service/articles/investment' />
+              {/*<MenuItem menuIndex={4} subMenu={financeServiceItems} name='金融服务' link='/finance-service/articles/investment' />*/}
               <MenuItem menuIndex={5} subMenu={innovationSpaceItems} name='众创空间' link='/innovation-space/activities' />
               <MenuItem menuIndex={6} subMenu={companyItems} name='企业服务' link='/company-service/articles/company_settlement' />
             </div>
           </header>
-          <div className='basket-container' onMouseOver={that.displayBasket} onMouseOut={that.hideBasket}>
-            <Basket />
-          </div>
         </div>
       );
     }
