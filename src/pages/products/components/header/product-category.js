@@ -15,7 +15,7 @@ var ProductCategory = React.createClass({
 
   render() {
     var categories = this.state.categories.map(function (category) {
-      return <CategoryItem category={category} />
+      return <CategoryItem key={category.id} category={category} />
     });
 
     var displaySubMenu = () => {

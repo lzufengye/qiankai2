@@ -28,7 +28,7 @@ var ProductSection = React.createClass({
       <div className='product-section' style={style}>
         {this.props.children}
         <ProductSectionTitle backgroundImage={this.props.backgroundImage} width={this.props.width} height={this.props.height} title={this.props.title} link={this.props.link}/>
-        <ReactCSSTransitionGroup component="ul" className="appItems pure-g list-reset" id="item-group"  transitionName="itemTransition" transitionLeave={false}>
+        <ReactCSSTransitionGroup component="ul" className="appItems pure-g list-reset" id="item-group"  transitionName="itemTransition" transitionLeave={true} transitionEnterTimeout={200} transitionLeaveTimeout={200}>
           {items}
         </ReactCSSTransitionGroup>
       </div>

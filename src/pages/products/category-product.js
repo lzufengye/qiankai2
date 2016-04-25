@@ -82,7 +82,7 @@ var CategoryProduct = React.createClass({
           <div className='product-list-container'>
             <h1>{titleMapping[this.props.params.category]}</h1>
         {this.props.children}
-            <ReactCSSTransitionGroup component="ul" className="pure-g appItems list-reset" id="item-group"  transitionName="itemTransition" transitionLeave={false}>
+            <ReactCSSTransitionGroup component="ul" className="pure-g appItems list-reset" id="item-group"  transitionName="itemTransition" transitionLeave={false} transitionEnterTimeout={200} transitionLeaveTimeout={200}>
           {items}
             </ReactCSSTransitionGroup>
           </div>

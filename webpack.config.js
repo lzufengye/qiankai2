@@ -1,8 +1,12 @@
-var webpack = require('webpack')
+var webpack = require('webpack');
 
 module.exports = {
-  entry: ['babel-polyfill', './index.js'],
-
+  entry: [
+    'babel-polyfill',
+    './index.js'
+  ],
+  debug: true,
+  devtool: process.env.NODE_ENV === 'production'? undefined :'source-map',
   output: {
     path: 'public',
     filename: 'bundle.js',
@@ -17,8 +21,22 @@ module.exports = {
 
   module: {
     loaders: [
-      { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader?presets[]=es2015&presets[]=react' }
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+        query: {
+          presets: [
+            'es2015',
+            'react'
+          ],
+          plugins: [
+            'transform-es3-property-literals',
+            'transform-es3-member-expression-literals'
+          ]
+        }
+      }
     ]
   }
-}
+};
 

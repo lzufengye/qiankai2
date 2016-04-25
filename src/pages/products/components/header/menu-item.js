@@ -6,7 +6,7 @@ var MenuItem = React.createClass({
 
     var items = this.props.subMenu.map(function (item) {
       return (
-        <li>
+        <li key={item.name}>
           <a href={item.link}>{item.name}</a>
         </li>
       );

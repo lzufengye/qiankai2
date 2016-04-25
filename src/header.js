@@ -1,6 +1,5 @@
 import React from 'react'
 import Menu from './header/menu'
-import MenuItem from './header/menu-item'
 import NavLink from './header/nav-link'
 import SearchBar from './header/search-bar'
 
