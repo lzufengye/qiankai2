@@ -72,8 +72,9 @@ var CartStore = Reflux.createStore({
   onLoadItems: function () {
     var $this = this;
 
-    $this.list = [];
-    $this.list = JSON.parse(localStorage.qwezst).basketItems;
+    // localStorage.qwezst为空时给一个默认值, 避免JSON.parse抛出异常
+    var qwezst = localStorage.qwezst || '{"basketItems":[]}';
+    $this.list = JSON.parse(qwezst).basketItems || [];
     _.map($this.list, function (item) {
       item['selected'] = false
     });
